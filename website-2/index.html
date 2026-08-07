@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minit Charger — Industrial Fast Charging Solutions</title>
+<meta name="description" content="25 years of industrial EV fast-charging expertise. Smart chargers, fleet monitoring, and AssetPro 360 for airports, warehouses, and ports.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand">
+      <span class="nav__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="currentColor"/></svg>
+      </span>
+      <span class="nav__brand-text">MINIT<b>CHARGER</b></span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#products">Products</a>
+      <a href="#industries">Industries</a>
+      <a href="#environments">Environments</a>
+      <a href="#assetpro">AssetPro 360</a>
+      <a href="#company">Company</a>
+      <a href="#resources">Resources</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a href="#contact" class="btn btn--ghost">Contact Us</a>
+      <a href="#contact" class="btn btn--primary">Get a Quote</a>
+    </div>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" id="navMobile">
+    <a href="#products">Products</a>
+    <a href="#industries">Industries</a>
+    <a href="#environments">Environments</a>
+    <a href="#assetpro">AssetPro 360</a>
+    <a href="#company">Company</a>
+    <a href="#resources">Resources</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="btn btn--primary">Get a Quote</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>25 years of industrial charging expertise</p>
+        <h1 class="hero__title">
+          End‑to‑end rapid<br>
+          charging, built for<br>
+          <span class="hero__title-accent">every environment.</span>
+        </h1>
+        <p class="hero__sub">
+          Minit Charger powers forklifts, GSE, and low‑speed fleets with smart industrial
+          chargers and real‑time diagnostics — engineered for outdoor extremes and
+          indoor precision alike.
+        </p>
+
+        <div class="hero__env" role="tablist" aria-label="Charging environment">
+          <button class="env-tab is-active" role="tab" aria-selected="true" data-env="outdoor">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/></svg>
+            Outdoor
+          </button>
+          <button class="env-tab" role="tab" aria-selected="false" data-env="indoor">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 11 12 4l8 7M6 10v9h12v-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Indoor
+          </button>
+        </div>
+
+        <div class="hero__cta">
+          <a href="#products" class="btn btn--primary btn--lg">Explore Products</a>
+          <a href="#contact" class="btn btn--outline btn--lg">Talk to an Expert</a>
+        </div>
+
+        <dl class="hero__stats">
+          <div><dt>25</dt><dd>Years in fast charging</dd></div>
+          <div><dt>3</dt><dd>Battery chemistries supported</dd></div>
+          <div><dt>24/7</dt><dd>Cloud‑connected monitoring</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero__panel" aria-hidden="true">
+        <div class="charger-card">
+          <div class="charger-card__head">
+            <span class="charger-card__id">UNIT · ALTUS II</span>
+            <span class="charger-card__status"><i></i>Charging</span>
+          </div>
+
+          <div class="charger-card__ring">
+            <svg viewBox="0 0 160 160" class="ring-svg">
+              <circle cx="80" cy="80" r="68" class="ring-track"/>
+              <circle cx="80" cy="80" r="68" class="ring-progress" id="ringProgress"/>
+            </svg>
+            <div class="charger-card__ring-label">
+              <span class="ring-pct" id="ringPct">62%</span>
+              <span class="ring-sub">SoC</span>
+            </div>
+          </div>
+
+          <div class="charger-card__grid">
+            <div><span>Power</span><b>18.4 kW</b></div>
+            <div><span>Voltage</span><b>384 V</b></div>
+            <div><span>Cycles</span><b>1,204</b></div>
+            <div><span>Temp</span><b>41°C</b></div>
+          </div>
+
+          <div class="charger-card__wave">
+            <svg viewBox="0 0 300 60" preserveAspectRatio="none"><polyline id="wavePath" points="0,40 20,32 40,44 60,20 80,36 100,18 120,30 140,10 160,26 180,14 200,28 220,12 240,24 260,8 280,20 300,6"/></svg>
+          </div>
+        </div>
+        <div class="hero__panel-caption">Live diagnostics · AssetPro 360</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGO / TRUST STRIP ============ -->
+  <section class="strip" aria-label="Trusted across industries">
+    <div class="strip__inner">
+      <span class="strip__label">Deployed across</span>
+      <div class="strip__items">
+        <span>Airports</span><span>Warehouses</span><span>Ports</span><span>Ground Support</span><span>Material Handling</span><span>Last‑Mile Fleets</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FLAGSHIP SPOTLIGHT — MAGNUS ============ -->
+  <section class="spotlight" id="magnus-spotlight">
+    <div class="spotlight__media">
+      <img class="spotlight__img is-active" data-view="sunny" src="assets/magnus-sunny.jpg" alt="Magnus outdoor fast-charging pedestal installed on a rooftop deck with city skyline behind it">
+      <img class="spotlight__img" data-view="overcast" src="assets/magnus-overcast.jpg" alt="Magnus charging pedestal, front view against a parking structure">
+      <img class="spotlight__img" data-view="detail" src="assets/magnus-detail.jpg" alt="Close-up angled detail of the Magnus charger's top housing and display">
+      <div class="spotlight__scrim"></div>
+    </div>
+
+    <div class="spotlight__panel">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span>New · Flagship pedestal</p>
+      <h2>Meet Magnus.</h2>
+      <p>The largest charging pedestal in the Minit Charger line — dual LV‑3 / LV‑4 ports, a touchscreen that reports "Ready to Charge" at a glance, and a build tough enough for rooftop decks, parking structures, and open‑air ramps in any weather.</p>
+
+      <ul class="chip-row chip-row--light">
+        <li>Dual LV‑3 / LV‑4 ports</li>
+        <li>Touchscreen diagnostics</li>
+        <li>Net Zero contributor build</li>
+      </ul>
+
+      <div class="spotlight__thumbs" role="tablist" aria-label="Magnus views">
+        <button class="spotlight__thumb is-active" role="tab" aria-selected="true" data-view="sunny" style="background-image:url(assets/magnus-sunny.jpg)"></button>
+        <button class="spotlight__thumb" role="tab" aria-selected="false" data-view="overcast" style="background-image:url(assets/magnus-overcast.jpg)"></button>
+        <button class="spotlight__thumb" role="tab" aria-selected="false" data-view="detail" style="background-image:url(assets/magnus-detail.jpg)"></button>
+      </div>
+
+      <div class="showcase__cta">
+        <a href="#p-magnus" class="btn btn--primary">See full specs</a>
+        <a href="#contact" class="btn btn--outline-light">Request a quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY / FEATURES ============ -->
+  <section class="section" id="why">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>Why Minit Charger</p>
+      <h2>Engineered advantages, not marketing checkboxes.</h2>
+      <p class="section__lede">Every charger ships with the diagnostics, efficiency, and installation flexibility your fleet actually runs on.</p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card feature-card--lg">
+        <div class="feature-card__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Smart technology &amp; diagnostics</h3>
+        <p>On‑screen diagnostics and remote monitoring surface issues before they become downtime — every unit reports back to AssetPro 360 in real time.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Eco‑friendly efficiency</h3>
+        <p>Optimized charge curves reduce energy waste and extend battery life across lithium, lead‑acid, and AGM chemistries.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 20V10l8-6 8 6v10M9 20v-6h6v6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Versatile installation</h3>
+        <p>Wall‑mount, pedestal, or fleet‑bay configurations — built for outdoor extremes and tight indoor footprints alike.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3>Comprehensive coverage</h3>
+        <p>From compact low‑speed vehicle chargers to high‑capacity indoor systems, one vendor covers your whole mixed fleet.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS — FLAGSHIP SHOWCASE ============ -->
+  <section class="section section--products" id="products">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>Product line</p>
+      <h2>Cutting‑edge charging solutions, by use case.</h2>
+      <p class="section__lede">Eight purpose‑built systems designed for optimal efficiency and reliability across your operation.</p>
+    </div>
+
+    <nav class="product-jump" aria-label="Jump to product">
+      <a href="#p-magnus">Magnus</a>
+      <a href="#p-altus">Altus II</a>
+      <a href="#p-maximus">Maximus</a>
+      <a href="#p-momentus">Momentus</a>
+      <a href="#p-durus">Durus</a>
+      <a href="#p-celltrac">CellTrac</a>
+      <a href="#p-pharus">Pharus</a>
+      <a href="#p-mobile">Mobile Unit</a>
+    </nav>
+
+    <!-- ---------- MAGNUS ---------- -->
+    <article class="showcase" id="p-magnus">
+      <div class="showcase__viewer" data-tilt>
+        <div class="showcase__stage showcase__stage--dark">
+          <img class="showcase__img is-active" data-view="sunny" src="assets/magnus-sunny.jpg" alt="Magnus charging pedestal on a rooftop deck, city skyline behind it" loading="lazy">
+          <img class="showcase__img" data-view="overcast" src="assets/magnus-overcast.jpg" alt="Magnus charging pedestal, straight front view" loading="lazy">
+          <img class="showcase__img" data-view="detail" src="assets/magnus-detail.jpg" alt="Magnus charger angled close-up of housing and display" loading="lazy">
+          <span class="showcase__badge showcase__badge--dark">Flagship · Outdoor</span>
+        </div>
+        <div class="showcase__thumbs" role="tablist" aria-label="Magnus views">
+          <button class="showcase__thumb is-active" role="tab" aria-selected="true" data-view="sunny" style="background-image:url(assets/magnus-sunny.jpg)"><span>In the field</span></button>
+          <button class="showcase__thumb" role="tab" aria-selected="false" data-view="overcast" style="background-image:url(assets/magnus-overcast.jpg)"><span>Front</span></button>
+          <button class="showcase__thumb" role="tab" aria-selected="false" data-view="detail" style="background-image:url(assets/magnus-detail.jpg)"><span>Detail</span></button>
+        </div>
+      </div>
+
+      <div class="showcase__info">
+        <span class="product-card__tag">Flagship · Outdoor fast charging</span>
+        <h3>Magnus</h3>
+        <p>Our largest outdoor pedestal, built for sites that can't have a queue at the charger. Dual LV‑3 and LV‑4 ports run independently, with a touchscreen that surfaces "Ready to Charge" status the moment a vehicle connects.</p>
+
+        <dl class="spec-list">
+          <div><dt>Ports</dt><dd>Dual — LV‑3 &amp; LV‑4</dd></div>
+          <div><dt>Environment</dt><dd>Outdoor, all‑weather</dd></div>
+          <div><dt>Display</dt><dd>Full touchscreen</dd></div>
+          <div><dt>Connectivity</dt><dd>AssetPro 360 cloud</dd></div>
+        </dl>
+
+        <ul class="chip-row">
+          <li>Dual independent ports</li>
+          <li>Touchscreen diagnostics</li>
+          <li>Net Zero contributor build</li>
+        </ul>
+
+        <p class="showcase__industries"><b>Used in:</b> High‑traffic outdoor hubs · Parking structures · Rooftop &amp; open‑air decks</p>
+
+        <div class="showcase__cta">
+          <a href="#contact" class="btn btn--outline">Download datasheet</a>
+          <a href="#contact" class="btn btn--primary">Request a quote</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ---------- OUTDOOR PEDESTAL COMPARISON ---------- -->
+    <div class="compare">
+      <div class="compare__head">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>Choosing a pedestal</p>
+        <h3>Altus II, Maximus, or Magnus?</h3>
+        <p class="section__lede">All three run dual ports and report into AssetPro 360 — the difference is scale and setting.</p>
+      </div>
+      <div class="compare__table" role="table">
+        <div class="compare__row compare__row--head" role="row">
+          <span role="columnheader">&nbsp;</span>
+          <span role="columnheader">Altus II</span>
+          <span role="columnheader">Maximus</span>
+          <span role="columnheader">Magnus</span>
+        </div>
+        <div class="compare__row" role="row"><span>Setting</span><span>Outdoor</span><span>Indoor</span><span>Outdoor, all‑weather</span></div>
+        <div class="compare__row" role="row"><span>Ports</span><span>Dual</span><span>Dual</span><span>Dual — LV‑3 &amp; LV‑4</span></div>
+        <div class="compare__row" role="row"><span>Scale</span><span>Standard sites</span><span>Large indoor duty</span><span>High‑traffic flagship</span></div>
+        <div class="compare__row" role="row"><span>Display</span><span>On‑screen diagnostics</span><span>On‑screen diagnostics</span><span>Full touchscreen</span></div>
+        <div class="compare__row" role="row"><span>Best for</span><span>Ramps &amp; yards</span><span>Warehouses</span><span>Decks &amp; structures</span></div>
+      </div>
+    </div>
+
+    <!-- ---------- ALTUS II ---------- -->
+    <article class="showcase" id="p-altus">
+      <div class="showcase__viewer" data-tilt>
+        <div class="showcase__stage">
+          <img class="showcase__img is-active" data-view="front" src="assets/altus-front.jpg" alt="Altus II outdoor EV charging pedestal, front view" loading="lazy">
+          <img class="showcase__img" data-view="detail" src="assets/altus-front.jpg" alt="Altus II control panel close-up" loading="lazy" style="object-position:50% 22%; transform:scale(2.4);">
+          <span class="showcase__badge">Outdoor rated</span>
+        </div>
+        <div class="showcase__thumbs" role="tablist" aria-label="Altus II views">
+          <button class="showcase__thumb is-active" role="tab" aria-selected="true" data-view="front" style="background-image:url(assets/altus-front.jpg)"><span>Front</span></button>
+          <button class="showcase__thumb" role="tab" aria-selected="false" data-view="detail" style="background-image:url(assets/altus-front.jpg); background-position:50% 20%; background-size:280%;"><span>Panel detail</span></button>
+        </div>
+      </div>
+
+      <div class="showcase__info">
+        <span class="product-card__tag">Outdoor · EV‑ready</span>
+        <h3>Altus II</h3>
+        <p>An outdoor charging pedestal with dual ports and an EV‑ready option, built to run exposed sites — ramps, yards, and curbside fleet bays — without babysitting.</p>
+
+        <dl class="spec-list">
+          <div><dt>Ports</dt><dd>Dual</dd></div>
+          <div><dt>Environment</dt><dd>Outdoor rated</dd></div>
+          <div><dt>Battery support</dt><dd>Li‑ion / Lead‑acid / AGM</dd></div>
+          <div><dt>Connectivity</dt><dd>AssetPro 360 cloud</dd></div>
+        </dl>
+
+        <ul class="chip-row">
+          <li>On‑screen diagnostics</li>
+          <li>EV charging option</li>
+          <li>Intelligent power delivery</li>
+        </ul>
+
+        <p class="showcase__industries"><b>Used in:</b> Airports · Ports · Outdoor fleet yards</p>
+
+        <div class="showcase__cta">
+          <a href="#contact" class="btn btn--outline">Download datasheet</a>
+          <a href="#contact" class="btn btn--primary">Request a quote</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ---------- MAXIMUS ---------- -->
+    <article class="showcase showcase--reverse" id="p-maximus">
+      <div class="showcase__viewer" data-tilt>
+        <div class="showcase__stage">
+          <img class="showcase__img is-active" data-view="front" src="assets/maximus-front.jpg" alt="Maximus high-capacity indoor charger, front view" loading="lazy">
+          <img class="showcase__img" data-view="detail" src="assets/maximus-front.jpg" alt="Maximus display close-up" loading="lazy" style="object-position:50% 30%; transform:scale(2.2);">
+          <span class="showcase__badge">Indoor · High‑capacity</span>
+        </div>
+        <div class="showcase__thumbs" role="tablist" aria-label="Maximus views">
+          <button class="showcase__thumb is-active" role="tab" aria-selected="true" data-view="front" style="background-image:url(assets/maximus-front.jpg)"><span>Front</span></button>
+          <button class="showcase__thumb" role="tab" aria-selected="false" data-view="detail" style="background-image:url(assets/maximus-front.jpg); background-position:50% 28%; background-size:260%;"><span>Display detail</span></button>
+        </div>
+      </div>
+
+      <div class="showcase__info">
+        <span class="product-card__tag">Indoor · High‑capacity</span>
+        <h3>Maximus</h3>
+        <p>A high‑capacity indoor charger with dual ports, sized for large‑scale, continuous‑duty operations that can't afford a bottleneck at the charging bay.</p>
+
+        <dl class="spec-list">
+          <div><dt>Ports</dt><dd>Dual</dd></div>
+          <div><dt>Environment</dt><dd>Indoor</dd></div>
+          <div><dt>Battery support</dt><dd>Li‑ion / Lead‑acid / AGM</dd></div>
+          <div><dt>Connectivity</dt><dd>AssetPro 360 cloud</dd></div>
+        </dl>
+
+        <ul class="chip-row">
+          <li>High‑capacity delivery</li>
+          <li>On‑screen diagnostics</li>
+          <li>Net Zero contributor build</li>
+        </ul>
+
+        <p class="showcase__industries"><b>Used in:</b> Warehouses · Distribution centers · Large indoor fleets</p>
+
+        <div class="showcase__cta">
+          <a href="#contact" class="btn btn--outline">Download datasheet</a>
+          <a href="#contact" class="btn btn--primary">Request a quote</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ---------- MOMENTUS ---------- -->
+    <article class="showcase" id="p-momentus">
+      <div class="showcase__viewer" data-tilt>
+        <div class="showcase__stage">
+          <img class="showcase__img is-active" data-view="front" src="assets/momentus-iso.jpg" alt="Momentus charger, 45-degree isometric view" loading="lazy">
+          <img class="showcase__img" data-view="detail" src="assets/momentus-iso.jpg" alt="Momentus dual-port touchscreen close-up" loading="lazy" style="object-position:44% 48%; transform:scale(2.6);">
+          <span class="showcase__badge">45° isometric</span>
+        </div>
+        <div class="showcase__thumbs" role="tablist" aria-label="Momentus views">
+          <button class="showcase__thumb is-active" role="tab" aria-selected="true" data-view="front" style="background-image:url(assets/momentus-iso.jpg)"><span>Isometric</span></button>
+          <button class="showcase__thumb" role="tab" aria-selected="false" data-view="detail" style="background-image:url(assets/momentus-iso.jpg); background-position:44% 46%; background-size:300%;"><span>Touchscreen detail</span></button>
+        </div>
+      </div>
+
+      <div class="showcase__info">
+        <span class="product-card__tag">Mid‑level · Fast install</span>
+        <h3>Momentus</h3>
+        <p>A mid‑level charger for material handling fleets, with a dual‑port touchscreen that reports port status, battery info, and countdown timers at a glance.</p>
+
+        <dl class="spec-list">
+          <div><dt>Ports</dt><dd>Dual, independent</dd></div>
+          <div><dt>Display</dt><dd>Touchscreen diagnostics</dd></div>
+          <div><dt>Battery support</dt><dd>Li‑ion / Lead‑acid / AGM</dd></div>
+          <div><dt>Connectivity</dt><dd>Wi‑Fi + Bluetooth</dd></div>
+        </dl>
+
+        <ul class="chip-row">
+          <li>Live port status</li>
+          <li>Equalize‑charge mode</li>
+          <li>Fast installation</li>
+        </ul>
+
+        <p class="showcase__industries"><b>Used in:</b> Warehouses · Material handling fleets</p>
+
+        <div class="showcase__cta">
+          <a href="#contact" class="btn btn--outline">Download datasheet</a>
+          <a href="#contact" class="btn btn--primary">Request a quote</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ---------- DURUS ---------- -->
+    <article class="showcase showcase--reverse" id="p-durus">
+      <div class="showcase__viewer" data-tilt>
+        <div class="showcase__stage showcase__stage--pad showcase__stage--glow">
+          <img class="showcase__img is-active" data-view="front" src="assets/durus-front-hq.jpg" alt="Durus compact charger, front view" loading="lazy">
+          <img class="showcase__img" data-view="detail" src="assets/durus-front-hq.jpg" alt="Durus display close-up" loading="lazy" style="object-position:50% 24%; transform:scale(2.2);">
+          <span class="showcase__badge">Compact · Mobility</span>
+        </div>
+        <div class="showcase__thumbs" role="tablist" aria-label="Durus views">
+          <button class="showcase__thumb is-active" role="tab" aria-selected="true" data-view="front" style="background-image:url(assets/durus-front-hq.jpg)"><span>Front</span></button>
+          <button class="showcase__thumb" role="tab" aria-selected="false" data-view="detail" style="background-image:url(assets/durus-front-hq.jpg); background-position:50% 22%; background-size:260%;"><span>Display detail</span></button>
+        </div>
+      </div>
+
+      <div class="showcase__info">
+        <span class="product-card__tag">Compact · Mobility</span>
+        <h3>Durus</h3>
+        <p>A compact wall‑mount charger built for low‑speed vehicles and mobility fleets, sized to fit tight install spaces without giving up diagnostics.</p>
+
+        <dl class="spec-list">
+          <div><dt>Form factor</dt><dd>Compact wall‑mount</dd></div>
+          <div><dt>Display</dt><dd>On‑unit status screen</dd></div>
+          <div><dt>Battery support</dt><dd>Li‑ion / Lead‑acid / AGM</dd></div>
+          <div><dt>Connectivity</dt><dd>AssetPro 360 cloud</dd></div>
+        </dl>
+
+        <ul class="chip-row">
+          <li>Small footprint</li>
+          <li>Simple status display</li>
+          <li>Fast wall installation</li>
+        </ul>
+
+        <p class="showcase__industries"><b>Used in:</b> Low‑speed vehicles · Campus &amp; last‑mile mobility</p>
+
+        <div class="showcase__cta">
+          <a href="#contact" class="btn btn--outline">Download datasheet</a>
+          <a href="#contact" class="btn btn--primary">Request a quote</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ---------- CELLTRAC ---------- -->
+    <article class="showcase" id="p-celltrac">
+      <div class="showcase__viewer" data-tilt>
+        <div class="showcase__stage showcase__stage--dark">
+          <img class="showcase__img is-active" data-view="front" src="assets/celltrac-angle.jpg" alt="CellTrac onboard battery management module, angled view" loading="lazy">
+          <img class="showcase__img" data-view="detail" src="assets/celltrac-angle.jpg" alt="CellTrac status LED close-up" loading="lazy" style="object-position:78% 25%; transform:scale(2.4);">
+          <span class="showcase__badge showcase__badge--dark">Onboard · Telematics</span>
+        </div>
+        <div class="showcase__thumbs" role="tablist" aria-label="CellTrac views">
+          <button class="showcase__thumb is-active" role="tab" aria-selected="true" data-view="front" style="background-image:url(assets/celltrac-angle.jpg)"><span>Angle</span></button>
+          <button class="showcase__thumb" role="tab" aria-selected="false" data-view="detail" style="background-image:url(assets/celltrac-angle.jpg); background-position:78% 22%; background-size:320%;"><span>LED detail</span></button>
+        </div>
+      </div>
+
+      <div class="showcase__info">
+        <span class="product-card__tag">Onboard · Telematics</span>
+        <h3>CellTrac</h3>
+        <p>An onboard battery management module with GPS and state‑of‑charge monitoring, reporting alarm, cooling, and charge status straight to the cloud.</p>
+
+        <dl class="spec-list">
+          <div><dt>Mount</dt><dd>Onboard, in‑vehicle</dd></div>
+          <div><dt>Monitoring</dt><dd>SoC, alarm, cooling, comms</dd></div>
+          <div><dt>Location</dt><dd>GPS‑enabled</dd></div>
+          <div><dt>Connectivity</dt><dd>Bluetooth + cloud</dd></div>
+        </dl>
+
+        <ul class="chip-row">
+          <li>Real‑time SoC tracking</li>
+          <li>Onboard alarm LEDs</li>
+          <li>Cloud‑connected</li>
+        </ul>
+
+        <p class="showcase__industries"><b>Used in:</b> Mixed fleets needing per‑vehicle battery telemetry</p>
+
+        <div class="showcase__cta">
+          <a href="#contact" class="btn btn--outline">Download datasheet</a>
+          <a href="#contact" class="btn btn--primary">Request a quote</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ---------- PHARUS ---------- -->
+    <article class="showcase showcase--reverse" id="p-pharus">
+      <div class="showcase__viewer" data-tilt>
+        <div class="showcase__stage showcase__stage--dark">
+          <img class="showcase__img is-active" data-view="front" src="assets/pharus-front.jpg" alt="Pharus smart monitoring module, front view with circuit-board display" loading="lazy">
+          <img class="showcase__img" data-view="detail" src="assets/pharus-front.jpg" alt="Pharus status indicator close-up" loading="lazy" style="object-position:38% 30%; transform:scale(2.3);">
+          <span class="showcase__badge showcase__badge--dark">Onboard · Monitoring</span>
+        </div>
+        <div class="showcase__thumbs" role="tablist" aria-label="Pharus views">
+          <button class="showcase__thumb is-active" role="tab" aria-selected="true" data-view="front" style="background-image:url(assets/pharus-front.jpg)"><span>Front</span></button>
+          <button class="showcase__thumb" role="tab" aria-selected="false" data-view="detail" style="background-image:url(assets/pharus-front.jpg); background-position:38% 28%; background-size:280%;"><span>Status detail</span></button>
+        </div>
+      </div>
+
+      <div class="showcase__info">
+        <span class="product-card__tag">Onboard · Monitoring</span>
+        <h3>Pharus</h3>
+        <p>A ruggedized onboard monitoring module built alongside CellTrac — a single status light and a sealed housing report unit health without adding another screen for your operators to check.</p>
+
+        <dl class="spec-list">
+          <div><dt>Mount</dt><dd>Onboard, bolted housing</dd></div>
+          <div><dt>Status</dt><dd>Single indicator LED</dd></div>
+          <div><dt>Build</dt><dd>Sealed, ruggedized</dd></div>
+          <div><dt>Connectivity</dt><dd>Cloud‑reporting</dd></div>
+        </dl>
+
+        <ul class="chip-row">
+          <li>Simple at‑a‑glance status</li>
+          <li>Rugged sealed housing</li>
+          <li>Pairs with CellTrac</li>
+        </ul>
+
+        <p class="showcase__industries"><b>Used in:</b> Fleets standardizing on one onboard monitoring layer</p>
+
+        <div class="showcase__cta">
+          <a href="#contact" class="btn btn--outline">Download datasheet</a>
+          <a href="#contact" class="btn btn--primary">Request a quote</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ---------- MOBILE CHARGING UNIT ---------- -->
+    <article class="showcase" id="p-mobile">
+      <div class="showcase__viewer" data-tilt>
+        <div class="showcase__stage">
+          <img class="showcase__img is-active" data-view="a" src="assets/mobile-unit-a.jpg" alt="Mobile charging generator unit, front-right angle" loading="lazy">
+          <img class="showcase__img" data-view="b" src="assets/mobile-unit-b.jpg" alt="Mobile charging generator unit, alternate front angle" loading="lazy">
+          <span class="showcase__badge">Portable · Backup power</span>
+        </div>
+        <div class="showcase__thumbs" role="tablist" aria-label="Mobile charging unit views">
+          <button class="showcase__thumb is-active" role="tab" aria-selected="true" data-view="a" style="background-image:url(assets/mobile-unit-a.jpg)"><span>Angle A</span></button>
+          <button class="showcase__thumb" role="tab" aria-selected="false" data-view="b" style="background-image:url(assets/mobile-unit-b.jpg)"><span>Angle B</span></button>
+        </div>
+      </div>
+
+      <div class="showcase__info">
+        <span class="product-card__tag">Portable · Backup &amp; remote sites</span>
+        <h3>Mobile Charging Unit</h3>
+        <p>A wheeled, self‑contained charging generator for sites without fixed infrastructure yet — temporary yards, disaster response staging, or backup power while a permanent pedestal is being installed.</p>
+
+        <dl class="spec-list">
+          <div><dt>Form factor</dt><dd>Wheeled, towable</dd></div>
+          <div><dt>Controls</dt><dd>Onboard status lights</dd></div>
+          <div><dt>Output</dt><dd>Single EVSE connector</dd></div>
+          <div><dt>Use case</dt><dd>Temporary / backup power</dd></div>
+        </dl>
+
+        <ul class="chip-row">
+          <li>Fully portable</li>
+          <li>No fixed install needed</li>
+          <li>Onboard status panel</li>
+        </ul>
+
+        <p class="showcase__industries"><b>Used in:</b> Temporary yards · Disaster response · Bridge power during installs</p>
+
+        <div class="showcase__cta">
+          <a href="#contact" class="btn btn--outline">Download datasheet</a>
+          <a href="#contact" class="btn btn--primary">Request a quote</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ---------- ASSETPRO CALLOUT ---------- -->
+    <a class="platform-callout" href="#assetpro">
+      <div>
+        <span class="product-card__tag" style="background:rgba(224,138,74,0.16); color:var(--copper);">Platform</span>
+        <h3>AssetPro 360 — the layer that connects every unit above</h3>
+        <p>Real‑time data, analytics, and proactive insights across your whole fleet of Minit Charger units.</p>
+      </div>
+      <span class="platform-callout__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section section--process" id="process">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>How it works</p>
+      <h2>From first call to fully installed.</h2>
+      <p class="section__lede">A streamlined buying process, transparent at every step.</p>
+    </div>
+
+    <ol class="process-rail">
+      <li class="process-step">
+        <span class="process-step__index">01</span>
+        <h3>Initial consultation</h3>
+        <p>Walk our team through your fleet, sites, and duty cycles to find the right charging fit.</p>
+      </li>
+      <li class="process-step">
+        <span class="process-step__index">02</span>
+        <h3>Tailored solution</h3>
+        <p>We configure port count, chemistry support, and mounting to your exact operational requirements.</p>
+      </li>
+      <li class="process-step">
+        <span class="process-step__index">03</span>
+        <h3>Transparent quote</h3>
+        <p>A comprehensive quote with clear pricing and terms — no surprise line items later.</p>
+      </li>
+      <li class="process-step">
+        <span class="process-step__index">04</span>
+        <h3>Installation &amp; go‑live</h3>
+        <p>Quick delivery and professional installation, with your units live on AssetPro 360 from day one.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ STATS / LEGACY ============ -->
+  <section class="legacy" id="company">
+    <div class="legacy__inner">
+      <div class="legacy__copy">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span>A legacy of reliability</p>
+        <h2>Two decades of leading power management innovation.</h2>
+        <p>From pioneering fast‑charging technology to managing a full asset ecosystem, Minit Charger keeps operations efficient, safe, and cutting‑edge — with AssetPro 360 woven through every unit we ship.</p>
+        <ul class="legacy__list">
+          <li>Seamless integration with AssetPro 360 for total asset management</li>
+          <li>Commitment to safety with robust monitoring and incident management</li>
+          <li>Industry leadership built over two decades of deployments</li>
+        </ul>
+      </div>
+
+      <div class="legacy__stats">
+        <div class="legacy-stat">
+          <span class="legacy-stat__num" data-count="25">0</span>
+          <span class="legacy-stat__unit">yrs</span>
+          <span class="legacy-stat__label">Fast‑charging expertise</span>
+        </div>
+        <div class="legacy-stat">
+          <span class="legacy-stat__num" data-count="3">0</span>
+          <span class="legacy-stat__unit"></span>
+          <span class="legacy-stat__label">Battery chemistries — Li, lead‑acid, AGM</span>
+        </div>
+        <div class="legacy-stat">
+          <span class="legacy-stat__num" data-count="8">0</span>
+          <span class="legacy-stat__unit"></span>
+          <span class="legacy-stat__label">Purpose‑built product lines</span>
+        </div>
+        <div class="legacy-stat">
+          <span class="legacy-stat__num" data-count="100">0</span>
+          <span class="legacy-stat__unit">%</span>
+          <span class="legacy-stat__label">Cloud‑connected monitoring</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INDUSTRIES ============ -->
+  <section class="section" id="industries">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>Industries served</p>
+      <h2>Built for the environments that don't forgive downtime.</h2>
+    </div>
+
+    <div class="industry-grid">
+      <article class="industry-card">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M2 22h20M6 22V10l6-6 6 6v12M10 22v-6h4v6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <h3>Airports</h3>
+        <p>Ground support equipment charging that keeps turnaround times on schedule.</p>
+      </article>
+      <article class="industry-card">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 21V9l9-6 9 6v12H3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke="currentColor" stroke-width="1.5"/></svg>
+        <h3>Warehouses</h3>
+        <p>Forklift and AGV charging built for continuous, high‑cycle material handling.</p>
+      </article>
+      <article class="industry-card">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 20h18M5 20V8l7-4 7 4v12M9 20v-5h6v5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <h3>Ports</h3>
+        <p>Rugged outdoor units engineered for salt air, heavy duty cycles, and 24/7 operations.</p>
+      </article>
+      <article class="industry-card">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h3>Last‑mile &amp; mobility</h3>
+        <p>Compact, low‑speed vehicle charging for delivery and campus mobility fleets.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ ENVIRONMENTS — IMMERSIVE SCENES ============ -->
+  <section class="scenes" id="environments">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>See it in place</p>
+      <h2>Built into the sites that can't stop moving.</h2>
+      <p class="section__lede">Two cutaway views of Minit Charger at work — power flowing from the grid, through the unit, into the fleet.</p>
+    </div>
+
+    <div class="scenes__tabs" role="tablist" aria-label="Environment">
+      <button class="scene-tab is-active" role="tab" aria-selected="true" data-scene="warehouse">Warehouse</button>
+      <button class="scene-tab" role="tab" aria-selected="false" data-scene="airport">Airport</button>
+    </div>
+
+    <div class="scene-stage">
+
+      <!-- ---------- WAREHOUSE SCENE ---------- -->
+      <figure class="scene is-active" data-scene="warehouse">
+        <svg viewBox="0 0 1200 620" class="scene__svg" role="img" aria-label="Cutaway illustration of a warehouse with solar roof panels, a Maximus charger powering a forklift, and a Momentus charger powering an AGV">
+          <!-- sky / ambient -->
+          <rect x="0" y="0" width="1200" height="620" fill="url(#skyGrad)"/>
+          <!-- ground -->
+          <rect x="0" y="520" width="1200" height="100" fill="#101B15"/>
+          <line x1="0" y1="521" x2="1200" y2="521" stroke="var(--line-strong)" stroke-width="1"/>
+
+          <!-- warehouse shell (cutaway) -->
+          <rect x="330" y="160" width="620" height="360" rx="6" fill="#0F1B15" stroke="var(--line-strong)"/>
+          <polygon points="330,160 640,70 950,160" fill="#0C1712" stroke="var(--line-strong)"/>
+          <!-- solar panels on roof -->
+          <g opacity="0.92">
+            <polygon points="420,140 610,88 610,110 440,158" fill="#1C3327" stroke="var(--volt-dim)" stroke-width="1"/>
+            <polygon points="660,110 850,150 830,168 645,132" fill="#1C3327" stroke="var(--volt-dim)" stroke-width="1"/>
+          </g>
+          <text x="640" y="45" text-anchor="middle" class="scene__label scene__label--mono">SOLAR‑ASSISTED ROOF · 6 kW</text>
+
+          <!-- interior shelving hint -->
+          <g opacity="0.5" stroke="var(--line-strong)">
+            <line x1="380" y1="220" x2="380" y2="480"/>
+            <line x1="440" y1="220" x2="440" y2="480"/>
+            <line x1="380" y1="260" x2="440" y2="260"/>
+            <line x1="380" y1="330" x2="440" y2="330"/>
+            <line x1="380" y1="400" x2="440" y2="400"/>
+          </g>
+
+          <!-- grid feed -->
+          <g class="scene__pole">
+            <line x1="80" y1="520" x2="80" y2="320" stroke="#4C5C54" stroke-width="6"/>
+            <line x1="30" y1="340" x2="130" y2="340" stroke="#4C5C54" stroke-width="6"/>
+            <line x1="80" y1="330" x2="330" y2="260" stroke="#4C5C54" stroke-width="2" stroke-dasharray="2 6"/>
+          </g>
+          <rect x="60" y="475" width="40" height="45" rx="4" fill="#16201C" stroke="var(--line-strong)"/>
+          <text x="80" y="466" text-anchor="middle" class="scene__label scene__label--mono">GRID · 45 kW</text>
+
+          <!-- Maximus charger (indoor, at wall) -->
+          <g transform="translate(560,330)">
+            <rect x="-24" y="-70" width="48" height="140" rx="6" fill="#1C3327" stroke="var(--volt)" stroke-width="1.4"/>
+            <rect x="-16" y="-56" width="32" height="24" rx="3" fill="#0B1712"/>
+            <circle cx="0" cy="-44" r="4" fill="var(--volt)" class="scene__pulse-dot"/>
+            <text x="0" y="88" text-anchor="middle" class="scene__label scene__label--mono">MAXIMUS</text>
+          </g>
+
+          <!-- forklift -->
+          <g transform="translate(470,470)">
+            <rect x="-38" y="-34" width="70" height="30" rx="4" fill="#EEF5F0"/>
+            <rect x="24" y="-56" width="8" height="60" fill="#9FB3A9"/>
+            <rect x="24" y="-56" width="8" height="14" fill="var(--copper)"/>
+            <circle cx="-24" cy="0" r="12" fill="#0B1712" stroke="#4C5C54" stroke-width="3"/>
+            <circle cx="18" cy="0" r="12" fill="#0B1712" stroke="#4C5C54" stroke-width="3"/>
+          </g>
+          <path class="scene__flow" d="M536,330 C505,380 495,430 470,455" />
+          <g class="scene__kw" transform="translate(470,420)"><rect x="-24" y="-14" width="48" height="26" rx="13"/><text y="4" text-anchor="middle">18 kW</text></g>
+
+          <!-- Momentus charger (second bay) -->
+          <g transform="translate(760,330)">
+            <rect x="-20" y="-60" width="40" height="120" rx="6" fill="#1C3327" stroke="var(--volt)" stroke-width="1.4"/>
+            <rect x="-13" y="-48" width="26" height="20" rx="3" fill="#0B1712"/>
+            <circle cx="0" cy="-38" r="4" fill="var(--volt)" class="scene__pulse-dot"/>
+            <text x="0" y="78" text-anchor="middle" class="scene__label scene__label--mono">MOMENTUS</text>
+          </g>
+
+          <!-- AGV -->
+          <g transform="translate(840,478)">
+            <rect x="-30" y="-16" width="60" height="16" rx="4" fill="#9FB3A9"/>
+            <rect x="-18" y="-26" width="36" height="10" rx="3" fill="var(--copper)"/>
+            <circle cx="-18" cy="2" r="7" fill="#0B1712"/>
+            <circle cx="18" cy="2" r="7" fill="#0B1712"/>
+          </g>
+          <path class="scene__flow" d="M760,330 C795,390 815,440 840,462" />
+          <g class="scene__kw" transform="translate(840,430)"><rect x="-22" y="-14" width="44" height="26" rx="13"/><text y="4" text-anchor="middle">7 kW</text></g>
+
+          <!-- floor status readout -->
+          <g transform="translate(1040,470)" class="scene__hud">
+            <rect x="-70" y="-46" width="140" height="92" rx="12" fill="rgba(11,23,18,0.85)" stroke="var(--line-strong)"/>
+            <text x="0" y="-22" text-anchor="middle" class="scene__label scene__label--mono">FLEET STATUS</text>
+            <circle cx="-46" cy="-2" r="4" fill="var(--volt)" class="scene__pulse-dot"/>
+            <text x="-30" y="2" class="scene__label scene__label--mono scene__label--sm">2 units charging</text>
+            <text x="-46" y="24" class="scene__label scene__label--mono scene__label--sm">AssetPro 360 · live</text>
+          </g>
+
+          <defs>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0F241B"/>
+              <stop offset="100%" stop-color="#07100C"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <figcaption>Maximus and Momentus share one indoor bay — solar‑offset power routes through AssetPro 360 to a forklift and an AGV at once.</figcaption>
+      </figure>
+
+      <!-- ---------- AIRPORT SCENE ---------- -->
+      <figure class="scene" data-scene="airport">
+        <svg viewBox="0 0 1200 620" class="scene__svg" role="img" aria-label="Cutaway illustration of an airport ramp with an Altus II charger powering a baggage tug and ground support cart, terminal and aircraft tail in the background">
+          <rect x="0" y="0" width="1200" height="620" fill="url(#skyGrad2)"/>
+          <rect x="0" y="520" width="1200" height="100" fill="#101B15"/>
+          <line x1="0" y1="521" x2="1200" y2="521" stroke="var(--line-strong)" stroke-width="1"/>
+          <!-- tarmac markings -->
+          <line x1="0" y1="560" x2="1200" y2="560" stroke="#E08A4A" stroke-width="3" stroke-dasharray="24 20" opacity="0.6"/>
+
+          <!-- terminal silhouette -->
+          <rect x="60" y="230" width="360" height="220" rx="4" fill="#0F1B15" stroke="var(--line-strong)"/>
+          <g opacity="0.55" stroke="var(--line-strong)">
+            <line x1="100" y1="260" x2="100" y2="440"/>
+            <line x1="150" y1="260" x2="150" y2="440"/>
+            <line x1="200" y1="260" x2="200" y2="440"/>
+            <line x1="250" y1="260" x2="250" y2="440"/>
+            <line x1="300" y1="260" x2="300" y2="440"/>
+            <line x1="350" y1="260" x2="350" y2="440"/>
+          </g>
+          <text x="240" y="215" text-anchor="middle" class="scene__label scene__label--mono">TERMINAL RAMP</text>
+
+          <!-- aircraft tail hint -->
+          <g transform="translate(1080,300)" opacity="0.85">
+            <path d="M0,120 L-14,0 L18,0 L4,120 Z" fill="#0F1B15" stroke="var(--line-strong)"/>
+            <path d="M-14,0 L-70,-46 L-58,-46 L-6,0 Z" fill="#0F1B15" stroke="var(--line-strong)"/>
+          </g>
+
+          <!-- Magnus flagship charger -->
+          <g transform="translate(640,320)">
+            <rect x="-30" y="-90" width="60" height="180" rx="8" fill="#1C3327" stroke="var(--volt)" stroke-width="1.6"/>
+            <rect x="-20" y="-72" width="40" height="30" rx="4" fill="#0B1712"/>
+            <circle cx="0" cy="-57" r="4" fill="var(--volt)" class="scene__pulse-dot"/>
+            <rect x="-22" y="-30" width="44" height="8" rx="4" fill="var(--copper)" opacity="0.8"/>
+            <text x="0" y="112" text-anchor="middle" class="scene__label scene__label--mono">MAGNUS</text>
+          </g>
+
+          <!-- baggage tug + carts -->
+          <g transform="translate(500,470)">
+            <rect x="-34" y="-26" width="60" height="24" rx="4" fill="#EEF5F0"/>
+            <circle cx="-20" cy="0" r="10" fill="#0B1712" stroke="#4C5C54" stroke-width="3"/>
+            <circle cx="18" cy="0" r="10" fill="#0B1712" stroke="#4C5C54" stroke-width="3"/>
+            <rect x="30" y="-14" width="34" height="14" rx="3" fill="#9FB3A9"/>
+            <rect x="70" y="-14" width="34" height="14" rx="3" fill="#9FB3A9"/>
+          </g>
+          <path class="scene__flow" d="M612,320 C570,380 545,430 520,452" />
+          <g class="scene__kw" transform="translate(520,420)"><rect x="-24" y="-14" width="48" height="26" rx="13"/><text y="4" text-anchor="middle">18 kW</text></g>
+
+          <!-- GSE cart -->
+          <g transform="translate(800,478)">
+            <rect x="-28" y="-20" width="56" height="20" rx="4" fill="#9FB3A9"/>
+            <rect x="-16" y="-30" width="32" height="10" rx="3" fill="var(--copper)"/>
+            <circle cx="-16" cy="2" r="7" fill="#0B1712"/>
+            <circle cx="16" cy="2" r="7" fill="#0B1712"/>
+          </g>
+          <path class="scene__flow" d="M668,320 C720,380 760,440 800,462" />
+          <g class="scene__kw" transform="translate(800,430)"><rect x="-22" y="-14" width="44" height="26" rx="13"/><text y="4" text-anchor="middle">14 kW</text></g>
+
+          <!-- grid feed -->
+          <rect x="1000" y="475" width="40" height="45" rx="4" fill="#16201C" stroke="var(--line-strong)"/>
+          <text x="1020" y="466" text-anchor="middle" class="scene__label scene__label--mono">GRID · 60 kW</text>
+          <line x1="1020" y1="475" x2="670" y2="330" stroke="#4C5C54" stroke-width="2" stroke-dasharray="2 6"/>
+
+          <!-- HUD -->
+          <g transform="translate(220,480)" class="scene__hud">
+            <rect x="-90" y="-46" width="180" height="92" rx="12" fill="rgba(11,23,18,0.85)" stroke="var(--line-strong)"/>
+            <text x="0" y="-22" text-anchor="middle" class="scene__label scene__label--mono">RAMP STATUS</text>
+            <circle cx="-66" cy="-2" r="4" fill="var(--volt)" class="scene__pulse-dot"/>
+            <text x="-50" y="2" class="scene__label scene__label--mono scene__label--sm">Turnaround on schedule</text>
+            <text x="-66" y="24" class="scene__label scene__label--mono scene__label--sm">AssetPro 360 · live</text>
+          </g>
+
+          <defs>
+            <linearGradient id="skyGrad2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#132A20"/>
+              <stop offset="100%" stop-color="#07100C"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <figcaption>One Magnus pedestal on the ramp keeps a baggage tug and a GSE cart both moving between turnarounds.</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ============ ASSETPRO SPOTLIGHT ============ -->
+  <section class="assetpro" id="assetpro">
+    <div class="assetpro__inner">
+      <div class="assetpro__visual" aria-hidden="true">
+        <div class="assetpro__device assetpro__device--laptop">
+          <div class="assetpro__screen">
+            <div class="assetpro__screen-row">
+              <span>Fleet Status</span><span class="dot dot--live"></span>
+            </div>
+            <div class="assetpro__bars">
+              <i style="--h:70%"></i><i style="--h:40%"></i><i style="--h:85%"></i><i style="--h:55%"></i><i style="--h:95%"></i><i style="--h:30%"></i><i style="--h:65%"></i>
+            </div>
+            <div class="assetpro__mini-stats">
+              <span>Units online <b>142</b></span>
+              <span>Alerts <b>2</b></span>
+            </div>
+          </div>
+        </div>
+        <div class="assetpro__device assetpro__device--phone">
+          <div class="assetpro__phone-dot"></div>
+          <div class="assetpro__phone-line"></div>
+          <div class="assetpro__phone-line assetpro__phone-line--short"></div>
+        </div>
+      </div>
+
+      <div class="assetpro__copy">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>Optimize charging, maximize efficiency</p>
+        <h2>Revolutionize fleet management with AssetPro 360.</h2>
+        <p class="section__lede">Real‑time data, detailed analytics, and proactive issue detection — streamline operations, reduce downtime, and improve asset utilization with ease.</p>
+
+        <ul class="check-list">
+          <li>Real‑time tracking of charging status and equipment performance</li>
+          <li>In‑depth analytics to optimize asset utilization and reduce costs</li>
+          <li>Proactive issue detection to minimize downtime and maintenance</li>
+          <li>User‑friendly interface for easy management and reporting</li>
+          <li>Customizable alerts to stay informed about fleet status</li>
+        </ul>
+
+        <a href="#contact" class="btn btn--primary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAPABILITIES BAND ============ -->
+  <section class="capabilities">
+    <div class="capabilities__inner">
+      <div class="capability">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 21V9l9-6 9 6v12H3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <div>
+          <h3>Industrial expertise</h3>
+          <p>Two decades of EV fast charging for airports, warehouses, and ports.</p>
+        </div>
+      </div>
+      <div class="capability">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <div>
+          <h3>Universal compatibility</h3>
+          <p>Supports lithium, lead‑acid, and AGM batteries for every industrial use case.</p>
+        </div>
+      </div>
+      <div class="capability">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <div>
+          <h3>Cloud‑connected</h3>
+          <p>Real‑time data and remote monitoring for timely, proactive maintenance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section" id="testimonials">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>Trusted by operations teams</p>
+      <h2>What fleets running on Minit Charger say.</h2>
+    </div>
+
+    <div class="testimonial-grid">
+      <blockquote class="testimonial-card">
+        <p>“Downtime on our GSE fleet dropped noticeably once we could see charger diagnostics before a unit actually failed.”</p>
+        <footer><span class="testimonial-card__avatar" aria-hidden="true"></span><div><b>Operations Director</b><span>Regional Airport Authority</span></div></footer>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <p>“Installation was faster than we planned for, and AssetPro 360 gave our maintenance team visibility they never had before.”</p>
+        <footer><span class="testimonial-card__avatar" aria-hidden="true"></span><div><b>Fleet Manager</b><span>Distribution &amp; Warehousing</span></div></footer>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <p>“The outdoor units have held up through two full seasons of salt air with zero corrosion issues.”</p>
+        <footer><span class="testimonial-card__avatar" aria-hidden="true"></span><div><b>Terminal Operations Lead</b><span>Port Facility</span></div></footer>
+      </blockquote>
+    </div>
+    <p class="testimonial-note">Illustrative quotes — replace with verified customer testimonials before publishing.</p>
+  </section>
+
+  <!-- ============ RESOURCES ============ -->
+  <section class="section section--muted" id="resources">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>Recommended resources</p>
+      <h2>Field notes from the charging world.</h2>
+    </div>
+
+    <div class="resource-grid">
+      <article class="resource-card">
+        <div class="resource-card__media resource-card__media--a"></div>
+        <span class="resource-card__meta">September 14, 2024 · No Comments</span>
+        <h3>Four important battery management system features for MHE</h3>
+        <p>Forklifts, automated guided vehicles, airport ground support equipment, and other mobile material handling equipment all depend on it.</p>
+        <a href="#">Read article →</a>
+      </article>
+      <article class="resource-card">
+        <div class="resource-card__media resource-card__media--b"></div>
+        <span class="resource-card__meta">September 14, 2024 · No Comments</span>
+        <h3>Rapid operations: turbocharging warehouse material handling equipment</h3>
+        <p>What is material handling? A wide range of processes that keep facilities moving — and charging strategy is central to all of them.</p>
+        <a href="#">Read article →</a>
+      </article>
+      <article class="resource-card">
+        <div class="resource-card__media resource-card__media--c"></div>
+        <span class="resource-card__meta">September 14, 2024 · No Comments</span>
+        <h3>Boosting rides: charging power for low‑speed electric vehicles</h3>
+        <p>What is a low‑speed vehicle, and how should its charging infrastructure differ from standard EV setups?</p>
+        <a href="#">Read article →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>FAQ</p>
+      <h2>Answers before you ask.</h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Which battery chemistries do your chargers support?<span class="faq-item__icon"></span></summary>
+        <p>All Minit Charger systems support lithium, lead‑acid, and AGM batteries, with charge profiles tuned per chemistry to protect battery health.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can outdoor units handle extreme climates?<span class="faq-item__icon"></span></summary>
+        <p>Yes. Altus II and other outdoor‑rated units are built for exposure to heat, cold, and coastal environments across ports and airport ramps.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What does AssetPro 360 actually monitor?<span class="faq-item__icon"></span></summary>
+        <p>Charging status, equipment performance, utilization analytics, and proactive fault detection — all in one cloud dashboard with customizable alerts.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long does installation take?<span class="faq-item__icon"></span></summary>
+        <p>Most sites move from signed quote to live install within a few weeks, depending on port count and site electrical readiness.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you support mixed fleets across multiple chargers?<span class="faq-item__icon"></span></summary>
+        <p>Yes — Altus II, Maximus, Momentus, and Durus can run side by side on one AssetPro 360 account for full mixed‑fleet visibility.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="cta__inner">
+      <h2>Ready to cut fleet downtime?</h2>
+      <p>Talk to our team about the right charging configuration for your sites.</p>
+      <div class="cta__actions">
+        <a href="#contact" class="btn btn--primary btn--lg">Get a Quote</a>
+        <a href="#products" class="btn btn--outline-light btn--lg">View Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section--contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__copy">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>Contact us</p>
+        <h2>Let's spec your charging setup.</h2>
+        <p class="section__lede">For inquiries or support, reach our team directly or send the details below.</p>
+
+        <ul class="contact-details">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M3 5h18v14H3z" stroke="currentColor" stroke-width="1.5"/><path d="m3 6 9 7 9-7" stroke="currentColor" stroke-width="1.5"/></svg> info@minitcharger.com</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z" stroke="currentColor" stroke-width="1.5"/></svg> (908) 789‑8700</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg> 7303 W Boston St, Chandler, AZ 85226</li>
+        </ul>
+
+        <div class="social-row" aria-label="Social media">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M7 10v7M7 7v.01M11 17v-4.5a1.5 2 0 0 1 4 0V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 17v-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M15 8h-2a2 2 0 0 0-2 2v10M8 13h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none"><path d="m4 4 16 16M20 4 4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M10 9.5v5l5-2.5-5-2.5Z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required placeholder="Jordan Reyes">
+        </div>
+        <div class="field">
+          <label for="email">Work email</label>
+          <input id="email" name="email" type="email" required placeholder="jordan@company.com">
+        </div>
+        <div class="field">
+          <label for="fleet">Fleet type</label>
+          <select id="fleet" name="fleet">
+            <option>Airport GSE</option>
+            <option>Warehouse / Material Handling</option>
+            <option>Port Operations</option>
+            <option>Low‑Speed / Last‑Mile</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">What are you looking to solve?</label>
+          <textarea id="message" name="message" rows="4" placeholder="Fleet size, site conditions, timeline…"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">Send Request</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="#top" class="nav__brand">
+        <span class="nav__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="currentColor"/></svg>
+        </span>
+        <span class="nav__brand-text">MINIT<b>CHARGER</b></span>
+      </a>
+      <p>25 years of fast‑charging expertise, providing industrial smart chargers for mobile equipment — integrated with AssetPro 360 for remote monitoring and prolonged equipment life.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Products</h4>
+      <a href="#p-magnus">Magnus</a>
+      <a href="#p-altus">Altus II</a>
+      <a href="#p-maximus">Maximus</a>
+      <a href="#p-momentus">Momentus</a>
+      <a href="#p-durus">Durus</a>
+      <a href="#p-celltrac">CellTrac</a>
+      <a href="#p-pharus">Pharus</a>
+      <a href="#p-mobile">Mobile Unit</a>
+      <a href="#assetpro">AssetPro 360</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Resources</h4>
+      <a href="#company">About Us</a>
+      <a href="#resources">Blog</a>
+      <a href="#company">Company</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contact Us</h4>
+      <p>For inquiries or support, please reach out to our team.</p>
+      <a href="mailto:info@minitcharger.com">info@minitcharger.com</a>
+      <a href="tel:9087898700">(908) 789‑8700</a>
+      <span>7303 W Boston St, Chandler, AZ 85226</span>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span>© 2024 Minit Charger. All rights reserved.</span>
+    <div class="footer__legal">
+      <a href="#">Terms &amp; Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
