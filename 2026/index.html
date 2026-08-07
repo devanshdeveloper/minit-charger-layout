@@ -117,10 +117,7 @@
     details summary { list-style: none; }
     details summary::-webkit-details-marker { display: none; }
     .wave polyline { fill: none; stroke: #5CF2A0; stroke-width: 2; opacity: 0.85; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-    }
+    /* prefers-reduced-motion removed to allow SVG animations */
     }
     :root {
       --ink-950: #07100C; --line-strong: rgba(255,255,255,0.15); --line: rgba(255,255,255,0.08);
@@ -151,7 +148,7 @@
     @keyframes kwFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
     .scene__hud text { fill: var(--text-hi); }
     .scene__hud text.scene__label--sm { fill: var(--text-lo); }
-    @media (prefers-reduced-motion: reduce) { .scene__flow, .scene__pulse-dot, .scene__kw { animation: none; } }
+    /* prefers-reduced-motion removed */
   </style>
 </head>
 <body class="antialiased">
@@ -190,13 +187,20 @@
   <main id="top">
 
     <!-- HERO -->
-    <section class="relative overflow-hidden bg-gradient-to-br from-[#e4eaee] to-[#f4f7f6] pt-20">
-      <div class="mx-auto max-w-[1240px] px-6 text-center lg:px-8">
+    <section class="relative flex min-h-[85vh] items-center justify-center overflow-hidden pt-20 pb-20">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="../new_images/ChatGPT%20Image%20Aug%207,%202026,%2005_27_16%20PM%20(1).png" alt="Hero Background" class="h-full w-full object-cover object-center" />
+        <!-- Overlay to ensure text readability -->
+        <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
+      </div>
+
+      <div class="relative z-10 mx-auto w-full max-w-[1240px] px-6 text-center lg:px-8">
         <h1 class="font-display text-5xl font-bold leading-[1.1] tracking-tight text-ink-950 sm:text-6xl lg:text-[4.5rem]">
           Keep your fleet moving with<br />
           <span class="text-[#28A745]">end-to-end</span> rapid charging.
         </h1>
-        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#4C5C54]">
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#4C5C54] font-medium drop-shadow-sm">
           Smart industrial battery chargers and AssetPro 360 visibility for warehouses, airports, and distribution centers, built for mixed fleets that cannot afford downtime.
         </p>
 
@@ -204,10 +208,6 @@
           <a href="#quote" class="inline-flex rounded-full bg-[#4b3c99] px-8 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-[#362b80] hover:-translate-y-0.5">Get a Quote</a>
           <a href="#solutions" class="inline-flex rounded-full bg-white px-8 py-3.5 text-sm font-bold text-ink-950 shadow-lg transition hover:bg-gray-50 hover:-translate-y-0.5">Explore Solutions</a>
         </div>
-      </div>
-
-      <div class="mt-16 w-full">
-        <img src="../new_images/ChatGPT%20Image%20Aug%207,%202026,%2005_27_16%20PM%20(1).png" alt="Minit Charger Magnus Unit charging an EV" class="w-full object-cover shadow-2xl" />
       </div>
     </section>
 
