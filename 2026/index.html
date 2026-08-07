@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Industrial Rapid Charging for MHE &amp; GSE Fleets | Minit Charger</title>
-  <meta name="description" content="25 years of industrial fast-charging expertise. Smart chargers, CellTrac, and AssetPro 360 for warehouses, airports, and ports. Get a quote." />
-  <meta name="keywords" content="industrial battery charger, forklift battery charger, GSE charger, material handling charging, AssetPro 360, lithium lead acid AGM" />
+  <meta name="description"
+    content="25 years of industrial fast-charging expertise. Smart chargers, CellTrac, and AssetPro 360 for warehouses, airports, and ports. Get a quote." />
+  <meta name="keywords"
+    content="industrial battery charger, forklift battery charger, GSE charger, material handling charging, AssetPro 360, lithium lead acid AGM" />
   <link rel="canonical" href="https://www.minitcharger.com/" />
   <script type="application/ld+json">
   {
@@ -79,9 +82,9 @@
             mist: '#9FB3A9'
           },
           fontFamily: {
-            display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace']
+            display: ['"Inter"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            mono: ['"Inter"', 'sans-serif']
           },
           boxShadow: {
             volt: '0 8px 24px -8px rgba(92,242,160,0.35)'
@@ -92,64 +95,270 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background: #F4F7F3; color: #0E1712; }
-    .font-display { font-family: 'Space Grotesk', system-ui, sans-serif; }
-    .font-mono { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-optical-sizing: auto;
+      background: #F4F7F3;
+      color: #0E1712;
+    }
+
+    .font-display {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .font-mono {
+      font-family: 'Inter', sans-serif;
+    }
+
     .hero-grid {
       background-image:
-        linear-gradient(rgba(232,245,238,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(232,245,238,0.05) 1px, transparent 1px);
+        linear-gradient(rgba(232, 245, 238, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232, 245, 238, 0.05) 1px, transparent 1px);
       background-size: 64px 64px;
       mask-image: radial-gradient(80% 60% at 30% 20%, #000 30%, transparent 80%);
     }
-    .ring-track { fill: none; stroke: rgba(232,245,238,0.12); stroke-width: 10; }
-    .ring-progress {
-      fill: none; stroke: #5CF2A0; stroke-width: 10; stroke-linecap: round;
-      transform: rotate(-90deg); transform-origin: 80px 80px;
-      transition: stroke-dashoffset 1.2s cubic-bezier(.16,.8,.24,1);
+
+    .ring-track {
+      fill: none;
+      stroke: rgba(232, 245, 238, 0.12);
+      stroke-width: 10;
     }
-    .env-tab.is-active { background: rgba(92,242,160,0.14); border-color: #5CF2A0; color: #5CF2A0; }
-    .scene-tab.is-active { border-color: #5CF2A0; background: rgba(92,242,160,0.15); color: #5CF2A0; }
-    .nav-mobile.is-open { display: flex; }
-    details summary { list-style: none; }
-    details summary::-webkit-details-marker { display: none; }
-    .wave polyline { fill: none; stroke: #5CF2A0; stroke-width: 2; opacity: 0.85; }
+
+    .ring-progress {
+      fill: none;
+      stroke: #5CF2A0;
+      stroke-width: 10;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 80px 80px;
+      transition: stroke-dashoffset 1.2s cubic-bezier(.16, .8, .24, 1);
+    }
+
+    .env-tab.is-active {
+      background: rgba(92, 242, 160, 0.14);
+      border-color: #5CF2A0;
+      color: #5CF2A0;
+    }
+
+    .scene-tab.is-active {
+      border-color: #5CF2A0;
+      background: rgba(92, 242, 160, 0.15);
+      color: #5CF2A0;
+    }
+
+    .nav-mobile.is-open {
+      display: flex;
+    }
+
+    details summary {
+      list-style: none;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .wave polyline {
+      fill: none;
+      stroke: #5CF2A0;
+      stroke-width: 2;
+      opacity: 0.85;
+    }
+
     /* prefers-reduced-motion removed to allow SVG animations */
     :root {
-      --ink-950: #07100C; --line-strong: rgba(255,255,255,0.15); --line: rgba(255,255,255,0.08);
-      --volt: #5CF2A0; --volt-dim: #2C7A56; --volt-glow: rgba(92,242,160,0.35); --copper: #E08A4A;
-      --ease: cubic-bezier(.16,.8,.24,1); --f-mono: 'IBM Plex Mono', ui-monospace, monospace;
-      --text-lo: #9FB3A9; --text-hi: #EEF5F0; --r-xl: 24px; --container: 1240px;
+      --ink-950: #07100C;
+      --line-strong: rgba(255, 255, 255, 0.15);
+      --line: rgba(255, 255, 255, 0.08);
+      --volt: #5CF2A0;
+      --volt-dim: #2C7A56;
+      --volt-glow: rgba(92, 242, 160, 0.35);
+      --copper: #E08A4A;
+      --ease: cubic-bezier(.16, .8, .24, 1);
+      --f-mono: 'Inter', sans-serif;
+      --text-lo: #9FB3A9;
+      --text-hi: #EEF5F0;
+      --r-xl: 24px;
+      --container: 1240px;
     }
-    .scenes { max-width: var(--container); margin: 0 auto; padding: 120px 32px; text-align: center; }
-    .scenes__tabs { display: inline-flex; gap: 5px; padding: 5px; margin-bottom: 36px; background: var(--ink-950); border: 1px solid var(--line-strong); border-radius: 999px; }
-    .scene-tab { padding: 10px 22px; border: none; background: none; color: var(--text-lo); border-radius: 999px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all .25s var(--ease); }
-    .scene-tab.is-active { background: var(--volt); color: #04150C; }
-    .scene-stage { position: relative; text-align: left; }
-    .scene { display: none; border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--line-strong); box-shadow: 0 50px 90px -40px rgba(7,16,12,0.5); margin: 0; background: var(--ink-950); }
-    .scene.is-active { display: block; animation: sceneIn .5s var(--ease); }
-    @keyframes sceneIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-    .scene__svg { width: 100%; height: auto; display: block; }
-    .scene figcaption { padding: 18px 28px; font-size: 14px; color: var(--text-lo); border-top: 1px solid var(--line); font-family: var(--f-mono); }
-    .scene__label { fill: var(--text-lo); font-size: 12px; letter-spacing: 0.04em; }
-    .scene__label--mono { font-family: var(--f-mono); }
-    .scene__label--sm { font-size: 11px; }
-    .scene__flow { fill: none; stroke: var(--volt); stroke-width: 2.4; stroke-dasharray: 4 10; stroke-linecap: round; animation: flowPulse 1.6s linear infinite; filter: drop-shadow(0 0 4px var(--volt-glow)); }
-    @keyframes flowPulse { to { stroke-dashoffset: -28; } }
-    .scene__pulse-dot { animation: dotPulse 1.8s ease-in-out infinite; }
-    @keyframes dotPulse { 0%,100% { opacity: 1; filter: drop-shadow(0 0 2px var(--volt)); } 50% { opacity: 0.4; filter: drop-shadow(0 0 8px var(--volt)); } }
-    .scene__kw rect { fill: rgba(7,16,12,0.88); stroke: var(--volt-dim); stroke-width: 1; }
-    .scene__kw text { fill: var(--volt); font-family: var(--f-mono); font-size: 13px; font-weight: 600; }
-    .scene__kw { animation: kwFloat 3.4s ease-in-out infinite; }
-    @keyframes kwFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-    .scene__hud text { fill: var(--text-hi); }
-    .scene__hud text.scene__label--sm { fill: var(--text-lo); }
+
+    .scenes {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 120px 32px;
+      text-align: center;
+    }
+
+    .scenes__tabs {
+      display: inline-flex;
+      gap: 5px;
+      padding: 5px;
+      margin-bottom: 36px;
+      background: var(--ink-950);
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+    }
+
+    .scene-tab {
+      padding: 10px 22px;
+      border: none;
+      background: none;
+      color: var(--text-lo);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .25s var(--ease);
+    }
+
+    .scene-tab.is-active {
+      background: var(--volt);
+      color: #04150C;
+    }
+
+    .scene-stage {
+      position: relative;
+      text-align: left;
+    }
+
+    .scene {
+      display: none;
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      border: 1px solid var(--line-strong);
+      box-shadow: 0 50px 90px -40px rgba(7, 16, 12, 0.5);
+      margin: 0;
+      background: var(--ink-950);
+    }
+
+    .scene.is-active {
+      display: block;
+      animation: sceneIn .5s var(--ease);
+    }
+
+    @keyframes sceneIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .scene__svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .scene figcaption {
+      padding: 18px 28px;
+      font-size: 14px;
+      color: var(--text-lo);
+      border-top: 1px solid var(--line);
+      font-family: var(--f-mono);
+    }
+
+    .scene__label {
+      fill: var(--text-lo);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+    }
+
+    .scene__label--mono {
+      font-family: var(--f-mono);
+    }
+
+    .scene__label--sm {
+      font-size: 11px;
+    }
+
+    .scene__flow {
+      fill: none;
+      stroke: var(--volt);
+      stroke-width: 2.4;
+      stroke-dasharray: 4 10;
+      stroke-linecap: round;
+      animation: flowPulse 1.6s linear infinite;
+      filter: drop-shadow(0 0 4px var(--volt-glow));
+    }
+
+    @keyframes flowPulse {
+      to {
+        stroke-dashoffset: -28;
+      }
+    }
+
+    .scene__pulse-dot {
+      animation: dotPulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes dotPulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 2px var(--volt));
+      }
+
+      50% {
+        opacity: 0.4;
+        filter: drop-shadow(0 0 8px var(--volt));
+      }
+    }
+
+    .scene__kw rect {
+      fill: rgba(7, 16, 12, 0.88);
+      stroke: var(--volt-dim);
+      stroke-width: 1;
+    }
+
+    .scene__kw text {
+      fill: var(--volt);
+      font-family: var(--f-mono);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .scene__kw {
+      animation: kwFloat 3.4s ease-in-out infinite;
+    }
+
+    @keyframes kwFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .scene__hud text {
+      fill: var(--text-hi);
+    }
+
+    .scene__hud text.scene__label--sm {
+      fill: var(--text-lo);
+    }
+
     /* prefers-reduced-motion removed */
   </style>
 </head>
+
 <body class="antialiased">
 
   <!-- NAV -->
@@ -157,9 +366,11 @@
     <div class="mx-auto flex max-w-[1240px] items-center justify-between px-6 py-4 lg:px-8">
       <a href="#top" class="flex items-center gap-2 font-display text-xl tracking-wide font-bold text-ink-950">
         <span class="flex items-center justify-center text-[#28A745]" aria-hidden="true">
-          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="currentColor"/></svg>
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none">
+            <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="currentColor" />
+          </svg>
         </span>
-        <span class="leading-tight">MINIT<br/>CHARGER</span>
+        <span class="leading-tight">MINIT<br />CHARGER</span>
       </a>
 
       <nav class="hidden items-center gap-8 text-sm font-semibold text-ink-900 lg:flex" aria-label="Primary">
@@ -171,11 +382,15 @@
       </nav>
 
       <div class="hidden items-center gap-4 sm:flex">
-        <a href="#contact" class="rounded-full bg-white px-6 py-2.5 text-sm font-bold shadow-sm transition hover:bg-gray-50">Contact</a>
-        <a href="#learn" class="rounded-full bg-[#4b3c99] px-6 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#362b80]">Learn More</a>
+        <a href="#contact"
+          class="rounded-full bg-white px-6 py-2.5 text-sm font-bold shadow-sm transition hover:bg-gray-50">Contact</a>
+        <a href="#learn"
+          class="rounded-full bg-[#4b3c99] px-6 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#362b80]">Learn
+          More</a>
       </div>
 
-      <button class="flex flex-col gap-1.5 lg:hidden" id="navToggle" aria-label="Open menu" aria-expanded="false" type="button">
+      <button class="flex flex-col gap-1.5 lg:hidden" id="navToggle" aria-label="Open menu" aria-expanded="false"
+        type="button">
         <span class="block h-0.5 w-5 rounded bg-ink-900"></span>
         <span class="block h-0.5 w-5 rounded bg-ink-900"></span>
         <span class="block h-0.5 w-5 rounded bg-ink-900"></span>
@@ -186,361 +401,664 @@
   <main id="top">
 
     <!-- HERO -->
-    <section class="relative flex min-h-[85vh] items-center overflow-hidden bg-gradient-to-br from-[#e4eaee] to-[#f4f7f6] pt-20 pb-20">
+
+
+    <!-- ============ ENVIRONMENTS — IMMERSIVE SCENES ============ -->
+
+
+    <!-- ============ INDUSTRIES SECTION ============ -->
+
+
+    <!-- ============ PRODUCT SHOWCASE SECTION ============ -->
+
+
+
+    <!-- TRUST STRIP -->
+
+
+    <!-- FLAGSHIP SPOTLIGHT — product cutout -->
+
+
+    <!-- WHY -->
+
+
+    <!-- PRODUCTS -->
+
+
+    <!-- PROCESS -->
+
+
+    <!-- LEGACY / STATS -->
+
+
+    <!-- ASSETPRO -->
+
+
+    <!-- INDUSTRIES -->
+
+
+    <!-- TESTIMONIALS -->
+
+
+    <!-- FAQ -->
+
+
+    <!-- RESOURCES -->
+
+
+    <!-- PARTNERS -->
+
+
+    <!-- CTA BAND — product-led -->
+
+
+    <!-- SEO: Problems we solve -->
+
+
+    <!-- SEO: Battery chemistry -->
+
+
+    <!-- SEO: Indoor vs outdoor -->
+
+
+    <!-- SEO: Specs / keywords -->
+
+
+    <!-- SEO: Use-case guides -->
+
+
+    <!-- SEO: Glossary -->
+
+
+    <!-- SEO: Service area -->
+
+
+    <!-- CONTACT -->
+
+    <section
+      class="relative flex min-h-[85vh] items-center overflow-hidden bg-gradient-to-br from-[#e4eaee] to-[#f4f7f6] pt-20 pb-20">
       <!-- Background Image -->
       <div class="absolute inset-0 z-0">
-        <img src="../new_images/Gemini_Generated_Image_9umsrd9umsrd9ums.png" alt="Hero Background" class="h-full w-full object-cover object-center" />
+        <img src="../new_images/banner_image.png" alt="Hero Background"
+          class="h-full w-full object-cover object-center" />
       </div>
 
       <div class="relative z-10 mx-auto w-full max-w-[1240px] px-6 lg:px-8 text-left">
         <div class="max-w-2xl">
-          <h1 class="font-display text-5xl font-bold leading-[1.1] tracking-tight text-ink-950 sm:text-6xl lg:text-[4.5rem]">
+          <h1
+            class="font-display text-5xl font-bold leading-[1.1] tracking-tight text-ink-950 sm:text-6xl lg:text-[4.5rem]">
             Keep your fleet moving with<br />
             <span class="text-[#28A745]">end-to-end</span> rapid charging.
           </h1>
           <p class="mt-6 text-lg leading-relaxed text-[#4C5C54] font-medium drop-shadow-sm">
-            Smart industrial battery chargers and AssetPro 360 visibility for warehouses, airports, and distribution centers, built for mixed fleets that cannot afford downtime.
+            Smart industrial battery chargers and AssetPro 360 visibility for warehouses, airports, and distribution
+            centers, built for mixed fleets that cannot afford downtime.
           </p>
 
           <div class="mt-10 flex flex-wrap justify-start gap-4">
-            <a href="#quote" class="inline-flex rounded-full bg-[#4b3c99] px-8 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-[#362b80] hover:-translate-y-0.5">Get a Quote</a>
-            <a href="#solutions" class="inline-flex rounded-full bg-white px-8 py-3.5 text-sm font-bold text-ink-950 shadow-lg transition hover:bg-gray-50 hover:-translate-y-0.5">Explore Solutions</a>
+            <a href="#quote"
+              class="inline-flex rounded-full bg-[#4b3c99] px-8 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-[#362b80] hover:-translate-y-0.5">Get
+              a Quote</a>
+            <a href="#solutions"
+              class="inline-flex rounded-full bg-white px-8 py-3.5 text-sm font-bold text-ink-950 shadow-lg transition hover:bg-gray-50 hover:-translate-y-0.5">Explore
+              Solutions</a>
           </div>
         </div>
       </div>
     </section>
 
-  <!-- ============ ENVIRONMENTS — IMMERSIVE SCENES ============ -->
-  <section class="scenes" id="environments">
-    <div class="mb-10 text-center">
-      <p class="font-mono mb-4 text-[11px] uppercase tracking-wider text-[#28A745]">See it in place</p>
-      <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl text-ink-950">Built into the sites that can't stop moving.</h2>
-      <p class="mt-4 text-[#4C5C54]">Two cutaway views of Minit Charger at work — power flowing from the grid, through the unit, into the fleet.</p>
-    </div>
-
-    <div class="scenes__tabs" role="tablist" aria-label="Environment">
-      <button class="scene-tab is-active" role="tab" aria-selected="true" data-scene="warehouse">Warehouse</button>
-      <button class="scene-tab" role="tab" aria-selected="false" data-scene="airport">Airport</button>
-    </div>
-
-    <div class="scene-stage">
-
-      <!-- ---------- WAREHOUSE SCENE ---------- -->
-      <figure class="scene is-active" data-scene="warehouse">
-        <svg viewBox="0 0 1200 620" class="scene__svg" role="img" aria-label="Cutaway illustration of a warehouse with solar roof panels, a Maximus charger powering a forklift, and a Momentus charger powering an AGV">
-          <!-- sky / ambient -->
-          <rect x="0" y="0" width="1200" height="620" fill="url(#skyGrad)"/>
-          <!-- ground -->
-          <rect x="0" y="520" width="1200" height="100" fill="#101B15"/>
-          <line x1="0" y1="521" x2="1200" y2="521" stroke="var(--line-strong)" stroke-width="1"/>
-
-          <!-- warehouse shell (cutaway) -->
-          <rect x="330" y="160" width="620" height="360" rx="6" fill="#0F1B15" stroke="var(--line-strong)"/>
-          <polygon points="330,160 640,70 950,160" fill="#0C1712" stroke="var(--line-strong)"/>
-          <!-- solar panels on roof -->
-          <g opacity="0.92">
-            <polygon points="420,140 610,88 610,110 440,158" fill="#1C3327" stroke="var(--volt-dim)" stroke-width="1"/>
-            <polygon points="660,110 850,150 830,168 645,132" fill="#1C3327" stroke="var(--volt-dim)" stroke-width="1"/>
-          </g>
-          <text x="640" y="45" text-anchor="middle" class="scene__label scene__label--mono">SOLAR‑ASSISTED ROOF · 6 kW</text>
-
-          <!-- interior shelving hint -->
-          <g opacity="0.5" stroke="var(--line-strong)">
-            <line x1="380" y1="220" x2="380" y2="480"/>
-            <line x1="440" y1="220" x2="440" y2="480"/>
-            <line x1="380" y1="260" x2="440" y2="260"/>
-            <line x1="380" y1="330" x2="440" y2="330"/>
-            <line x1="380" y1="400" x2="440" y2="400"/>
-          </g>
-
-          <!-- grid feed -->
-          <g class="scene__pole">
-            <line x1="80" y1="520" x2="80" y2="320" stroke="#4C5C54" stroke-width="6"/>
-            <line x1="30" y1="340" x2="130" y2="340" stroke="#4C5C54" stroke-width="6"/>
-            <line x1="80" y1="330" x2="330" y2="260" stroke="#4C5C54" stroke-width="2" stroke-dasharray="2 6"/>
-          </g>
-          <rect x="60" y="475" width="40" height="45" rx="4" fill="#16201C" stroke="var(--line-strong)"/>
-          <text x="80" y="466" text-anchor="middle" class="scene__label scene__label--mono">GRID · 45 kW</text>
-
-          <!-- Maximus charger (indoor, at wall) -->
-          <g transform="translate(560,330)">
-            <rect x="-24" y="-70" width="48" height="140" rx="6" fill="#1C3327" stroke="var(--volt)" stroke-width="1.4"/>
-            <rect x="-16" y="-56" width="32" height="24" rx="3" fill="#0B1712"/>
-            <circle cx="0" cy="-44" r="4" fill="var(--volt)" class="scene__pulse-dot"/>
-            <text x="0" y="88" text-anchor="middle" class="scene__label scene__label--mono">MAXIMUS</text>
-          </g>
-
-          <!-- forklift -->
-          <g transform="translate(470,470)">
-            <rect x="-38" y="-34" width="70" height="30" rx="4" fill="#EEF5F0"/>
-            <rect x="24" y="-56" width="8" height="60" fill="#9FB3A9"/>
-            <rect x="24" y="-56" width="8" height="14" fill="var(--copper)"/>
-            <circle cx="-24" cy="0" r="12" fill="#0B1712" stroke="#4C5C54" stroke-width="3"/>
-            <circle cx="18" cy="0" r="12" fill="#0B1712" stroke="#4C5C54" stroke-width="3"/>
-          </g>
-          <path class="scene__flow" d="M536,330 C505,380 495,430 470,455" />
-          <g class="scene__kw" transform="translate(470,420)"><rect x="-24" y="-14" width="48" height="26" rx="13"/><text y="4" text-anchor="middle">18 kW</text></g>
-
-          <!-- Momentus charger (second bay) -->
-          <g transform="translate(760,330)">
-            <rect x="-20" y="-60" width="40" height="120" rx="6" fill="#1C3327" stroke="var(--volt)" stroke-width="1.4"/>
-            <rect x="-13" y="-48" width="26" height="20" rx="3" fill="#0B1712"/>
-            <circle cx="0" cy="-38" r="4" fill="var(--volt)" class="scene__pulse-dot"/>
-            <text x="0" y="78" text-anchor="middle" class="scene__label scene__label--mono">MOMENTUS</text>
-          </g>
-
-          <!-- AGV -->
-          <g transform="translate(840,478)">
-            <rect x="-30" y="-16" width="60" height="16" rx="4" fill="#9FB3A9"/>
-            <rect x="-18" y="-26" width="36" height="10" rx="3" fill="var(--copper)"/>
-            <circle cx="-18" cy="2" r="7" fill="#0B1712"/>
-            <circle cx="18" cy="2" r="7" fill="#0B1712"/>
-          </g>
-          <path class="scene__flow" d="M760,330 C795,390 815,440 840,462" />
-          <g class="scene__kw" transform="translate(840,430)"><rect x="-22" y="-14" width="44" height="26" rx="13"/><text y="4" text-anchor="middle">7 kW</text></g>
-
-          <!-- floor status readout -->
-          <g transform="translate(1040,470)" class="scene__hud">
-            <rect x="-70" y="-46" width="140" height="92" rx="12" fill="rgba(11,23,18,0.85)" stroke="var(--line-strong)"/>
-            <text x="0" y="-22" text-anchor="middle" class="scene__label scene__label--mono">FLEET STATUS</text>
-            <circle cx="-46" cy="-2" r="4" fill="var(--volt)" class="scene__pulse-dot"/>
-            <text x="-30" y="2" class="scene__label scene__label--mono scene__label--sm">2 units charging</text>
-            <text x="-46" y="24" class="scene__label scene__label--mono scene__label--sm">AssetPro 360 · live</text>
-          </g>
-
-          <defs>
-            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#0F241B"/>
-              <stop offset="100%" stop-color="#07100C"/>
-            </linearGradient>
-          </defs>
-        </svg>
-        <figcaption>Maximus and Momentus share one indoor bay — solar‑offset power routes through AssetPro 360 to a forklift and an AGV at once.</figcaption>
-      </figure>
-
-      <!-- ---------- AIRPORT SCENE ---------- -->
-      <figure class="scene" data-scene="airport">
-        <svg viewBox="0 0 1200 620" class="scene__svg" role="img" aria-label="Cutaway illustration of an airport ramp with an Altus II charger powering a baggage tug and ground support cart, terminal and aircraft tail in the background">
-          <rect x="0" y="0" width="1200" height="620" fill="url(#skyGrad2)"/>
-          <rect x="0" y="520" width="1200" height="100" fill="#101B15"/>
-          <line x1="0" y1="521" x2="1200" y2="521" stroke="var(--line-strong)" stroke-width="1"/>
-          <!-- tarmac markings -->
-          <line x1="0" y1="560" x2="1200" y2="560" stroke="#E08A4A" stroke-width="3" stroke-dasharray="24 20" opacity="0.6"/>
-
-          <!-- terminal silhouette -->
-          <rect x="60" y="230" width="360" height="220" rx="4" fill="#0F1B15" stroke="var(--line-strong)"/>
-          <g opacity="0.55" stroke="var(--line-strong)">
-            <line x1="100" y1="260" x2="100" y2="440"/>
-            <line x1="150" y1="260" x2="150" y2="440"/>
-            <line x1="200" y1="260" x2="200" y2="440"/>
-            <line x1="250" y1="260" x2="250" y2="440"/>
-            <line x1="300" y1="260" x2="300" y2="440"/>
-            <line x1="350" y1="260" x2="350" y2="440"/>
-          </g>
-          <text x="240" y="215" text-anchor="middle" class="scene__label scene__label--mono">TERMINAL RAMP</text>
-
-          <!-- aircraft tail hint -->
-          <g transform="translate(1080,300)" opacity="0.85">
-            <path d="M0,120 L-14,0 L18,0 L4,120 Z" fill="#0F1B15" stroke="var(--line-strong)"/>
-            <path d="M-14,0 L-70,-46 L-58,-46 L-6,0 Z" fill="#0F1B15" stroke="var(--line-strong)"/>
-          </g>
-
-          <!-- Magnus flagship charger -->
-          <g transform="translate(640,320)">
-            <rect x="-30" y="-90" width="60" height="180" rx="8" fill="#1C3327" stroke="var(--volt)" stroke-width="1.6"/>
-            <rect x="-20" y="-72" width="40" height="30" rx="4" fill="#0B1712"/>
-            <circle cx="0" cy="-57" r="4" fill="var(--volt)" class="scene__pulse-dot"/>
-            <rect x="-22" y="-30" width="44" height="8" rx="4" fill="var(--copper)" opacity="0.8"/>
-            <text x="0" y="112" text-anchor="middle" class="scene__label scene__label--mono">MAGNUS</text>
-          </g>
-
-          <!-- baggage tug + carts -->
-          <g transform="translate(500,470)">
-            <rect x="-34" y="-26" width="60" height="24" rx="4" fill="#EEF5F0"/>
-            <circle cx="-20" cy="0" r="10" fill="#0B1712" stroke="#4C5C54" stroke-width="3"/>
-            <circle cx="18" cy="0" r="10" fill="#0B1712" stroke="#4C5C54" stroke-width="3"/>
-            <rect x="30" y="-14" width="34" height="14" rx="3" fill="#9FB3A9"/>
-            <rect x="70" y="-14" width="34" height="14" rx="3" fill="#9FB3A9"/>
-          </g>
-          <path class="scene__flow" d="M612,320 C570,380 545,430 520,452" />
-          <g class="scene__kw" transform="translate(520,420)"><rect x="-24" y="-14" width="48" height="26" rx="13"/><text y="4" text-anchor="middle">18 kW</text></g>
-
-          <!-- GSE cart -->
-          <g transform="translate(800,478)">
-            <rect x="-28" y="-20" width="56" height="20" rx="4" fill="#9FB3A9"/>
-            <rect x="-16" y="-30" width="32" height="10" rx="3" fill="var(--copper)"/>
-            <circle cx="-16" cy="2" r="7" fill="#0B1712"/>
-            <circle cx="16" cy="2" r="7" fill="#0B1712"/>
-          </g>
-          <path class="scene__flow" d="M668,320 C720,380 760,440 800,462" />
-          <g class="scene__kw" transform="translate(800,430)"><rect x="-22" y="-14" width="44" height="26" rx="13"/><text y="4" text-anchor="middle">14 kW</text></g>
-
-          <!-- grid feed -->
-          <rect x="1000" y="475" width="40" height="45" rx="4" fill="#16201C" stroke="var(--line-strong)"/>
-          <text x="1020" y="466" text-anchor="middle" class="scene__label scene__label--mono">GRID · 60 kW</text>
-          <line x1="1020" y1="475" x2="670" y2="330" stroke="#4C5C54" stroke-width="2" stroke-dasharray="2 6"/>
-
-          <!-- HUD -->
-          <g transform="translate(220,480)" class="scene__hud">
-            <rect x="-90" y="-46" width="180" height="92" rx="12" fill="rgba(11,23,18,0.85)" stroke="var(--line-strong)"/>
-            <text x="0" y="-22" text-anchor="middle" class="scene__label scene__label--mono">RAMP STATUS</text>
-            <circle cx="-66" cy="-2" r="4" fill="var(--volt)" class="scene__pulse-dot"/>
-            <text x="-50" y="2" class="scene__label scene__label--mono scene__label--sm">Turnaround on schedule</text>
-            <text x="-66" y="24" class="scene__label scene__label--mono scene__label--sm">AssetPro 360 · live</text>
-          </g>
-
-          <defs>
-            <linearGradient id="skyGrad2" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#132A20"/>
-              <stop offset="100%" stop-color="#07100C"/>
-            </linearGradient>
-          </defs>
-        </svg>
-        <figcaption>One Magnus pedestal on the ramp keeps a baggage tug and a GSE cart both moving between turnarounds.</figcaption>
-      </figure>
-
-    </div>
-  </section>
-
-  <!-- ============ INDUSTRIES SECTION ============ -->
-  <section class="bg-[#040A07] py-24 border-t border-white/5">
-    <div class="mx-auto max-w-[1400px] px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Warehouse -->
-        <div class="relative h-[560px] overflow-hidden rounded-[2rem] border border-white/10 group">
-          <img src="../new_images/warehouse_bg.png" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" alt="Warehouse">
-          <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-transparent"></div>
-          <div class="relative z-10 flex h-full flex-col justify-start p-10">
-            <svg class="w-12 h-12 text-white mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-            <h3 class="text-3xl font-bold text-white mb-3">Warehouses</h3>
-            <p class="text-white/80 text-lg leading-relaxed max-w-sm">Uninterrupted power for round-the-clock operations.</p>
-          </div>
+    <section class="border-y border-black/5 bg-white py-14" aria-labelledby="partners-heading">
+      <div class="mx-auto max-w-[1240px] px-6 lg:px-8">
+        <h2 id="partners-heading" class="text-center font-mono text-[11px] uppercase tracking-wider text-[#4C5C54]">
+          Trusted by industrial operators</h2>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-8 sm:gap-14">
+          <span class="font-display text-lg font-bold tracking-wide text-ink-900/35">BOEING</span>
+          <span class="font-display text-lg font-bold tracking-wide text-ink-900/35">AMERICOLD</span>
+          <span class="font-display text-lg font-bold tracking-wide text-ink-900/35">UNITED</span>
+          <span class="font-display text-lg font-bold tracking-wide text-ink-900/35">ENTERPRISE</span>
         </div>
-        <!-- Airport -->
-        <div class="relative h-[560px] overflow-hidden rounded-[2rem] border border-white/10 group">
-          <img src="../new_images/airport_bg.png" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" alt="Airport">
-          <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-transparent"></div>
-          <div class="relative z-10 flex h-full flex-col justify-start p-10">
-            <svg class="w-12 h-12 text-white mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <h3 class="text-3xl font-bold text-white mb-3">Airports</h3>
-            <p class="text-white/80 text-lg leading-relaxed max-w-sm">Clean mobility for a smarter infrastructure.</p>
+        <div class="mt-14 grid gap-6 border-t border-black/5 pt-12 md:grid-cols-3">
+          <div class="flex gap-4">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-ink-900 text-volt">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Industrial expertise</h3>
+              <p class="mt-1 text-sm text-[#4C5C54]">Decades of EV fast charging for airports, warehouses, and ports.
+              </p>
+            </div>
           </div>
-        </div>
-        <!-- LSEVs -->
-        <div class="relative h-[560px] overflow-hidden rounded-[2rem] border border-white/10 group">
-          <img src="../new_images/lsev_bg.png" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" alt="LSEV">
-          <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-transparent"></div>
-          <div class="relative z-10 flex h-full flex-col justify-start p-10">
-            <svg class="w-12 h-12 text-white mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-            <h3 class="text-3xl font-bold text-white mb-3">Low-Speed<br/>Electric Vehicles (LSEVs)</h3>
-            <p class="text-white/80 text-lg leading-relaxed max-w-sm">Clean energy for campus, resort and community mobility.</p>
+          <div class="flex gap-4">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-ink-900 text-volt">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Universal compatibility</h3>
+              <p class="mt-1 text-sm text-[#4C5C54]">Lithium, lead-acid, and AGM solutions for mixed fleets.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-ink-900 text-volt">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+                <path d="M4 12a8 8 0 0 1 8-8M12 20a8 8 0 0 0 8-8" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" />
+                <circle cx="12" cy="12" r="2" fill="currentColor" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Cloud-connected</h3>
+              <p class="mt-1 text-sm text-[#4C5C54]">Real-time data, remote monitoring, and timely maintenance.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ PRODUCT SHOWCASE SECTION ============ -->
-  <section class="bg-[#07100C] py-24 border-t border-white/5">
-    <div class="mx-auto max-w-[1400px] px-6 lg:px-8">
-      
-      <!-- 5 Angles -->
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <!-- Angle 1 -->
-        <div class="flex flex-col items-center">
-          <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden flex items-center justify-center">
-            <img src="../new_images/angle_1_hr.png" alt="Front View" class="w-full h-full object-cover" />
-          </div>
+    <section class="bg-paper-dim py-24" id="challenges" aria-labelledby="challenges-heading">
+      <div class="mx-auto max-w-[1240px] px-6 lg:px-8">
+        <div class="mb-12 max-w-2xl">
+          <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
+            <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
+            Operational challenges
+          </p>
+          <h2 id="challenges-heading" class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Why
+            industrial fleets switch to smart rapid charging.</h2>
+          <p class="mt-4 text-[17px] leading-relaxed text-[#4C5C54]">Forklift battery chargers, GSE chargers, and fleet
+            charging management only pay off when they cut downtime, protect batteries, and fit mixed chemistries.</p>
         </div>
-        <!-- Angle 2 -->
-        <div class="flex flex-col items-center">
-          <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden flex items-center justify-center">
-            <img src="../new_images/angle_2_hr.png" alt="45° View" class="w-full h-full object-cover" />
-          </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
+            <h3 class="font-display text-xl font-semibold">Charger-related downtime</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">When material handling equipment sits waiting on a
+              slow or failed charge, shift plans slip. Rapid industrial battery chargers with on-screen diagnostics keep
+              MHE and GSE moving.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
+            <h3 class="font-display text-xl font-semibold">Mixed battery chemistries</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Fleets migrating from lead-acid to lithium often run
+              both. Minit Charger supports lithium, lead-acid, and AGM so you standardize hardware without forcing a
+              one-chemistry rip-and-replace.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
+            <h3 class="font-display text-xl font-semibold">No visibility into battery health</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Without CellTrac and AssetPro 360, maintenance reacts
+              after failures. Cloud fleet charging management surfaces SoC, alarms, and charger status before equipment
+              goes dark.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
+            <h3 class="font-display text-xl font-semibold">Outdoor GSE harsh conditions</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Airport apron and port yards need outdoor-rated eGSE
+              chargers. Altus II is built for dual-port outdoor duty with remote diagnostics for ground support fleets.
+            </p>
+          </article>
+          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
+            <h3 class="font-display text-xl font-semibold">Multi-site standardization</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">3PL and distribution networks need one industrial
+              charging stack across warehouses. Configure Maximus, Momentus, and AssetPro once, then scale the same
+              playbook site to site.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
+            <h3 class="font-display text-xl font-semibold">CapEx without clear ROI</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Procurement needs a consultative quote—not consumer
+              pricing pages. We scope fleet size, duty cycles, and install constraints so CapEx maps to measurable
+              uptime outcomes.</p>
+          </article>
         </div>
-        <!-- Angle 3 -->
-        <div class="flex flex-col items-center">
-          <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden flex items-center justify-center">
-            <img src="../new_images/angle_3_hr.png" alt="Side View" class="w-full h-full object-cover" />
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="why">
+      <div class="mb-14 max-w-xl">
+        <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
+          <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
+          Why Minit Charger
+        </p>
+        <h2 class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Engineered advantages, not
+          marketing checkboxes.</h2>
+        <p class="mt-4 text-[17px] leading-relaxed text-[#4C5C54]">Every charger ships with the diagnostics, efficiency,
+          and installation flexibility your fleet actually runs on.</p>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <article
+          class="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-black/5 md:col-span-2 lg:col-span-2 lg:row-span-2 lg:p-10">
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-ink-900 text-volt">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none">
+              <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.5"
+                stroke-linejoin="round" />
+            </svg>
           </div>
-        </div>
-        <!-- Angle 4 -->
-        <div class="flex flex-col items-center">
-          <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden flex items-center justify-center">
-            <img src="../new_images/angle_4_hr.png" alt="Close-Up" class="w-full h-full object-cover" />
+          <h3 class="font-display text-2xl font-semibold">Smart technology &amp; diagnostics</h3>
+          <p class="mt-3 leading-relaxed text-[#4C5C54]">On-screen diagnostics and remote monitoring surface issues
+            before they become downtime — every unit reports back to AssetPro 360 in real time.</p>
+        </article>
+        <article class="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-black/5">
+          <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-paper-dim text-volt-dim">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z" stroke="currentColor" stroke-width="1.5"
+                stroke-linejoin="round" />
+            </svg>
           </div>
-        </div>
-        <!-- Angle 5 -->
-        <div class="flex flex-col items-center">
-          <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden flex items-center justify-center">
-            <img src="../new_images/angle_5_hr.png" alt="Top Isometric" class="w-full h-full object-cover" />
+          <h3 class="font-display text-lg font-semibold">Eco-friendly efficiency</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Optimized charge curves reduce waste and extend battery
+            life across lithium, lead-acid, and AGM.</p>
+        </article>
+        <article class="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-black/5">
+          <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-paper-dim text-volt-dim">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+              <path d="M4 20V10l8-6 8 6v10M9 20v-6h6v6" stroke="currentColor" stroke-width="1.5"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold">Versatile installation</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Wall-mount, pedestal, or fleet-bay configurations for
+            outdoor extremes and tight indoor footprints.</p>
+        </article>
+        <article class="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-black/5 md:col-span-2 lg:col-span-2">
+          <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-paper-dim text-volt-dim">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.5" />
+              <path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold">Comprehensive coverage</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">From compact LSEV chargers to dual-port high-capacity
+            systems — one vendor for your mixed fleet.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="bg-[#040A07] py-24 border-t border-white/5">
+      <div class="mx-auto max-w-[1400px] px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Warehouse -->
+          <div class="relative h-[560px] overflow-hidden rounded-[2rem] border border-white/10 group">
+            <img src="../new_images/warehouse_bg.png"
+              class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              alt="Warehouse">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-transparent"></div>
+            <div class="relative z-10 flex h-full flex-col justify-start p-10">
+              <svg class="w-12 h-12 text-white mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                </path>
+              </svg>
+              <h3 class="text-3xl font-bold text-white mb-3">Warehouses</h3>
+              <p class="text-white/80 text-lg leading-relaxed max-w-sm">Uninterrupted power for round-the-clock
+                operations.</p>
+            </div>
+          </div>
+          <!-- Airport -->
+          <div class="relative h-[560px] overflow-hidden rounded-[2rem] border border-white/10 group">
+            <img src="../new_images/airport_bg.png"
+              class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              alt="Airport">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-transparent"></div>
+            <div class="relative z-10 flex h-full flex-col justify-start p-10">
+              <svg class="w-12 h-12 text-white mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
+              </svg>
+              <h3 class="text-3xl font-bold text-white mb-3">Airports</h3>
+              <p class="text-white/80 text-lg leading-relaxed max-w-sm">Clean mobility for a smarter infrastructure.</p>
+            </div>
+          </div>
+          <!-- LSEVs -->
+          <div class="relative h-[560px] overflow-hidden rounded-[2rem] border border-white/10 group">
+            <img src="../new_images/lsev_bg.png"
+              class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              alt="LSEV">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-transparent"></div>
+            <div class="relative z-10 flex h-full flex-col justify-start p-10">
+              <svg class="w-12 h-12 text-white mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              </svg>
+              <h3 class="text-3xl font-bold text-white mb-3">Low-Speed<br />Electric Vehicles (LSEVs)</h3>
+              <p class="text-white/80 text-lg leading-relaxed max-w-sm">Clean energy for campus, resort and community
+                mobility.</p>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Features Row -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-white/10">
-        <!-- Feature 1 -->
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full border border-volt/30 flex items-center justify-center text-volt">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-          </div>
-          <div>
-            <h4 class="text-white font-bold mb-1">Built for Performance</h4>
-            <p class="text-white/60 text-sm">Robust design for demanding environments</p>
-          </div>
+    <section class="bg-paper-dim py-24" id="industries">
+      <div class="mx-auto max-w-[1240px] px-6 lg:px-8">
+        <div class="mb-12 max-w-xl">
+          <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
+            <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
+            Industries
+          </p>
+          <h2 class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Industrial charging solutions
+            by industry.</h2>
         </div>
-        <!-- Feature 2 -->
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full border border-volt/30 flex items-center justify-center text-volt">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-          </div>
-          <div>
-            <h4 class="text-white font-bold mb-1">Future Ready</h4>
-            <p class="text-white/60 text-sm">Scalable, upgradeable, and built to evolve</p>
-          </div>
-        </div>
-        <!-- Feature 3 -->
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full border border-volt/30 flex items-center justify-center text-volt">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-          </div>
-          <div>
-            <h4 class="text-white font-bold mb-1">Global Standards</h4>
-            <p class="text-white/60 text-sm">Compliant with international safety norms</p>
-          </div>
-        </div>
-        <!-- Feature 4 -->
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full border border-volt/30 flex items-center justify-center text-volt">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          </div>
-          <div>
-            <h4 class="text-white font-bold mb-1">Sustainable Impact</h4>
-            <p class="text-white/60 text-sm">Driving towards a cleaner, greener planet</p>
-          </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
+            <img src="../product-images/Industry%20Image%20Renders/Material%20handeling.jpg"
+              alt="Warehouse material handling charging" class="aspect-video w-full object-cover" width="640"
+              height="360" loading="lazy" />
+            <div class="p-6">
+              <h3 class="font-display text-lg font-semibold">Warehousing &amp; 3PL</h3>
+              <p class="mt-2 text-sm text-[#4C5C54]">Predictable recharge windows for forklift and pallet-jack fleets.
+              </p>
+              <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Get a quote →</a>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
+            <img src="../product-images/Industry%20Image%20Renders/ALTUS%20II.1771.jpg"
+              alt="Airport eGSE outdoor charging" class="aspect-video w-full object-cover" width="640" height="360"
+              loading="lazy" />
+            <div class="p-6">
+              <h3 class="font-display text-lg font-semibold">Airports &amp; eGSE</h3>
+              <p class="mt-2 text-sm text-[#4C5C54]">Outdoor dual-port charging for ground support equipment.</p>
+              <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Explore GSE →</a>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
+            <img src="../product-images/Industry%20Image%20Renders/Sample%20Render.1768.jpg"
+              alt="Cold storage industrial charging" class="aspect-video w-full object-cover" width="640" height="360"
+              loading="lazy" />
+            <div class="p-6">
+              <h3 class="font-display text-lg font-semibold">Cold storage</h3>
+              <p class="mt-2 text-sm text-[#4C5C54]">Reliable charging for demanding cold-chain MHE environments.</p>
+              <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Talk to an expert →</a>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
+            <img src="../product-images/Industry%20Image%20Renders/work%20platforms.png"
+              alt="Ports and manufacturing charging platforms" class="aspect-video w-full object-cover" width="640"
+              height="360" loading="lazy" />
+            <div class="p-6">
+              <h3 class="font-display text-lg font-semibold">Ports &amp; manufacturing</h3>
+              <p class="mt-2 text-sm text-[#4C5C54]">Rugged systems for continuous sites where uptime is the KPI.</p>
+              <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Request a site review
+                →</a>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section class="scenes" id="environments">
+      <div class="mb-10 text-center">
+        <p class="font-mono mb-4 text-[11px] uppercase tracking-wider text-[#28A745]">See it in place</p>
+        <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl text-ink-950">Built into the sites
+          that can't stop moving.</h2>
+        <p class="mt-4 text-[#4C5C54]">Two cutaway views of Minit Charger at work — power flowing from the grid, through
+          the unit, into the fleet.</p>
+      </div>
 
+      <div class="scenes__tabs" role="tablist" aria-label="Environment">
+        <button class="scene-tab is-active" role="tab" aria-selected="true" data-scene="warehouse">Warehouse</button>
+        <button class="scene-tab" role="tab" aria-selected="false" data-scene="airport">Airport</button>
+      </div>
 
-    <!-- TRUST STRIP -->
+      <div class="scene-stage">
+
+        <!-- ---------- WAREHOUSE SCENE ---------- -->
+        <figure class="scene is-active" data-scene="warehouse">
+          <svg viewBox="0 0 1200 620" class="scene__svg" role="img"
+            aria-label="Cutaway illustration of a warehouse with solar roof panels, a Maximus charger powering a forklift, and a Momentus charger powering an AGV">
+            <!-- sky / ambient -->
+            <rect x="0" y="0" width="1200" height="620" fill="url(#skyGrad)" />
+            <!-- ground -->
+            <rect x="0" y="520" width="1200" height="100" fill="#101B15" />
+            <line x1="0" y1="521" x2="1200" y2="521" stroke="var(--line-strong)" stroke-width="1" />
+
+            <!-- warehouse shell (cutaway) -->
+            <rect x="330" y="160" width="620" height="360" rx="6" fill="#0F1B15" stroke="var(--line-strong)" />
+            <polygon points="330,160 640,70 950,160" fill="#0C1712" stroke="var(--line-strong)" />
+            <!-- solar panels on roof -->
+            <g opacity="0.92">
+              <polygon points="420,140 610,88 610,110 440,158" fill="#1C3327" stroke="var(--volt-dim)"
+                stroke-width="1" />
+              <polygon points="660,110 850,150 830,168 645,132" fill="#1C3327" stroke="var(--volt-dim)"
+                stroke-width="1" />
+            </g>
+            <text x="640" y="45" text-anchor="middle" class="scene__label scene__label--mono">SOLAR‑ASSISTED ROOF · 6
+              kW</text>
+
+            <!-- interior shelving hint -->
+            <g opacity="0.5" stroke="var(--line-strong)">
+              <line x1="380" y1="220" x2="380" y2="480" />
+              <line x1="440" y1="220" x2="440" y2="480" />
+              <line x1="380" y1="260" x2="440" y2="260" />
+              <line x1="380" y1="330" x2="440" y2="330" />
+              <line x1="380" y1="400" x2="440" y2="400" />
+            </g>
+
+            <!-- grid feed -->
+            <g class="scene__pole">
+              <line x1="80" y1="520" x2="80" y2="320" stroke="#4C5C54" stroke-width="6" />
+              <line x1="30" y1="340" x2="130" y2="340" stroke="#4C5C54" stroke-width="6" />
+              <line x1="80" y1="330" x2="330" y2="260" stroke="#4C5C54" stroke-width="2" stroke-dasharray="2 6" />
+            </g>
+            <rect x="60" y="475" width="40" height="45" rx="4" fill="#16201C" stroke="var(--line-strong)" />
+            <text x="80" y="466" text-anchor="middle" class="scene__label scene__label--mono">GRID · 45 kW</text>
+
+            <!-- Maximus charger (indoor, at wall) -->
+            <g transform="translate(560,330)">
+              <rect x="-24" y="-70" width="48" height="140" rx="6" fill="#1C3327" stroke="var(--volt)"
+                stroke-width="1.4" />
+              <rect x="-16" y="-56" width="32" height="24" rx="3" fill="#0B1712" />
+              <circle cx="0" cy="-44" r="4" fill="var(--volt)" class="scene__pulse-dot" />
+              <text x="0" y="88" text-anchor="middle" class="scene__label scene__label--mono">MAXIMUS</text>
+            </g>
+
+            <!-- forklift -->
+            <g transform="translate(470,470)">
+              <rect x="-38" y="-34" width="70" height="30" rx="4" fill="#EEF5F0" />
+              <rect x="24" y="-56" width="8" height="60" fill="#9FB3A9" />
+              <rect x="24" y="-56" width="8" height="14" fill="var(--copper)" />
+              <circle cx="-24" cy="0" r="12" fill="#0B1712" stroke="#4C5C54" stroke-width="3" />
+              <circle cx="18" cy="0" r="12" fill="#0B1712" stroke="#4C5C54" stroke-width="3" />
+            </g>
+            <path class="scene__flow" d="M536,330 C505,380 495,430 470,455" />
+            <g class="scene__kw" transform="translate(470,420)">
+              <rect x="-24" y="-14" width="48" height="26" rx="13" /><text y="4" text-anchor="middle">18 kW</text>
+            </g>
+
+            <!-- Momentus charger (second bay) -->
+            <g transform="translate(760,330)">
+              <rect x="-20" y="-60" width="40" height="120" rx="6" fill="#1C3327" stroke="var(--volt)"
+                stroke-width="1.4" />
+              <rect x="-13" y="-48" width="26" height="20" rx="3" fill="#0B1712" />
+              <circle cx="0" cy="-38" r="4" fill="var(--volt)" class="scene__pulse-dot" />
+              <text x="0" y="78" text-anchor="middle" class="scene__label scene__label--mono">MOMENTUS</text>
+            </g>
+
+            <!-- AGV -->
+            <g transform="translate(840,478)">
+              <rect x="-30" y="-16" width="60" height="16" rx="4" fill="#9FB3A9" />
+              <rect x="-18" y="-26" width="36" height="10" rx="3" fill="var(--copper)" />
+              <circle cx="-18" cy="2" r="7" fill="#0B1712" />
+              <circle cx="18" cy="2" r="7" fill="#0B1712" />
+            </g>
+            <path class="scene__flow" d="M760,330 C795,390 815,440 840,462" />
+            <g class="scene__kw" transform="translate(840,430)">
+              <rect x="-22" y="-14" width="44" height="26" rx="13" /><text y="4" text-anchor="middle">7 kW</text>
+            </g>
+
+            <!-- floor status readout -->
+            <g transform="translate(1040,470)" class="scene__hud">
+              <rect x="-70" y="-46" width="140" height="92" rx="12" fill="rgba(11,23,18,0.85)"
+                stroke="var(--line-strong)" />
+              <text x="0" y="-22" text-anchor="middle" class="scene__label scene__label--mono">FLEET STATUS</text>
+              <circle cx="-46" cy="-2" r="4" fill="var(--volt)" class="scene__pulse-dot" />
+              <text x="-30" y="2" class="scene__label scene__label--mono scene__label--sm">2 units charging</text>
+              <text x="-46" y="24" class="scene__label scene__label--mono scene__label--sm">AssetPro 360 · live</text>
+            </g>
+
+            <defs>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0F241B" />
+                <stop offset="100%" stop-color="#07100C" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <figcaption>Maximus and Momentus share one indoor bay — solar‑offset power routes through AssetPro 360 to a
+            forklift and an AGV at once.</figcaption>
+        </figure>
+
+        <!-- ---------- AIRPORT SCENE ---------- -->
+        <figure class="scene" data-scene="airport">
+          <svg viewBox="0 0 1200 620" class="scene__svg" role="img"
+            aria-label="Cutaway illustration of an airport ramp with an Altus II charger powering a baggage tug and ground support cart, terminal and aircraft tail in the background">
+            <rect x="0" y="0" width="1200" height="620" fill="url(#skyGrad2)" />
+            <rect x="0" y="520" width="1200" height="100" fill="#101B15" />
+            <line x1="0" y1="521" x2="1200" y2="521" stroke="var(--line-strong)" stroke-width="1" />
+            <!-- tarmac markings -->
+            <line x1="0" y1="560" x2="1200" y2="560" stroke="#E08A4A" stroke-width="3" stroke-dasharray="24 20"
+              opacity="0.6" />
+
+            <!-- terminal silhouette -->
+            <rect x="60" y="230" width="360" height="220" rx="4" fill="#0F1B15" stroke="var(--line-strong)" />
+            <g opacity="0.55" stroke="var(--line-strong)">
+              <line x1="100" y1="260" x2="100" y2="440" />
+              <line x1="150" y1="260" x2="150" y2="440" />
+              <line x1="200" y1="260" x2="200" y2="440" />
+              <line x1="250" y1="260" x2="250" y2="440" />
+              <line x1="300" y1="260" x2="300" y2="440" />
+              <line x1="350" y1="260" x2="350" y2="440" />
+            </g>
+            <text x="240" y="215" text-anchor="middle" class="scene__label scene__label--mono">TERMINAL RAMP</text>
+
+            <!-- aircraft tail hint -->
+            <g transform="translate(1080,300)" opacity="0.85">
+              <path d="M0,120 L-14,0 L18,0 L4,120 Z" fill="#0F1B15" stroke="var(--line-strong)" />
+              <path d="M-14,0 L-70,-46 L-58,-46 L-6,0 Z" fill="#0F1B15" stroke="var(--line-strong)" />
+            </g>
+
+            <!-- Magnus flagship charger -->
+            <g transform="translate(640,320)">
+              <rect x="-30" y="-90" width="60" height="180" rx="8" fill="#1C3327" stroke="var(--volt)"
+                stroke-width="1.6" />
+              <rect x="-20" y="-72" width="40" height="30" rx="4" fill="#0B1712" />
+              <circle cx="0" cy="-57" r="4" fill="var(--volt)" class="scene__pulse-dot" />
+              <rect x="-22" y="-30" width="44" height="8" rx="4" fill="var(--copper)" opacity="0.8" />
+              <text x="0" y="112" text-anchor="middle" class="scene__label scene__label--mono">MAGNUS</text>
+            </g>
+
+            <!-- baggage tug + carts -->
+            <g transform="translate(500,470)">
+              <rect x="-34" y="-26" width="60" height="24" rx="4" fill="#EEF5F0" />
+              <circle cx="-20" cy="0" r="10" fill="#0B1712" stroke="#4C5C54" stroke-width="3" />
+              <circle cx="18" cy="0" r="10" fill="#0B1712" stroke="#4C5C54" stroke-width="3" />
+              <rect x="30" y="-14" width="34" height="14" rx="3" fill="#9FB3A9" />
+              <rect x="70" y="-14" width="34" height="14" rx="3" fill="#9FB3A9" />
+            </g>
+            <path class="scene__flow" d="M612,320 C570,380 545,430 520,452" />
+            <g class="scene__kw" transform="translate(520,420)">
+              <rect x="-24" y="-14" width="48" height="26" rx="13" /><text y="4" text-anchor="middle">18 kW</text>
+            </g>
+
+            <!-- GSE cart -->
+            <g transform="translate(800,478)">
+              <rect x="-28" y="-20" width="56" height="20" rx="4" fill="#9FB3A9" />
+              <rect x="-16" y="-30" width="32" height="10" rx="3" fill="var(--copper)" />
+              <circle cx="-16" cy="2" r="7" fill="#0B1712" />
+              <circle cx="16" cy="2" r="7" fill="#0B1712" />
+            </g>
+            <path class="scene__flow" d="M668,320 C720,380 760,440 800,462" />
+            <g class="scene__kw" transform="translate(800,430)">
+              <rect x="-22" y="-14" width="44" height="26" rx="13" /><text y="4" text-anchor="middle">14 kW</text>
+            </g>
+
+            <!-- grid feed -->
+            <rect x="1000" y="475" width="40" height="45" rx="4" fill="#16201C" stroke="var(--line-strong)" />
+            <text x="1020" y="466" text-anchor="middle" class="scene__label scene__label--mono">GRID · 60 kW</text>
+            <line x1="1020" y1="475" x2="670" y2="330" stroke="#4C5C54" stroke-width="2" stroke-dasharray="2 6" />
+
+            <!-- HUD -->
+            <g transform="translate(220,480)" class="scene__hud">
+              <rect x="-90" y="-46" width="180" height="92" rx="12" fill="rgba(11,23,18,0.85)"
+                stroke="var(--line-strong)" />
+              <text x="0" y="-22" text-anchor="middle" class="scene__label scene__label--mono">RAMP STATUS</text>
+              <circle cx="-66" cy="-2" r="4" fill="var(--volt)" class="scene__pulse-dot" />
+              <text x="-50" y="2" class="scene__label scene__label--mono scene__label--sm">Turnaround on schedule</text>
+              <text x="-66" y="24" class="scene__label scene__label--mono scene__label--sm">AssetPro 360 · live</text>
+            </g>
+
+            <defs>
+              <linearGradient id="skyGrad2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#132A20" />
+                <stop offset="100%" stop-color="#07100C" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <figcaption>One Magnus pedestal on the ramp keeps a baggage tug and a GSE cart both moving between
+            turnarounds.</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <section class="bg-ink-900 px-6 py-24 text-[#EEF5F0] lg:px-8" id="indoor-outdoor" aria-labelledby="env-heading">
+      <div class="mx-auto max-w-[1240px]">
+        <div class="mb-12 max-w-2xl">
+          <p class="font-mono mb-4 inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt">
+            <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
+            Environments
+          </p>
+          <h2 id="env-heading" class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Indoor warehouse
+            chargers vs outdoor GSE chargers.</h2>
+          <p class="mt-4 text-mist">Match the industrial battery charger to the site—not the other way around.</p>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-2">
+          <article class="rounded-[2rem] bg-ink-850 p-8 ring-1 ring-white/10">
+            <img src="../product-images/Maximus/MAXIMUS.png" alt="Maximus indoor high-capacity forklift battery charger"
+              class="mb-6 mx-auto h-48 object-contain" width="400" height="300" loading="lazy" />
+            <h3 class="font-display text-2xl font-semibold text-volt">Indoor material handling</h3>
+            <p class="mt-3 text-sm leading-relaxed text-mist">Maximus and Momentus serve warehouses, cold storage, and
+              distribution centers where dual- or single-port forklift battery chargers need high uptime, wall or
+              pedestal mounts, and AssetPro 360 visibility.</p>
+            <ul class="mt-4 space-y-2 text-sm text-mist">
+              <li>· High-throughput MHE fleets</li>
+              <li>· 3PL and manufacturing floors</li>
+              <li>· Controlled electrical infrastructure</li>
+            </ul>
+          </article>
+          <article class="rounded-[2rem] bg-ink-850 p-8 ring-1 ring-white/10">
+            <img src="../product-images/Altus%20II/ALTUS%20II.14.png"
+              alt="Altus II outdoor dual-port eGSE airport charger" class="mb-6 mx-auto h-48 object-contain" width="400"
+              height="300" loading="lazy" />
+            <h3 class="font-display text-2xl font-semibold text-volt">Outdoor eGSE &amp; yards</h3>
+            <p class="mt-3 text-sm leading-relaxed text-mist">Altus II is an outdoor-rated dual-port GSE charger for
+              airports, ports, and exposed fleet yards—with optional Level 2 EV port and intelligent power sharing for
+              constrained infrastructure.</p>
+            <ul class="mt-4 space-y-2 text-sm text-mist">
+              <li>· Airport ground support equipment</li>
+              <li>· Port and outdoor fleet yards</li>
+              <li>· Weather-exposed apron operations</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="border-b border-black/5 bg-paper-dim py-5" aria-label="Trusted across industries">
       <div class="mx-auto flex max-w-[1240px] flex-wrap items-center gap-4 px-6 lg:px-8">
         <span class="font-mono text-[11px] uppercase tracking-wider text-volt-dim">Deployed across</span>
         <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-[#4C5C54]">
-          <span>Airports</span><span>Warehouses</span><span>Ports</span><span>Ground Support</span><span>Material Handling</span><span>Last-Mile Fleets</span>
+          <span>Airports</span><span>Warehouses</span><span>Ports</span><span>Ground Support</span><span>Material
+            Handling</span><span>Last-Mile Fleets</span>
         </div>
       </div>
     </section>
 
-    <!-- FLAGSHIP SPOTLIGHT — product cutout -->
     <section class="relative grid min-h-[560px] lg:grid-cols-2" id="spotlight">
       <div class="relative flex min-h-[320px] items-center justify-center overflow-hidden bg-ink-900 p-8 sm:p-12">
-        <img src="../product-images/Momentus/Momentus.2100.png" alt="Momentus industrial battery charger product view" class="relative z-10 max-h-[420px] w-full object-contain" width="800" height="800" />
-        <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(92,242,160,0.12),transparent_55%)]" aria-hidden="true"></div>
+        <img src="../product-images/Momentus/Momentus.2100.png" alt="Momentus industrial battery charger product view"
+          class="relative z-10 max-h-[420px] w-full object-contain" width="800" height="800" />
+        <div
+          class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(92,242,160,0.12),transparent_55%)]"
+          aria-hidden="true"></div>
       </div>
       <div class="flex flex-col justify-center bg-ink-900 px-8 py-16 text-[#EEF5F0] sm:px-12 lg:px-16">
         <p class="font-mono mb-4 inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt">
@@ -549,64 +1067,138 @@
         </p>
         <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Meet Momentus.</h2>
         <p class="mt-4 max-w-md leading-relaxed text-mist">
-          Mid-level material handling charging with smart diagnostics, fast install paths, and AssetPro 360 connectivity — built for warehouses that cannot wait on a bay.
+          Mid-level material handling charging with smart diagnostics, fast install paths, and AssetPro 360 connectivity
+          — built for warehouses that cannot wait on a bay.
         </p>
         <ul class="mt-6 flex flex-wrap gap-2">
-          <li class="rounded-full border border-white/15 px-3 py-1.5 text-xs font-semibold text-white/85">Smart diagnostics</li>
-          <li class="rounded-full border border-white/15 px-3 py-1.5 text-xs font-semibold text-white/85">Mixed chemistries</li>
-          <li class="rounded-full border border-white/15 px-3 py-1.5 text-xs font-semibold text-white/85">Net Zero contributor</li>
+          <li class="rounded-full border border-white/15 px-3 py-1.5 text-xs font-semibold text-white/85">Smart
+            diagnostics</li>
+          <li class="rounded-full border border-white/15 px-3 py-1.5 text-xs font-semibold text-white/85">Mixed
+            chemistries</li>
+          <li class="rounded-full border border-white/15 px-3 py-1.5 text-xs font-semibold text-white/85">Net Zero
+            contributor</li>
         </ul>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#p-momentus" class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-6 py-3 text-sm font-semibold text-[#04150C]">See full specs</a>
-          <a href="#contact" class="rounded-full border border-white/35 px-6 py-3 text-sm font-semibold text-white">Request a quote</a>
+          <a href="#p-momentus"
+            class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-6 py-3 text-sm font-semibold text-[#04150C]">See
+            full specs</a>
+          <a href="#contact"
+            class="rounded-full border border-white/35 px-6 py-3 text-sm font-semibold text-white">Request a quote</a>
         </div>
       </div>
     </section>
 
-    <!-- WHY -->
-    <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="why">
-      <div class="mb-14 max-w-xl">
-        <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
-          <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
-          Why Minit Charger
-        </p>
-        <h2 class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Engineered advantages, not marketing checkboxes.</h2>
-        <p class="mt-4 text-[17px] leading-relaxed text-[#4C5C54]">Every charger ships with the diagnostics, efficiency, and installation flexibility your fleet actually runs on.</p>
-      </div>
+    <section class="bg-[#07100C] py-24 border-t border-white/5">
+      <div class="mx-auto max-w-[1400px] px-6 lg:px-8">
 
-      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-        <article class="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-black/5 md:col-span-2 lg:col-span-2 lg:row-span-2 lg:p-10">
-          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-ink-900 text-volt">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <!-- 5 Angles -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <!-- Angle 1 -->
+          <div class="flex flex-col items-center gap-3">
+            <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden flex items-center justify-center">
+              <img src="../new_images/angle_1_hr.png" alt="Front View" class="w-full h-full object-cover" />
+            </div>
+            <span class="font-mono text-xs uppercase tracking-wider text-mist">Front View</span>
           </div>
-          <h3 class="font-display text-2xl font-semibold">Smart technology &amp; diagnostics</h3>
-          <p class="mt-3 leading-relaxed text-[#4C5C54]">On-screen diagnostics and remote monitoring surface issues before they become downtime — every unit reports back to AssetPro 360 in real time.</p>
-        </article>
-        <article class="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-black/5">
-          <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-paper-dim text-volt-dim">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <!-- Angle 2 -->
+          <div class="flex flex-col items-center gap-3">
+            <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden flex items-center justify-center">
+              <img src="../new_images/angle_2_hr.png" alt="45° View" class="w-full h-full object-cover" />
+            </div>
+            <span class="font-mono text-xs uppercase tracking-wider text-mist">45° View</span>
           </div>
-          <h3 class="font-display text-lg font-semibold">Eco-friendly efficiency</h3>
-          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Optimized charge curves reduce waste and extend battery life across lithium, lead-acid, and AGM.</p>
-        </article>
-        <article class="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-black/5">
-          <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-paper-dim text-volt-dim">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 20V10l8-6 8 6v10M9 20v-6h6v6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <!-- Angle 3 -->
+          <div class="flex flex-col items-center gap-3">
+            <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden flex items-center justify-center">
+              <img src="../new_images/angle_3_hr.png" alt="Side View" class="w-full h-full object-cover" />
+            </div>
+            <span class="font-mono text-xs uppercase tracking-wider text-mist">Side View</span>
           </div>
-          <h3 class="font-display text-lg font-semibold">Versatile installation</h3>
-          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Wall-mount, pedestal, or fleet-bay configurations for outdoor extremes and tight indoor footprints.</p>
-        </article>
-        <article class="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-black/5 md:col-span-2 lg:col-span-2">
-          <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-paper-dim text-volt-dim">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="1.5"/></svg>
+          <!-- Angle 4 -->
+          <div class="flex flex-col items-center gap-3">
+            <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden flex items-center justify-center">
+              <img src="../new_images/angle_4_hr.png" alt="Close-Up" class="w-full h-full object-cover" />
+            </div>
+            <span class="font-mono text-xs uppercase tracking-wider text-mist">Close-Up</span>
           </div>
-          <h3 class="font-display text-lg font-semibold">Comprehensive coverage</h3>
-          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">From compact LSEV chargers to dual-port high-capacity systems — one vendor for your mixed fleet.</p>
-        </article>
+          <!-- Angle 5 -->
+          <div class="flex flex-col items-center gap-3">
+            <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden flex items-center justify-center">
+              <img src="../new_images/angle_5_hr.png" alt="Top Isometric" class="w-full h-full object-cover" />
+            </div>
+            <span class="font-mono text-xs uppercase tracking-wider text-mist">Top Isometric</span>
+          </div>
+        </div>
+
+        <!-- Features Row -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-white/10">
+          <!-- Feature 1 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full border border-volt/30 flex items-center justify-center text-volt">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                </path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-1">Built for Performance</h4>
+              <p class="text-white/60 text-sm">Robust design for demanding environments</p>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full border border-volt/30 flex items-center justify-center text-volt">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-1">Future Ready</h4>
+              <p class="text-white/60 text-sm">Scalable, upgradeable, and built to evolve</p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full border border-volt/30 flex items-center justify-center text-volt">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-1">Global Standards</h4>
+              <p class="text-white/60 text-sm">Compliant with international safety norms</p>
+            </div>
+          </div>
+          <!-- Feature 4 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full border border-volt/30 flex items-center justify-center text-volt">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-1">Sustainable Impact</h4>
+              <p class="text-white/60 text-sm">Driving towards a cleaner, greener planet</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- PRODUCTS -->
     <section class="bg-paper-dim py-24" id="products">
       <div class="mx-auto max-w-[1240px] px-6 lg:px-8">
         <div class="mb-10 max-w-xl">
@@ -614,66 +1206,121 @@
             <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
             Product line
           </p>
-          <h2 class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Cutting-edge charging solutions, by use case.</h2>
-          <p class="mt-4 text-[17px] leading-relaxed text-[#4C5C54]">Purpose-built systems designed for efficiency and reliability across your operation.</p>
+          <h2 class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Cutting-edge charging
+            solutions, by use case.</h2>
+          <p class="mt-4 text-[17px] leading-relaxed text-[#4C5C54]">Purpose-built systems designed for efficiency and
+            reliability across your operation.</p>
         </div>
 
         <nav class="mb-14 flex flex-wrap gap-2" aria-label="Jump to product">
-          <a href="#p-magnus" class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Magnus</a>
-          <a href="#p-altus" class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Altus II</a>
-          <a href="#p-maximus" class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Maximus</a>
-          <a href="#p-momentus" class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Momentus</a>
-          <a href="#p-durus" class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Durus</a>
-          <a href="#p-celltrac" class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">CellTrac</a>
-          <a href="#p-pharus" class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Pharus</a>
-          <a href="#p-mobile" class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Mobile Unit</a>
-          <a href="#assetpro" class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">AssetPro 360</a>
+          <a href="#p-magnus"
+            class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Magnus</a>
+          <a href="#p-altus"
+            class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Altus
+            II</a>
+          <a href="#p-maximus"
+            class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Maximus</a>
+          <a href="#p-momentus"
+            class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Momentus</a>
+          <a href="#p-durus"
+            class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Durus</a>
+          <a href="#p-celltrac"
+            class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">CellTrac</a>
+          <a href="#p-pharus"
+            class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Pharus</a>
+          <a href="#p-mobile"
+            class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">Mobile
+            Unit</a>
+          <a href="#assetpro"
+            class="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/5 hover:ring-volt-dim">AssetPro
+            360</a>
         </nav>
 
         <!-- Magnus -->
-        <article class="mb-16 grid items-center gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:grid-cols-2 lg:p-10" id="p-magnus">
+        <article
+          class="mb-16 grid items-center gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:grid-cols-2 lg:p-10"
+          id="p-magnus">
           <div class="relative overflow-hidden rounded-3xl bg-ink-900">
-            <img src="../product-images/Ultimate/9.1918.png" alt="Magnus flagship outdoor dual-port charging pedestal" class="mx-auto aspect-[4/3] w-full object-contain p-8" width="900" height="675" loading="lazy" />
-            <span class="absolute left-4 top-4 rounded-full bg-volt px-3 py-1 text-xs font-bold text-ink-950">Flagship · Outdoor</span>
+            <img src="../product-images/Ultimate/9.1918.png" alt="Magnus flagship outdoor dual-port charging pedestal"
+              class="mx-auto aspect-[4/3] w-full object-contain p-8" width="900" height="675" loading="lazy" />
+            <span class="absolute left-4 top-4 rounded-full bg-volt px-3 py-1 text-xs font-bold text-ink-950">Flagship ·
+              Outdoor</span>
           </div>
           <div>
-            <span class="font-mono text-xs uppercase tracking-wider text-volt-dim">Flagship · Outdoor fast charging</span>
+            <span class="font-mono text-xs uppercase tracking-wider text-volt-dim">Flagship · Outdoor fast
+              charging</span>
             <h3 class="font-display mt-2 text-3xl font-semibold">Magnus</h3>
-            <p class="mt-3 leading-relaxed text-[#4C5C54]">Our largest outdoor pedestal for high-traffic hubs — dual ports, touchscreen-ready diagnostics, and a build tough enough for decks, structures, and open-air ramps.</p>
+            <p class="mt-3 leading-relaxed text-[#4C5C54]">Our largest outdoor pedestal for high-traffic hubs — dual
+              ports, touchscreen-ready diagnostics, and a build tough enough for decks, structures, and open-air ramps.
+            </p>
             <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
-              <div><dt class="text-mist">Ports</dt><dd class="font-semibold">Dual · high-traffic</dd></div>
-              <div><dt class="text-mist">Environment</dt><dd class="font-semibold">Outdoor, all-weather</dd></div>
-              <div><dt class="text-mist">Display</dt><dd class="font-semibold">Full diagnostics UI</dd></div>
-              <div><dt class="text-mist">Connectivity</dt><dd class="font-semibold">AssetPro 360 cloud</dd></div>
+              <div>
+                <dt class="text-mist">Ports</dt>
+                <dd class="font-semibold">Dual · high-traffic</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Environment</dt>
+                <dd class="font-semibold">Outdoor, all-weather</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Display</dt>
+                <dd class="font-semibold">Full diagnostics UI</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Connectivity</dt>
+                <dd class="font-semibold">AssetPro 360 cloud</dd>
+              </div>
             </dl>
             <ul class="mt-5 flex flex-wrap gap-2">
               <li class="rounded-full bg-paper-dim px-3 py-1.5 text-xs font-semibold">Dual independent ports</li>
               <li class="rounded-full bg-paper-dim px-3 py-1.5 text-xs font-semibold">Touchscreen diagnostics</li>
               <li class="rounded-full bg-paper-dim px-3 py-1.5 text-xs font-semibold">Net Zero contributor</li>
             </ul>
-            <p class="mt-5 text-sm"><b>Used in:</b> High-traffic outdoor hubs · Parking structures · Rooftop &amp; open-air decks</p>
+            <p class="mt-5 text-sm"><b>Used in:</b> High-traffic outdoor hubs · Parking structures · Rooftop &amp;
+              open-air decks</p>
             <div class="mt-6 flex flex-wrap gap-3">
-              <a href="#contact" class="rounded-full border border-volt-dim px-5 py-2.5 text-sm font-semibold text-volt-dim">Talk to sales</a>
-              <a href="#contact" class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-5 py-2.5 text-sm font-semibold text-[#04150C]">Request a quote</a>
+              <a href="#contact"
+                class="rounded-full border border-volt-dim px-5 py-2.5 text-sm font-semibold text-volt-dim">Talk to
+                sales</a>
+              <a href="#contact"
+                class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-5 py-2.5 text-sm font-semibold text-[#04150C]">Request
+                a quote</a>
             </div>
           </div>
         </article>
 
         <!-- Altus II -->
-        <article class="mb-16 grid items-center gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:grid-cols-2 lg:p-10" id="p-altus">
+        <article
+          class="mb-16 grid items-center gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:grid-cols-2 lg:p-10"
+          id="p-altus">
           <div class="relative overflow-hidden rounded-3xl bg-ink-900">
-            <img src="../product-images/Altus%20II/ALTUS%20II.14.png" alt="Altus II outdoor dual-port eGSE charger" class="mx-auto aspect-[4/3] w-full object-contain p-8" width="900" height="675" loading="lazy" />
-            <span class="absolute left-4 top-4 rounded-full bg-volt px-3 py-1 text-xs font-bold text-ink-950">Outdoor rated</span>
+            <img src="../product-images/Altus%20II/ALTUS%20II.14.png" alt="Altus II outdoor dual-port eGSE charger"
+              class="mx-auto aspect-[4/3] w-full object-contain p-8" width="900" height="675" loading="lazy" />
+            <span class="absolute left-4 top-4 rounded-full bg-volt px-3 py-1 text-xs font-bold text-ink-950">Outdoor
+              rated</span>
           </div>
           <div>
             <span class="font-mono text-xs uppercase tracking-wider text-volt-dim">Outdoor · EV-ready</span>
             <h3 class="font-display mt-2 text-3xl font-semibold">Altus II</h3>
-            <p class="mt-3 leading-relaxed text-[#4C5C54]">Outdoor dual-port eGSE charger with optional Level 2 EV port, intelligent power sharing, and weather-minded construction for aprons, yards, and exposed sites.</p>
+            <p class="mt-3 leading-relaxed text-[#4C5C54]">Outdoor dual-port eGSE charger with optional Level 2 EV port,
+              intelligent power sharing, and weather-minded construction for aprons, yards, and exposed sites.</p>
             <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
-              <div><dt class="text-mist">Ports</dt><dd class="font-semibold">Dual · ~20 kW each</dd></div>
-              <div><dt class="text-mist">Environment</dt><dd class="font-semibold">Outdoor rated</dd></div>
-              <div><dt class="text-mist">Battery support</dt><dd class="font-semibold">Li-ion / Lead-acid / AGM</dd></div>
-              <div><dt class="text-mist">Connectivity</dt><dd class="font-semibold">AssetPro 360 cloud</dd></div>
+              <div>
+                <dt class="text-mist">Ports</dt>
+                <dd class="font-semibold">Dual · ~20 kW each</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Environment</dt>
+                <dd class="font-semibold">Outdoor rated</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Battery support</dt>
+                <dd class="font-semibold">Li-ion / Lead-acid / AGM</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Connectivity</dt>
+                <dd class="font-semibold">AssetPro 360 cloud</dd>
+              </div>
             </dl>
             <ul class="mt-5 flex flex-wrap gap-2">
               <li class="rounded-full bg-paper-dim px-3 py-1.5 text-xs font-semibold">On-screen diagnostics</li>
@@ -682,27 +1329,48 @@
             </ul>
             <p class="mt-5 text-sm"><b>Used in:</b> Airports · Ports · Outdoor fleet yards</p>
             <div class="mt-6 flex flex-wrap gap-3">
-              <a href="#contact" class="rounded-full border border-volt-dim px-5 py-2.5 text-sm font-semibold text-volt-dim">Talk to sales</a>
-              <a href="#contact" class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-5 py-2.5 text-sm font-semibold text-[#04150C]">Request a quote</a>
+              <a href="#contact"
+                class="rounded-full border border-volt-dim px-5 py-2.5 text-sm font-semibold text-volt-dim">Talk to
+                sales</a>
+              <a href="#contact"
+                class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-5 py-2.5 text-sm font-semibold text-[#04150C]">Request
+                a quote</a>
             </div>
           </div>
         </article>
 
         <!-- Maximus -->
-        <article class="mb-16 grid items-center gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:grid-cols-2 lg:p-10" id="p-maximus">
+        <article
+          class="mb-16 grid items-center gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:grid-cols-2 lg:p-10"
+          id="p-maximus">
           <div class="relative overflow-hidden rounded-3xl bg-ink-900 lg:order-2">
-            <img src="../product-images/Maximus/MAXIMUS.png" alt="Maximus high-capacity indoor dual-port charger" class="mx-auto aspect-[4/3] w-full object-contain p-8" width="900" height="675" loading="lazy" />
-            <span class="absolute left-4 top-4 rounded-full bg-volt px-3 py-1 text-xs font-bold text-ink-950">Indoor · High-capacity</span>
+            <img src="../product-images/Maximus/MAXIMUS.png" alt="Maximus high-capacity indoor dual-port charger"
+              class="mx-auto aspect-[4/3] w-full object-contain p-8" width="900" height="675" loading="lazy" />
+            <span class="absolute left-4 top-4 rounded-full bg-volt px-3 py-1 text-xs font-bold text-ink-950">Indoor ·
+              High-capacity</span>
           </div>
           <div class="lg:order-1">
             <span class="font-mono text-xs uppercase tracking-wider text-volt-dim">Indoor · High-capacity</span>
             <h3 class="font-display mt-2 text-3xl font-semibold">Maximus</h3>
-            <p class="mt-3 leading-relaxed text-[#4C5C54]">Dual-port indoor high-capacity charger sized for large-scale warehouse and distribution fleets that cannot bottleneck at the bay.</p>
+            <p class="mt-3 leading-relaxed text-[#4C5C54]">Dual-port indoor high-capacity charger sized for large-scale
+              warehouse and distribution fleets that cannot bottleneck at the bay.</p>
             <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
-              <div><dt class="text-mist">Ports</dt><dd class="font-semibold">Dual</dd></div>
-              <div><dt class="text-mist">Environment</dt><dd class="font-semibold">Indoor</dd></div>
-              <div><dt class="text-mist">Battery support</dt><dd class="font-semibold">Li-ion / Lead-acid / AGM</dd></div>
-              <div><dt class="text-mist">Connectivity</dt><dd class="font-semibold">AssetPro 360 cloud</dd></div>
+              <div>
+                <dt class="text-mist">Ports</dt>
+                <dd class="font-semibold">Dual</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Environment</dt>
+                <dd class="font-semibold">Indoor</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Battery support</dt>
+                <dd class="font-semibold">Li-ion / Lead-acid / AGM</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Connectivity</dt>
+                <dd class="font-semibold">AssetPro 360 cloud</dd>
+              </div>
             </dl>
             <ul class="mt-5 flex flex-wrap gap-2">
               <li class="rounded-full bg-paper-dim px-3 py-1.5 text-xs font-semibold">High-capacity delivery</li>
@@ -711,32 +1379,57 @@
             </ul>
             <p class="mt-5 text-sm"><b>Used in:</b> Warehouses · Distribution centers · Large indoor fleets</p>
             <div class="mt-6 flex flex-wrap gap-3">
-              <a href="#contact" class="rounded-full border border-volt-dim px-5 py-2.5 text-sm font-semibold text-volt-dim">Talk to sales</a>
-              <a href="#contact" class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-5 py-2.5 text-sm font-semibold text-[#04150C]">Request a quote</a>
+              <a href="#contact"
+                class="rounded-full border border-volt-dim px-5 py-2.5 text-sm font-semibold text-volt-dim">Talk to
+                sales</a>
+              <a href="#contact"
+                class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-5 py-2.5 text-sm font-semibold text-[#04150C]">Request
+                a quote</a>
             </div>
           </div>
         </article>
 
         <!-- Momentus -->
-        <article class="mb-16 grid items-center gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:grid-cols-2 lg:p-10" id="p-momentus">
+        <article
+          class="mb-16 grid items-center gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:grid-cols-2 lg:p-10"
+          id="p-momentus">
           <div class="relative overflow-hidden rounded-3xl bg-ink-900">
-            <img src="../product-images/Momentus/Momentus.2100.png" alt="Momentus mid-level forklift battery charger" class="mx-auto aspect-[4/3] w-full object-contain p-8" width="900" height="675" loading="lazy" />
-            <span class="absolute left-4 top-4 rounded-full bg-volt px-3 py-1 text-xs font-bold text-ink-950">Mid-level · Fast install</span>
+            <img src="../product-images/Momentus/Momentus.2100.png" alt="Momentus mid-level forklift battery charger"
+              class="mx-auto aspect-[4/3] w-full object-contain p-8" width="900" height="675" loading="lazy" />
+            <span class="absolute left-4 top-4 rounded-full bg-volt px-3 py-1 text-xs font-bold text-ink-950">Mid-level
+              · Fast install</span>
           </div>
           <div>
             <span class="font-mono text-xs uppercase tracking-wider text-volt-dim">Mid-level · Fast install</span>
             <h3 class="font-display mt-2 text-3xl font-semibold">Momentus</h3>
-            <p class="mt-3 leading-relaxed text-[#4C5C54]">Reliable mid-level material handling charger balancing performance, install speed, and cost for standard warehouse fleets.</p>
+            <p class="mt-3 leading-relaxed text-[#4C5C54]">Reliable mid-level material handling charger balancing
+              performance, install speed, and cost for standard warehouse fleets.</p>
             <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
-              <div><dt class="text-mist">Form</dt><dd class="font-semibold">Wall / pedestal</dd></div>
-              <div><dt class="text-mist">Display</dt><dd class="font-semibold">Smart diagnostics</dd></div>
-              <div><dt class="text-mist">Battery support</dt><dd class="font-semibold">Li-ion / Lead-acid / AGM</dd></div>
-              <div><dt class="text-mist">Connectivity</dt><dd class="font-semibold">AssetPro 360</dd></div>
+              <div>
+                <dt class="text-mist">Form</dt>
+                <dd class="font-semibold">Wall / pedestal</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Display</dt>
+                <dd class="font-semibold">Smart diagnostics</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Battery support</dt>
+                <dd class="font-semibold">Li-ion / Lead-acid / AGM</dd>
+              </div>
+              <div>
+                <dt class="text-mist">Connectivity</dt>
+                <dd class="font-semibold">AssetPro 360</dd>
+              </div>
             </dl>
             <p class="mt-5 text-sm"><b>Used in:</b> Warehouses · Material handling fleets</p>
             <div class="mt-6 flex flex-wrap gap-3">
-              <a href="#contact" class="rounded-full border border-volt-dim px-5 py-2.5 text-sm font-semibold text-volt-dim">Talk to sales</a>
-              <a href="#contact" class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-5 py-2.5 text-sm font-semibold text-[#04150C]">Request a quote</a>
+              <a href="#contact"
+                class="rounded-full border border-volt-dim px-5 py-2.5 text-sm font-semibold text-volt-dim">Talk to
+                sales</a>
+              <a href="#contact"
+                class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-5 py-2.5 text-sm font-semibold text-[#04150C]">Request
+                a quote</a>
             </div>
           </div>
         </article>
@@ -745,42 +1438,55 @@
         <div class="grid gap-8 lg:grid-cols-2">
           <article class="rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:p-8" id="p-durus">
             <div class="mb-6 overflow-hidden rounded-3xl bg-ink-900">
-              <img src="../product-images/Durus/DCXC.png" alt="Durus compact charger for low-speed electric vehicles" class="mx-auto aspect-video w-full object-contain p-6" width="800" height="450" loading="lazy" />
+              <img src="../product-images/Durus/DCXC.png" alt="Durus compact charger for low-speed electric vehicles"
+                class="mx-auto aspect-video w-full object-contain p-6" width="800" height="450" loading="lazy" />
             </div>
             <span class="font-mono text-xs uppercase tracking-wider text-volt-dim">Compact · Mobility</span>
             <h3 class="font-display mt-2 text-2xl font-semibold">Durus</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Compact charging for low-speed electric vehicles and lighter industrial mobility fleets.</p>
-            <a href="#contact" class="mt-5 inline-flex text-sm font-semibold text-volt-dim hover:text-ink-900">Request a quote →</a>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Compact charging for low-speed electric vehicles and
+              lighter industrial mobility fleets.</p>
+            <a href="#contact" class="mt-5 inline-flex text-sm font-semibold text-volt-dim hover:text-ink-900">Request a
+              quote →</a>
           </article>
 
           <article class="rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:p-8" id="p-celltrac">
             <div class="mb-6 overflow-hidden rounded-3xl bg-ink-900">
-              <img src="../product-images/Cell%20trac/Render.2055.png" alt="CellTrac onboard smart battery management module" class="mx-auto aspect-video w-full object-contain p-6" width="800" height="450" loading="lazy" />
+              <img src="../product-images/Cell%20trac/Render.2055.png"
+                alt="CellTrac onboard smart battery management module"
+                class="mx-auto aspect-video w-full object-contain p-6" width="800" height="450" loading="lazy" />
             </div>
             <span class="font-mono text-xs uppercase tracking-wider text-volt-dim">Onboard · Telematics</span>
             <h3 class="font-display mt-2 text-2xl font-semibold">CellTrac</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Onboard BMS with GPS, SoC monitoring, alarms, and cloud connectivity for per-vehicle battery telemetry.</p>
-            <a href="#contact" class="mt-5 inline-flex text-sm font-semibold text-volt-dim hover:text-ink-900">Request a quote →</a>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Onboard BMS with GPS, SoC monitoring, alarms, and
+              cloud connectivity for per-vehicle battery telemetry.</p>
+            <a href="#contact" class="mt-5 inline-flex text-sm font-semibold text-volt-dim hover:text-ink-900">Request a
+              quote →</a>
           </article>
 
           <article class="rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:p-8" id="p-pharus">
             <div class="mb-6 overflow-hidden rounded-3xl bg-ink-900">
-              <img src="../product-images/Vital/Vital.png" alt="Pharus onboard monitoring module" class="mx-auto aspect-video w-full object-contain p-6" width="800" height="450" loading="lazy" />
+              <img src="../product-images/Vital/Vital.png" alt="Pharus onboard monitoring module"
+                class="mx-auto aspect-video w-full object-contain p-6" width="800" height="450" loading="lazy" />
             </div>
             <span class="font-mono text-xs uppercase tracking-wider text-volt-dim">Onboard · Monitoring</span>
             <h3 class="font-display mt-2 text-2xl font-semibold">Pharus</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Ruggedized onboard monitoring with at-a-glance status — pairs with CellTrac for fleets standardizing one monitoring layer.</p>
-            <a href="#contact" class="mt-5 inline-flex text-sm font-semibold text-volt-dim hover:text-ink-900">Request a quote →</a>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Ruggedized onboard monitoring with at-a-glance status
+              — pairs with CellTrac for fleets standardizing one monitoring layer.</p>
+            <a href="#contact" class="mt-5 inline-flex text-sm font-semibold text-volt-dim hover:text-ink-900">Request a
+              quote →</a>
           </article>
 
           <article class="rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 lg:p-8" id="p-mobile">
             <div class="mb-6 overflow-hidden rounded-3xl bg-ink-900">
-              <img src="../product-images/Mobilus/3D%20MODLE.10.png" alt="Mobile charging unit portable generator" class="mx-auto aspect-video w-full object-contain p-6" width="800" height="450" loading="lazy" />
+              <img src="../product-images/Mobilus/3D%20MODLE.10.png" alt="Mobile charging unit portable generator"
+                class="mx-auto aspect-video w-full object-contain p-6" width="800" height="450" loading="lazy" />
             </div>
             <span class="font-mono text-xs uppercase tracking-wider text-volt-dim">Portable · Backup power</span>
             <h3 class="font-display mt-2 text-2xl font-semibold">Mobile Charging Unit</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Self-contained portable charging for temporary yards, bridge power during installs, and sites without fixed infrastructure yet.</p>
-            <a href="#contact" class="mt-5 inline-flex text-sm font-semibold text-volt-dim hover:text-ink-900">Request a quote →</a>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Self-contained portable charging for temporary yards,
+              bridge power during installs, and sites without fixed infrastructure yet.</p>
+            <a href="#contact" class="mt-5 inline-flex text-sm font-semibold text-volt-dim hover:text-ink-900">Request a
+              quote →</a>
           </article>
         </div>
 
@@ -792,7 +1498,8 @@
               Choosing a charger
             </p>
             <h3 class="font-display mt-2 text-2xl font-semibold">Altus II, Maximus, or Momentus?</h3>
-            <p class="mt-2 max-w-2xl text-[#4C5C54]">All report into AssetPro 360 — the difference is environment and scale.</p>
+            <p class="mt-2 max-w-2xl text-[#4C5C54]">All report into AssetPro 360 — the difference is environment and
+              scale.</p>
           </div>
           <div class="overflow-x-auto">
             <table class="min-w-full text-left text-sm">
@@ -806,175 +1513,71 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-black/5">
-                <tr><td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-10">Setting</td><td class="px-4 py-4">Outdoor</td><td class="px-4 py-4">Indoor</td><td class="px-4 py-4">Indoor</td><td class="px-4 py-4 pr-6 lg:pr-10">Outdoor flagship</td></tr>
-                <tr><td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-10">Ports</td><td class="px-4 py-4">Dual</td><td class="px-4 py-4">Dual</td><td class="px-4 py-4">Single / mid</td><td class="px-4 py-4 pr-6 lg:pr-10">Dual high-traffic</td></tr>
-                <tr><td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-10">Best for</td><td class="px-4 py-4">GSE aprons</td><td class="px-4 py-4">Large warehouses</td><td class="px-4 py-4">Standard MHE</td><td class="px-4 py-4 pr-6 lg:pr-10">Decks &amp; hubs</td></tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-10">Setting</td>
+                  <td class="px-4 py-4">Outdoor</td>
+                  <td class="px-4 py-4">Indoor</td>
+                  <td class="px-4 py-4">Indoor</td>
+                  <td class="px-4 py-4 pr-6 lg:pr-10">Outdoor flagship</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-10">Ports</td>
+                  <td class="px-4 py-4">Dual</td>
+                  <td class="px-4 py-4">Dual</td>
+                  <td class="px-4 py-4">Single / mid</td>
+                  <td class="px-4 py-4 pr-6 lg:pr-10">Dual high-traffic</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-10">Best for</td>
+                  <td class="px-4 py-4">GSE aprons</td>
+                  <td class="px-4 py-4">Large warehouses</td>
+                  <td class="px-4 py-4">Standard MHE</td>
+                  <td class="px-4 py-4 pr-6 lg:pr-10">Decks &amp; hubs</td>
+                </tr>
               </tbody>
             </table>
           </div>
         </div>
 
         <!-- AssetPro callout -->
-        <a href="#assetpro" class="mt-10 flex items-center justify-between gap-6 rounded-[2rem] bg-ink-900 px-8 py-10 text-[#EEF5F0] transition hover:bg-ink-850">
+        <a href="#assetpro"
+          class="mt-10 flex items-center justify-between gap-6 rounded-[2rem] bg-ink-900 px-8 py-10 text-[#EEF5F0] transition hover:bg-ink-850">
           <div>
-            <span class="inline-block rounded-full bg-copper/20 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-copper">Platform</span>
-            <h3 class="font-display mt-3 text-2xl font-semibold sm:text-3xl">AssetPro 360 — the layer that connects every unit</h3>
-            <p class="mt-2 max-w-2xl text-mist">Real-time data, analytics, and proactive insights across your whole Minit Charger fleet.</p>
+            <span
+              class="inline-block rounded-full bg-copper/20 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-copper">Platform</span>
+            <h3 class="font-display mt-3 text-2xl font-semibold sm:text-3xl">AssetPro 360 — the layer that connects
+              every unit</h3>
+            <p class="mt-2 max-w-2xl text-mist">Real-time data, analytics, and proactive insights across your whole
+              Minit Charger fleet.</p>
           </div>
-          <span class="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/20 text-volt sm:flex" aria-hidden="true">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span
+            class="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/20 text-volt sm:flex"
+            aria-hidden="true">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
           </span>
         </a>
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="process">
-      <div class="mb-14 max-w-xl">
-        <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
-          <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
-          How it works
-        </p>
-        <h2 class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">From first call to fully installed.</h2>
-        <p class="mt-4 text-[17px] leading-relaxed text-[#4C5C54]">A consultative CapEx path — not consumer checkout. No public pricing plans.</p>
-      </div>
-      <ol class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <li class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
-          <span class="font-mono text-volt-dim">01</span>
-          <h3 class="font-display mt-3 text-xl font-semibold">Initial consultation</h3>
-          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Walk our team through your fleet, sites, and duty cycles.</p>
-        </li>
-        <li class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
-          <span class="font-mono text-volt-dim">02</span>
-          <h3 class="font-display mt-3 text-xl font-semibold">Tailored solution</h3>
-          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Configure port count, chemistry support, and mounting.</p>
-        </li>
-        <li class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
-          <span class="font-mono text-volt-dim">03</span>
-          <h3 class="font-display mt-3 text-xl font-semibold">Transparent quote</h3>
-          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Clear pricing and terms aligned to your configuration.</p>
-        </li>
-        <li class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
-          <span class="font-mono text-volt-dim">04</span>
-          <h3 class="font-display mt-3 text-xl font-semibold">Installation &amp; go-live</h3>
-          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Professional install with units live on AssetPro 360.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- LEGACY / STATS -->
-    <section class="bg-ink-900 px-6 py-24 text-[#EEF5F0] lg:px-8" id="company">
-      <div class="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-2">
-        <div>
-          <p class="font-mono mb-4 inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt">
-            <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
-            A legacy of reliability
-          </p>
-          <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Two decades of leading power management innovation.</h2>
-          <p class="mt-4 leading-relaxed text-mist">From pioneering fast-charging technology to managing a full asset ecosystem, Minit Charger keeps operations efficient, safe, and cutting-edge.</p>
-          <ul class="mt-6 space-y-3 text-sm text-mist">
-            <li class="flex gap-2"><span class="text-volt">✓</span> Seamless AssetPro 360 integration for total asset management</li>
-            <li class="flex gap-2"><span class="text-volt">✓</span> Robust monitoring and incident management for safety</li>
-            <li class="flex gap-2"><span class="text-volt">✓</span> Industry leadership built over 25 years of deployments</li>
-          </ul>
-        </div>
-        <div class="overflow-hidden rounded-[2rem] ring-1 ring-white/10 bg-ink-850 flex items-center justify-center p-10">
-          <img src="../product-images/Altus%20II/ALTUS%20II.2063.png" alt="Altus II industrial charger product showcase" class="max-h-[380px] w-full object-contain" width="900" height="675" loading="lazy" />
-        </div>
-      </div>
-      <div class="mx-auto mt-16 grid max-w-[1240px] gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="rounded-3xl bg-ink-850 p-6 ring-1 ring-white/5"><p class="font-display text-4xl font-bold text-volt">25+</p><p class="mt-2 text-sm text-mist">Years pioneering industrial fast charging</p></div>
-        <div class="rounded-3xl bg-ink-850 p-6 ring-1 ring-white/5"><p class="font-display text-4xl font-bold text-volt">~3 hr</p><p class="mt-2 text-sm text-mist">Typical full recharge from depleted*</p></div>
-        <div class="rounded-3xl bg-ink-850 p-6 ring-1 ring-white/5"><p class="font-display text-4xl font-bold text-volt">3</p><p class="mt-2 text-sm text-mist">Chemistries: lithium, lead-acid, AGM</p></div>
-        <div class="rounded-3xl bg-ink-850 p-6 ring-1 ring-white/5"><p class="font-display text-4xl font-bold text-volt">208–480</p><p class="mt-2 text-sm text-mist">VAC 3-phase universal input</p></div>
-      </div>
-      <p class="mx-auto mt-4 max-w-[1240px] text-xs text-mist/70">*Charge time varies by battery type, state of charge, and configuration.</p>
-    </section>
-
-    <!-- ASSETPRO -->
-    <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="assetpro">
-      <div class="grid items-center gap-12 lg:grid-cols-2">
-        <div>
-          <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
-            <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
-            Fleet intelligence
-          </p>
-          <h2 class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Revolutionize fleet management with AssetPro 360.</h2>
-          <p class="mt-4 leading-relaxed text-[#4C5C54]">Real-time charging status, analytics, and proactive issue detection — so ops and maintenance act before downtime hits.</p>
-          <ul class="mt-6 space-y-3 text-sm">
-            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> Real-time tracking of charging status and equipment performance</li>
-            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> Analytics to optimize utilization and reduce cost</li>
-            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> Proactive issue detection to minimize downtime</li>
-            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> ERP / CMMS-friendly integration paths</li>
-          </ul>
-          <a href="#contact" class="mt-8 inline-flex rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-6 py-3 text-sm font-semibold text-[#04150C] shadow-volt">Request an AssetPro walkthrough</a>
-        </div>
-        <div class="overflow-hidden rounded-[2rem] bg-ink-900 ring-1 ring-black/10">
-          <img src="../product-images/CMS/CMS.1.jpg" alt="Industrial Minit Charger hardware connected to AssetPro fleet operations" class="aspect-[4/3] w-full object-cover" width="900" height="675" loading="lazy" />
-        </div>
-      </div>
-    </section>
-
-    <!-- INDUSTRIES -->
-    <section class="bg-paper-dim py-24" id="industries">
-      <div class="mx-auto max-w-[1240px] px-6 lg:px-8">
-        <div class="mb-12 max-w-xl">
-          <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
-            <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
-            Industries
-          </p>
-          <h2 class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Industrial charging solutions by industry.</h2>
-        </div>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
-            <img src="../product-images/Industry%20Image%20Renders/Material%20handeling.jpg" alt="Warehouse material handling charging" class="aspect-video w-full object-cover" width="640" height="360" loading="lazy" />
-            <div class="p-6">
-              <h3 class="font-display text-lg font-semibold">Warehousing &amp; 3PL</h3>
-              <p class="mt-2 text-sm text-[#4C5C54]">Predictable recharge windows for forklift and pallet-jack fleets.</p>
-              <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Get a quote →</a>
-            </div>
-          </article>
-          <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
-            <img src="../product-images/Industry%20Image%20Renders/ALTUS%20II.1771.jpg" alt="Airport eGSE outdoor charging" class="aspect-video w-full object-cover" width="640" height="360" loading="lazy" />
-            <div class="p-6">
-              <h3 class="font-display text-lg font-semibold">Airports &amp; eGSE</h3>
-              <p class="mt-2 text-sm text-[#4C5C54]">Outdoor dual-port charging for ground support equipment.</p>
-              <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Explore GSE →</a>
-            </div>
-          </article>
-          <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
-            <img src="../product-images/Industry%20Image%20Renders/Sample%20Render.1768.jpg" alt="Cold storage industrial charging" class="aspect-video w-full object-cover" width="640" height="360" loading="lazy" />
-            <div class="p-6">
-              <h3 class="font-display text-lg font-semibold">Cold storage</h3>
-              <p class="mt-2 text-sm text-[#4C5C54]">Reliable charging for demanding cold-chain MHE environments.</p>
-              <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Talk to an expert →</a>
-            </div>
-          </article>
-          <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
-            <img src="../product-images/Industry%20Image%20Renders/work%20platforms.png" alt="Ports and manufacturing charging platforms" class="aspect-video w-full object-cover" width="640" height="360" loading="lazy" />
-            <div class="p-6">
-              <h3 class="font-display text-lg font-semibold">Ports &amp; manufacturing</h3>
-              <p class="mt-2 text-sm text-[#4C5C54]">Rugged systems for continuous sites where uptime is the KPI.</p>
-              <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Request a site review →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
     <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8">
       <div class="mb-12 text-center">
         <p class="font-mono mb-3 text-[11px] uppercase tracking-wider text-[#4C5C54]">Trusted by operations teams</p>
-        <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">What fleets running on Minit Charger say.</h2>
+        <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">What fleets running on Minit Charger
+          say.</h2>
       </div>
       <div class="grid gap-6 md:grid-cols-3">
         <blockquote class="flex flex-col justify-between rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
           <p class="font-display text-lg font-medium leading-relaxed">
-            “Downtime on our GSE fleet dropped noticeably once we could see charger diagnostics before a unit actually failed.”
+            “Downtime on our GSE fleet dropped noticeably once we could see charger diagnostics before a unit actually
+            failed.”
           </p>
           <footer class="mt-8 flex items-center gap-4">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink-900 font-display font-bold text-volt" aria-hidden="true">OD</div>
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink-900 font-display font-bold text-volt"
+              aria-hidden="true">OD</div>
             <div>
               <cite class="not-italic font-bold">Operations Director</cite>
               <p class="text-sm text-[#4C5C54]">Regional Airport Authority</p>
@@ -983,10 +1586,13 @@
         </blockquote>
         <blockquote class="flex flex-col justify-between rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
           <p class="font-display text-lg font-medium leading-relaxed">
-            “Installation was faster than we planned for, and AssetPro 360 gave our maintenance team visibility they never had before.”
+            “Installation was faster than we planned for, and AssetPro 360 gave our maintenance team visibility they
+            never had before.”
           </p>
           <footer class="mt-8 flex items-center gap-4">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink-900 font-display font-bold text-volt" aria-hidden="true">FM</div>
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink-900 font-display font-bold text-volt"
+              aria-hidden="true">FM</div>
             <div>
               <cite class="not-italic font-bold">Fleet Manager</cite>
               <p class="text-sm text-[#4C5C54]">Distribution &amp; Warehousing</p>
@@ -998,7 +1604,9 @@
             “The outdoor units have held up through two full seasons of salt air with zero corrosion issues.”
           </p>
           <footer class="mt-8 flex items-center gap-4">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink-900 font-display font-bold text-volt" aria-hidden="true">TL</div>
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink-900 font-display font-bold text-volt"
+              aria-hidden="true">TL</div>
             <div>
               <cite class="not-italic font-bold">Terminal Operations Lead</cite>
               <p class="text-sm text-[#4C5C54]">Port Facility</p>
@@ -1006,258 +1614,134 @@
           </footer>
         </blockquote>
       </div>
-      <p class="mt-8 text-center font-mono text-[11px] uppercase tracking-wider text-[#4C5C54]">Illustrative quotes — replace with verified customer testimonials before publishing.</p>
+      <p class="mt-8 text-center font-mono text-[11px] uppercase tracking-wider text-[#4C5C54]">Illustrative quotes —
+        replace with verified customer testimonials before publishing.</p>
     </section>
 
-    <!-- FAQ -->
-    <section class="bg-paper-dim py-24" id="faq">
-      <div class="mx-auto grid max-w-[1240px] gap-10 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-8">
-        <div>
-          <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Frequently asked questions</h2>
-          <p class="mt-4 text-[#4C5C54]">Straight answers for fleet, facilities, and procurement teams.</p>
-          <a href="#contact" class="mt-6 inline-flex rounded-full border border-black/10 px-6 py-3 text-sm font-semibold transition hover:border-volt-dim hover:text-volt-dim">Still have questions? Contact us</a>
-        </div>
-        <div class="space-y-3">
-          <details class="group rounded-2xl bg-white open:ring-1 open:ring-volt/30" open>
-            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 font-semibold">
-              What types of batteries are compatible?
-              <span class="text-volt-dim transition group-open:rotate-45 text-2xl leading-none">+</span>
-            </summary>
-            <p class="px-5 pb-5 text-sm leading-relaxed text-[#4C5C54]">Our chargers support lithium, lead-acid, and AGM batteries — ideal for mixed industrial fleets.</p>
-          </details>
-          <details class="group rounded-2xl bg-white">
-            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 font-semibold">
-              How fast can a depleted battery recharge?
-              <span class="text-volt-dim transition group-open:rotate-45 text-2xl leading-none">+</span>
-            </summary>
-            <p class="px-5 pb-5 text-sm leading-relaxed text-[#4C5C54]">Typical configurations recharge a fully depleted battery in about three hours, depending on battery type and configuration.</p>
-          </details>
-          <details class="group rounded-2xl bg-white">
-            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 font-semibold">
-              Are products suitable for outdoor use?
-              <span class="text-volt-dim transition group-open:rotate-45 text-2xl leading-none">+</span>
-            </summary>
-            <p class="px-5 pb-5 text-sm leading-relaxed text-[#4C5C54]">Yes. Altus II is designed for outdoor eGSE applications with weather-minded construction and dual-port performance.</p>
-          </details>
-          <details class="group rounded-2xl bg-white">
-            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 font-semibold">
-              Can AssetPro 360 integrate with our systems?
-              <span class="text-volt-dim transition group-open:rotate-45 text-2xl leading-none">+</span>
-            </summary>
-            <p class="px-5 pb-5 text-sm leading-relaxed text-[#4C5C54]">AssetPro 360 connects with enterprise workflows including ERP and CMMS paths.</p>
-          </details>
-          <details class="group rounded-2xl bg-white">
-            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 font-semibold">
-              Is there online pricing?
-              <span class="text-volt-dim transition group-open:rotate-45 text-2xl leading-none">+</span>
-            </summary>
-            <p class="px-5 pb-5 text-sm leading-relaxed text-[#4C5C54]">No consumer self-serve pricing. We scope your fleet, tailor the configuration, then provide a transparent quote and install plan.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESOURCES -->
-    <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="resources">
-      <h2 class="font-display text-center text-3xl font-semibold tracking-tight sm:text-4xl">Recommended resources</h2>
-      <p class="mx-auto mt-3 max-w-xl text-center text-[#4C5C54]">Guides for BMS features, warehouse charging, and LSEV power.</p>
-      <div class="mt-12 grid gap-6 md:grid-cols-3">
-        <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
-          <img src="../product-images/Cell%20trac/Render.2055.png" alt="Battery management system for material handling" class="aspect-video w-full bg-ink-900 object-contain p-6" width="640" height="360" loading="lazy" />
-          <div class="p-6">
-            <h3 class="font-display font-semibold">Four important BMS features for MHE</h3>
-            <p class="mt-2 text-sm text-[#4C5C54]">What fleet leaders should require from battery management on forklifts, AGVs, and GSE.</p>
-            <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Request the guide →</a>
-          </div>
-        </article>
-        <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
-          <img src="../product-images/Industry%20Image%20Renders/Material%20handeling.jpg" alt="Warehouse material handling rapid charging" class="aspect-video w-full object-cover" width="640" height="360" loading="lazy" />
-          <div class="p-6">
-            <h3 class="font-display font-semibold">Turbocharging warehouse MHE</h3>
-            <p class="mt-2 text-sm text-[#4C5C54]">How rapid charging supports throughput without oversizing electrical infrastructure.</p>
-            <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Request the guide →</a>
-          </div>
-        </article>
-        <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
-          <img src="../product-images/Durus/DCXC.png" alt="Low-speed electric vehicle charging" class="aspect-video w-full bg-ink-900 object-contain p-6" width="640" height="360" loading="lazy" />
-          <div class="p-6">
-            <h3 class="font-display font-semibold">Charging power for LSEVs</h3>
-            <p class="mt-2 text-sm text-[#4C5C54]">Practical guidance for low-speed fleets that share yards with heavier MHE.</p>
-            <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Request the guide →</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- PARTNERS -->
-    <section class="border-y border-black/5 bg-white py-14" aria-labelledby="partners-heading">
-      <div class="mx-auto max-w-[1240px] px-6 lg:px-8">
-        <h2 id="partners-heading" class="text-center font-mono text-[11px] uppercase tracking-wider text-[#4C5C54]">Trusted by industrial operators</h2>
-        <div class="mt-8 flex flex-wrap items-center justify-center gap-8 sm:gap-14">
-          <span class="font-display text-lg font-bold tracking-wide text-ink-900/35">BOEING</span>
-          <span class="font-display text-lg font-bold tracking-wide text-ink-900/35">AMERICOLD</span>
-          <span class="font-display text-lg font-bold tracking-wide text-ink-900/35">UNITED</span>
-          <span class="font-display text-lg font-bold tracking-wide text-ink-900/35">ENTERPRISE</span>
-        </div>
-        <div class="mt-14 grid gap-6 border-t border-black/5 pt-12 md:grid-cols-3">
-          <div class="flex gap-4">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-ink-900 text-volt">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z" stroke="currentColor" stroke-width="1.5"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold">Industrial expertise</h3>
-              <p class="mt-1 text-sm text-[#4C5C54]">Decades of EV fast charging for airports, warehouses, and ports.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-ink-900 text-volt">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold">Universal compatibility</h3>
-              <p class="mt-1 text-sm text-[#4C5C54]">Lithium, lead-acid, and AGM solutions for mixed fleets.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-ink-900 text-volt">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 8-8M12 20a8 8 0 0 0 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold">Cloud-connected</h3>
-              <p class="mt-1 text-sm text-[#4C5C54]">Real-time data, remote monitoring, and timely maintenance.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA BAND — product-led -->
-    <section class="relative overflow-hidden bg-ink-950" id="quote">
-      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(92,242,160,0.15),transparent_55%)]" aria-hidden="true"></div>
-      <div class="relative mx-auto grid max-w-[1240px] items-center gap-10 px-6 py-20 lg:grid-cols-2 lg:px-8">
-        <div class="text-center lg:text-left">
-          <h2 class="font-display text-3xl font-semibold text-white sm:text-4xl">Ready to reduce downtime? Get your industrial charging plan.</h2>
-          <p class="mt-4 text-lg text-mist">Talk with Minit Charger about chargers, CellTrac, and AssetPro 360.</p>
-          <div class="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
-            <a href="#contact" class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-7 py-3.5 text-sm font-semibold text-[#04150C]">Get a Quote</a>
-            <a href="#products" class="rounded-full border border-white/40 px-7 py-3.5 text-sm font-semibold text-white">Explore Products</a>
-          </div>
-        </div>
-        <div class="flex justify-center gap-4">
-          <img src="../product-images/Altus%20II/ALTUS%20II.14.png" alt="Altus II charger" class="h-48 object-contain sm:h-56" width="280" height="280" loading="lazy" />
-          <img src="../product-images/Maximus/MAXIMUS.png" alt="Maximus charger" class="hidden h-48 object-contain sm:block sm:h-56" width="280" height="280" loading="lazy" />
-        </div>
-      </div>
-    </section>
-
-    <!-- SEO: Problems we solve -->
-    <section class="bg-paper-dim py-24" id="challenges" aria-labelledby="challenges-heading">
-      <div class="mx-auto max-w-[1240px] px-6 lg:px-8">
-        <div class="mb-12 max-w-2xl">
-          <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
-            <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
-            Operational challenges
-          </p>
-          <h2 id="challenges-heading" class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Why industrial fleets switch to smart rapid charging.</h2>
-          <p class="mt-4 text-[17px] leading-relaxed text-[#4C5C54]">Forklift battery chargers, GSE chargers, and fleet charging management only pay off when they cut downtime, protect batteries, and fit mixed chemistries.</p>
-        </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
-            <h3 class="font-display text-xl font-semibold">Charger-related downtime</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">When material handling equipment sits waiting on a slow or failed charge, shift plans slip. Rapid industrial battery chargers with on-screen diagnostics keep MHE and GSE moving.</p>
-          </article>
-          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
-            <h3 class="font-display text-xl font-semibold">Mixed battery chemistries</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Fleets migrating from lead-acid to lithium often run both. Minit Charger supports lithium, lead-acid, and AGM so you standardize hardware without forcing a one-chemistry rip-and-replace.</p>
-          </article>
-          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
-            <h3 class="font-display text-xl font-semibold">No visibility into battery health</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Without CellTrac and AssetPro 360, maintenance reacts after failures. Cloud fleet charging management surfaces SoC, alarms, and charger status before equipment goes dark.</p>
-          </article>
-          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
-            <h3 class="font-display text-xl font-semibold">Outdoor GSE harsh conditions</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Airport apron and port yards need outdoor-rated eGSE chargers. Altus II is built for dual-port outdoor duty with remote diagnostics for ground support fleets.</p>
-          </article>
-          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
-            <h3 class="font-display text-xl font-semibold">Multi-site standardization</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">3PL and distribution networks need one industrial charging stack across warehouses. Configure Maximus, Momentus, and AssetPro once, then scale the same playbook site to site.</p>
-          </article>
-          <article class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
-            <h3 class="font-display text-xl font-semibold">CapEx without clear ROI</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Procurement needs a consultative quote—not consumer pricing pages. We scope fleet size, duty cycles, and install constraints so CapEx maps to measurable uptime outcomes.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEO: Battery chemistry -->
-    <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="battery-chemistry" aria-labelledby="chemistry-heading">
+    <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="battery-chemistry"
+      aria-labelledby="chemistry-heading">
       <div class="grid items-start gap-12 lg:grid-cols-2">
         <div>
           <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
             <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
             Battery compatibility
           </p>
-          <h2 id="chemistry-heading" class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Lithium, lead-acid, and AGM industrial battery chargers.</h2>
-          <p class="mt-4 leading-relaxed text-[#4C5C54]">Whether you run forklift batteries, airport GSE packs, or low-speed electric vehicle batteries, Minit Charger is engineered for mixed-chemistry fleets—with patented adaptive charging that supports longer battery life.</p>
+          <h2 id="chemistry-heading" class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+            Lithium, lead-acid, and AGM industrial battery chargers.</h2>
+          <p class="mt-4 leading-relaxed text-[#4C5C54]">Whether you run forklift batteries, airport GSE packs, or
+            low-speed electric vehicle batteries, Minit Charger is engineered for mixed-chemistry fleets—with patented
+            adaptive charging that supports longer battery life.</p>
           <ul class="mt-6 space-y-3 text-sm text-[#4C5C54]">
-            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> <strong class="text-ink-900">Lithium (Li-ion)</strong> — faster opportunity charging for high-throughput warehouses</li>
-            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> <strong class="text-ink-900">Lead-acid</strong> — proven chemistry still dominant across many MHE fleets</li>
-            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> <strong class="text-ink-900">AGM</strong> — sealed batteries common in specialty and lighter-duty equipment</li>
+            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> <strong class="text-ink-900">Lithium
+                (Li-ion)</strong> — faster opportunity charging for high-throughput warehouses</li>
+            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> <strong
+                class="text-ink-900">Lead-acid</strong> — proven chemistry still dominant across many MHE fleets</li>
+            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> <strong
+                class="text-ink-900">AGM</strong> — sealed batteries common in specialty and lighter-duty equipment</li>
           </ul>
-          <a href="#contact" class="mt-8 inline-flex rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-6 py-3 text-sm font-semibold text-[#04150C] shadow-volt">Ask about your chemistry mix</a>
+          <a href="#contact"
+            class="mt-8 inline-flex rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-6 py-3 text-sm font-semibold text-[#04150C] shadow-volt">Ask
+            about your chemistry mix</a>
         </div>
         <div class="overflow-hidden rounded-[2rem] bg-ink-900 ring-1 ring-black/10">
-          <img src="../product-images/Momentus/Momentus.2100.png" alt="Momentus industrial forklift battery charger supporting mixed chemistries" class="aspect-[4/3] w-full object-contain p-10" width="800" height="600" loading="lazy" />
+          <img src="../product-images/Momentus/Momentus.2100.png"
+            alt="Momentus industrial forklift battery charger supporting mixed chemistries"
+            class="aspect-[4/3] w-full object-contain p-10" width="800" height="600" loading="lazy" />
         </div>
       </div>
     </section>
 
-    <!-- SEO: Indoor vs outdoor -->
-    <section class="bg-ink-900 px-6 py-24 text-[#EEF5F0] lg:px-8" id="indoor-outdoor" aria-labelledby="env-heading">
-      <div class="mx-auto max-w-[1240px]">
-        <div class="mb-12 max-w-2xl">
+    <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="assetpro">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div>
+          <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
+            <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
+            Fleet intelligence
+          </p>
+          <h2 class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Revolutionize fleet management
+            with AssetPro 360.</h2>
+          <p class="mt-4 leading-relaxed text-[#4C5C54]">Real-time charging status, analytics, and proactive issue
+            detection — so ops and maintenance act before downtime hits.</p>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> Real-time tracking of charging status
+              and equipment performance</li>
+            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> Analytics to optimize utilization and
+              reduce cost</li>
+            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> Proactive issue detection to minimize
+              downtime</li>
+            <li class="flex gap-2"><span class="font-bold text-volt-dim">✓</span> ERP / CMMS-friendly integration paths
+            </li>
+          </ul>
+          <a href="#contact"
+            class="mt-8 inline-flex rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-6 py-3 text-sm font-semibold text-[#04150C] shadow-volt">Request
+            an AssetPro walkthrough</a>
+        </div>
+        <div class="overflow-hidden rounded-[2rem] bg-ink-900 ring-1 ring-black/10">
+          <img src="../product-images/CMS/CMS.1.jpg"
+            alt="Industrial Minit Charger hardware connected to AssetPro fleet operations"
+            class="aspect-[4/3] w-full object-cover" width="900" height="675" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ink-900 px-6 py-24 text-[#EEF5F0] lg:px-8" id="company">
+      <div class="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-2">
+        <div>
           <p class="font-mono mb-4 inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt">
             <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
-            Environments
+            A legacy of reliability
           </p>
-          <h2 id="env-heading" class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Indoor warehouse chargers vs outdoor GSE chargers.</h2>
-          <p class="mt-4 text-mist">Match the industrial battery charger to the site—not the other way around.</p>
+          <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Two decades of leading power
+            management innovation.</h2>
+          <p class="mt-4 leading-relaxed text-mist">From pioneering fast-charging technology to managing a full asset
+            ecosystem, Minit Charger keeps operations efficient, safe, and cutting-edge.</p>
+          <ul class="mt-6 space-y-3 text-sm text-mist">
+            <li class="flex gap-2"><span class="text-volt">✓</span> Seamless AssetPro 360 integration for total asset
+              management</li>
+            <li class="flex gap-2"><span class="text-volt">✓</span> Robust monitoring and incident management for safety
+            </li>
+            <li class="flex gap-2"><span class="text-volt">✓</span> Industry leadership built over 25 years of
+              deployments</li>
+          </ul>
         </div>
-        <div class="grid gap-6 lg:grid-cols-2">
-          <article class="rounded-[2rem] bg-ink-850 p-8 ring-1 ring-white/10">
-            <img src="../product-images/Maximus/MAXIMUS.png" alt="Maximus indoor high-capacity forklift battery charger" class="mb-6 mx-auto h-48 object-contain" width="400" height="300" loading="lazy" />
-            <h3 class="font-display text-2xl font-semibold text-volt">Indoor material handling</h3>
-            <p class="mt-3 text-sm leading-relaxed text-mist">Maximus and Momentus serve warehouses, cold storage, and distribution centers where dual- or single-port forklift battery chargers need high uptime, wall or pedestal mounts, and AssetPro 360 visibility.</p>
-            <ul class="mt-4 space-y-2 text-sm text-mist">
-              <li>· High-throughput MHE fleets</li>
-              <li>· 3PL and manufacturing floors</li>
-              <li>· Controlled electrical infrastructure</li>
-            </ul>
-          </article>
-          <article class="rounded-[2rem] bg-ink-850 p-8 ring-1 ring-white/10">
-            <img src="../product-images/Altus%20II/ALTUS%20II.14.png" alt="Altus II outdoor dual-port eGSE airport charger" class="mb-6 mx-auto h-48 object-contain" width="400" height="300" loading="lazy" />
-            <h3 class="font-display text-2xl font-semibold text-volt">Outdoor eGSE &amp; yards</h3>
-            <p class="mt-3 text-sm leading-relaxed text-mist">Altus II is an outdoor-rated dual-port GSE charger for airports, ports, and exposed fleet yards—with optional Level 2 EV port and intelligent power sharing for constrained infrastructure.</p>
-            <ul class="mt-4 space-y-2 text-sm text-mist">
-              <li>· Airport ground support equipment</li>
-              <li>· Port and outdoor fleet yards</li>
-              <li>· Weather-exposed apron operations</li>
-            </ul>
-          </article>
+        <div
+          class="overflow-hidden rounded-[2rem] ring-1 ring-white/10 bg-ink-850 flex items-center justify-center p-10">
+          <img src="../product-images/Altus%20II/ALTUS%20II.2063.png" alt="Altus II industrial charger product showcase"
+            class="max-h-[380px] w-full object-contain" width="900" height="675" loading="lazy" />
         </div>
       </div>
+      <div class="mx-auto mt-16 grid max-w-[1240px] gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-3xl bg-ink-850 p-6 ring-1 ring-white/5">
+          <p class="font-display text-4xl font-bold text-volt">25+</p>
+          <p class="mt-2 text-sm text-mist">Years pioneering industrial fast charging</p>
+        </div>
+        <div class="rounded-3xl bg-ink-850 p-6 ring-1 ring-white/5">
+          <p class="font-display text-4xl font-bold text-volt">~3 hr</p>
+          <p class="mt-2 text-sm text-mist">Typical full recharge from depleted*</p>
+        </div>
+        <div class="rounded-3xl bg-ink-850 p-6 ring-1 ring-white/5">
+          <p class="font-display text-4xl font-bold text-volt">3</p>
+          <p class="mt-2 text-sm text-mist">Chemistries: lithium, lead-acid, AGM</p>
+        </div>
+        <div class="rounded-3xl bg-ink-850 p-6 ring-1 ring-white/5">
+          <p class="font-display text-4xl font-bold text-volt">208–480</p>
+          <p class="mt-2 text-sm text-mist">VAC 3-phase universal input</p>
+        </div>
+      </div>
+      <p class="mx-auto mt-4 max-w-[1240px] text-xs text-mist/70">*Charge time varies by battery type, state of charge,
+        and configuration.</p>
     </section>
 
-    <!-- SEO: Specs / keywords -->
     <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="specs" aria-labelledby="specs-heading">
       <div class="mb-12 max-w-2xl">
         <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
           <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
           Technical overview
         </p>
-        <h2 id="specs-heading" class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Industrial battery charger specifications buyers search for.</h2>
-        <p class="mt-4 text-[17px] leading-relaxed text-[#4C5C54]">Key facts procurement, facilities, and fleet teams use when comparing forklift chargers and GSE charging systems.</p>
+        <h2 id="specs-heading" class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Industrial
+          battery charger specifications buyers search for.</h2>
+        <p class="mt-4 text-[17px] leading-relaxed text-[#4C5C54]">Key facts procurement, facilities, and fleet teams
+          use when comparing forklift chargers and GSE charging systems.</p>
       </div>
       <div class="overflow-hidden rounded-[2rem] bg-white ring-1 ring-black/5">
         <table class="min-w-full text-left text-sm">
@@ -1268,20 +1752,82 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-black/5">
-            <tr><td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">AC input</td><td class="px-4 py-4 pr-6 font-semibold lg:pr-8">Universal 208–480 VAC, 3-phase, 50/60 Hz</td></tr>
-            <tr><td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Typical recharge</td><td class="px-4 py-4 pr-6 font-semibold lg:pr-8">~3 hours from depleted (config-dependent)</td></tr>
-            <tr><td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Dual-port power class</td><td class="px-4 py-4 pr-6 font-semibold lg:pr-8">Up to ~20 kW per port (Altus II / Maximus class)</td></tr>
-            <tr><td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Battery chemistries</td><td class="px-4 py-4 pr-6 font-semibold lg:pr-8">Lithium, lead-acid, AGM</td></tr>
-            <tr><td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Diagnostics</td><td class="px-4 py-4 pr-6 font-semibold lg:pr-8">On-screen + remote via AssetPro 360</td></tr>
-            <tr><td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Fleet software</td><td class="px-4 py-4 pr-6 font-semibold lg:pr-8">AssetPro 360 · ERP / CMMS integration paths</td></tr>
-            <tr><td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Onboard BMS</td><td class="px-4 py-4 pr-6 font-semibold lg:pr-8">CellTrac with GPS, SoC, alarms, cloud</td></tr>
-            <tr><td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Install options</td><td class="px-4 py-4 pr-6 font-semibold lg:pr-8">Wall-mount, pedestal, outdoor-rated units</td></tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">AC input</td>
+              <td class="px-4 py-4 pr-6 font-semibold lg:pr-8">Universal 208–480 VAC, 3-phase, 50/60 Hz</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Typical recharge</td>
+              <td class="px-4 py-4 pr-6 font-semibold lg:pr-8">~3 hours from depleted (config-dependent)</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Dual-port power class</td>
+              <td class="px-4 py-4 pr-6 font-semibold lg:pr-8">Up to ~20 kW per port (Altus II / Maximus class)</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Battery chemistries</td>
+              <td class="px-4 py-4 pr-6 font-semibold lg:pr-8">Lithium, lead-acid, AGM</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Diagnostics</td>
+              <td class="px-4 py-4 pr-6 font-semibold lg:pr-8">On-screen + remote via AssetPro 360</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Fleet software</td>
+              <td class="px-4 py-4 pr-6 font-semibold lg:pr-8">AssetPro 360 · ERP / CMMS integration paths</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Onboard BMS</td>
+              <td class="px-4 py-4 pr-6 font-semibold lg:pr-8">CellTrac with GPS, SoC, alarms, cloud</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-[#4C5C54] lg:px-8">Install options</td>
+              <td class="px-4 py-4 pr-6 font-semibold lg:pr-8">Wall-mount, pedestal, outdoor-rated units</td>
+            </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- SEO: Use-case guides -->
+    <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="process">
+      <div class="mb-14 max-w-xl">
+        <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
+          <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
+          How it works
+        </p>
+        <h2 class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">From first call to fully
+          installed.</h2>
+        <p class="mt-4 text-[17px] leading-relaxed text-[#4C5C54]">A consultative CapEx path — not consumer checkout. No
+          public pricing plans.</p>
+      </div>
+      <ol class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
+          <span class="font-mono text-volt-dim">01</span>
+          <h3 class="font-display mt-3 text-xl font-semibold">Initial consultation</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Walk our team through your fleet, sites, and duty
+            cycles.</p>
+        </li>
+        <li class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
+          <span class="font-mono text-volt-dim">02</span>
+          <h3 class="font-display mt-3 text-xl font-semibold">Tailored solution</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Configure port count, chemistry support, and mounting.
+          </p>
+        </li>
+        <li class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
+          <span class="font-mono text-volt-dim">03</span>
+          <h3 class="font-display mt-3 text-xl font-semibold">Transparent quote</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Clear pricing and terms aligned to your configuration.
+          </p>
+        </li>
+        <li class="rounded-3xl bg-white p-7 ring-1 ring-black/5">
+          <span class="font-mono text-volt-dim">04</span>
+          <h3 class="font-display mt-3 text-xl font-semibold">Installation &amp; go-live</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[#4C5C54]">Professional install with units live on AssetPro 360.
+          </p>
+        </li>
+      </ol>
+    </section>
+
     <section class="bg-paper-dim py-24" id="guides" aria-labelledby="guides-heading">
       <div class="mx-auto max-w-[1240px] px-6 lg:px-8">
         <div class="mb-12 max-w-2xl">
@@ -1289,116 +1835,271 @@
             <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
             Buyer guides
           </p>
-          <h2 id="guides-heading" class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Industrial charging guides for fleet decision-makers.</h2>
+          <h2 id="guides-heading" class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Industrial
+            charging guides for fleet decision-makers.</h2>
         </div>
         <div class="grid gap-6 lg:grid-cols-3">
           <article class="rounded-3xl bg-white p-8 ring-1 ring-black/5">
             <h3 class="font-display text-xl font-semibold">Forklift battery charger buying checklist</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Confirm port count, chemistry support, install footprint, electrical input (208–480 VAC), diagnostics, and cloud fleet charging management before you issue an RFP.</p>
-            <a href="#contact" class="mt-5 inline-block text-sm font-semibold text-volt-dim">Get a tailored recommendation →</a>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Confirm port count, chemistry support, install
+              footprint, electrical input (208–480 VAC), diagnostics, and cloud fleet charging management before you
+              issue an RFP.</p>
+            <a href="#contact" class="mt-5 inline-block text-sm font-semibold text-volt-dim">Get a tailored
+              recommendation →</a>
           </article>
           <article class="rounded-3xl bg-white p-8 ring-1 ring-black/5">
             <h3 class="font-display text-xl font-semibold">Airport GSE charging best practices</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Outdoor dual-port eGSE chargers, intelligent power sharing, and remote monitoring help airlines and handlers keep baggage tractors and belt loaders online.</p>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Outdoor dual-port eGSE chargers, intelligent power
+              sharing, and remote monitoring help airlines and handlers keep baggage tractors and belt loaders online.
+            </p>
             <a href="#p-altus" class="mt-5 inline-block text-sm font-semibold text-volt-dim">See Altus II →</a>
           </article>
           <article class="rounded-3xl bg-white p-8 ring-1 ring-black/5">
             <h3 class="font-display text-xl font-semibold">Lead-acid to lithium migration</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Opportunity charging changes duty cycles. Pair adaptive industrial chargers with CellTrac SoC telemetry so lithium transitions do not strand remaining lead-acid assets.</p>
-            <a href="#battery-chemistry" class="mt-5 inline-block text-sm font-semibold text-volt-dim">Review chemistry support →</a>
+            <p class="mt-3 text-sm leading-relaxed text-[#4C5C54]">Opportunity charging changes duty cycles. Pair
+              adaptive industrial chargers with CellTrac SoC telemetry so lithium transitions do not strand remaining
+              lead-acid assets.</p>
+            <a href="#battery-chemistry" class="mt-5 inline-block text-sm font-semibold text-volt-dim">Review chemistry
+              support →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- SEO: Glossary -->
+    <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="resources">
+      <h2 class="font-display text-center text-3xl font-semibold tracking-tight sm:text-4xl">Recommended resources</h2>
+      <p class="mx-auto mt-3 max-w-xl text-center text-[#4C5C54]">Guides for BMS features, warehouse charging, and LSEV
+        power.</p>
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
+          <img src="../product-images/Cell%20trac/Render.2055.png" alt="Battery management system for material handling"
+            class="aspect-video w-full bg-ink-900 object-contain p-6" width="640" height="360" loading="lazy" />
+          <div class="p-6">
+            <h3 class="font-display font-semibold">Four important BMS features for MHE</h3>
+            <p class="mt-2 text-sm text-[#4C5C54]">What fleet leaders should require from battery management on
+              forklifts, AGVs, and GSE.</p>
+            <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Request the guide →</a>
+          </div>
+        </article>
+        <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
+          <img src="../product-images/Industry%20Image%20Renders/Material%20handeling.jpg"
+            alt="Warehouse material handling rapid charging" class="aspect-video w-full object-cover" width="640"
+            height="360" loading="lazy" />
+          <div class="p-6">
+            <h3 class="font-display font-semibold">Turbocharging warehouse MHE</h3>
+            <p class="mt-2 text-sm text-[#4C5C54]">How rapid charging supports throughput without oversizing electrical
+              infrastructure.</p>
+            <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Request the guide →</a>
+          </div>
+        </article>
+        <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
+          <img src="../product-images/Durus/DCXC.png" alt="Low-speed electric vehicle charging"
+            class="aspect-video w-full bg-ink-900 object-contain p-6" width="640" height="360" loading="lazy" />
+          <div class="p-6">
+            <h3 class="font-display font-semibold">Charging power for LSEVs</h3>
+            <p class="mt-2 text-sm text-[#4C5C54]">Practical guidance for low-speed fleets that share yards with heavier
+              MHE.</p>
+            <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-volt-dim">Request the guide →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="glossary" aria-labelledby="glossary-heading">
       <div class="mb-12 max-w-2xl">
         <p class="font-mono inline-flex items-center gap-2 text-[12.5px] uppercase tracking-[0.08em] text-volt-dim">
           <span class="h-1.5 w-1.5 rounded-full bg-volt shadow-[0_0_0_4px_rgba(92,242,160,0.35)]"></span>
           Glossary
         </p>
-        <h2 id="glossary-heading" class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Industrial EV charging terms explained.</h2>
+        <h2 id="glossary-heading" class="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Industrial
+          EV charging terms explained.</h2>
       </div>
       <dl class="grid gap-4 sm:grid-cols-2">
         <div class="rounded-2xl bg-paper-dim p-6">
           <dt class="font-display font-semibold">MHE</dt>
-          <dd class="mt-2 text-sm text-[#4C5C54]">Material handling equipment—forklifts, pallet jacks, reach trucks, and similar warehouse vehicles that rely on industrial battery chargers.</dd>
+          <dd class="mt-2 text-sm text-[#4C5C54]">Material handling equipment—forklifts, pallet jacks, reach trucks, and
+            similar warehouse vehicles that rely on industrial battery chargers.</dd>
         </div>
         <div class="rounded-2xl bg-paper-dim p-6">
           <dt class="font-display font-semibold">GSE / eGSE</dt>
-          <dd class="mt-2 text-sm text-[#4C5C54]">Ground support equipment (and electric GSE) used on airport aprons—baggage tractors, belt loaders, and pushbacks needing outdoor-rated chargers.</dd>
+          <dd class="mt-2 text-sm text-[#4C5C54]">Ground support equipment (and electric GSE) used on airport
+            aprons—baggage tractors, belt loaders, and pushbacks needing outdoor-rated chargers.</dd>
         </div>
         <div class="rounded-2xl bg-paper-dim p-6">
           <dt class="font-display font-semibold">Opportunity charging</dt>
-          <dd class="mt-2 text-sm text-[#4C5C54]">Fast partial recharge during breaks instead of waiting for a full conventional charge cycle—common with lithium fleets and rapid industrial chargers.</dd>
+          <dd class="mt-2 text-sm text-[#4C5C54]">Fast partial recharge during breaks instead of waiting for a full
+            conventional charge cycle—common with lithium fleets and rapid industrial chargers.</dd>
         </div>
         <div class="rounded-2xl bg-paper-dim p-6">
           <dt class="font-display font-semibold">SoC</dt>
-          <dd class="mt-2 text-sm text-[#4C5C54]">State of charge—how full a battery is. CellTrac and AssetPro 360 track SoC so fleets avoid unexpected dead units mid-shift.</dd>
+          <dd class="mt-2 text-sm text-[#4C5C54]">State of charge—how full a battery is. CellTrac and AssetPro 360 track
+            SoC so fleets avoid unexpected dead units mid-shift.</dd>
         </div>
         <div class="rounded-2xl bg-paper-dim p-6">
           <dt class="font-display font-semibold">BMS</dt>
-          <dd class="mt-2 text-sm text-[#4C5C54]">Battery management system—onboard monitoring of charge, discharge, alarms, and health. CellTrac is Minit Charger’s smart BMS module.</dd>
+          <dd class="mt-2 text-sm text-[#4C5C54]">Battery management system—onboard monitoring of charge, discharge,
+            alarms, and health. CellTrac is Minit Charger’s smart BMS module.</dd>
         </div>
         <div class="rounded-2xl bg-paper-dim p-6">
           <dt class="font-display font-semibold">AssetPro 360</dt>
-          <dd class="mt-2 text-sm text-[#4C5C54]">Cloud fleet charging management platform for chargers, batteries, analytics, alerts, and ERP/CMMS-connected operations.</dd>
+          <dd class="mt-2 text-sm text-[#4C5C54]">Cloud fleet charging management platform for chargers, batteries,
+            analytics, alerts, and ERP/CMMS-connected operations.</dd>
         </div>
       </dl>
     </section>
 
-    <!-- SEO: Service area -->
+    <section class="bg-paper-dim py-24" id="faq">
+      <div class="mx-auto grid max-w-[1240px] gap-10 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-8">
+        <div>
+          <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Frequently asked questions</h2>
+          <p class="mt-4 text-[#4C5C54]">Straight answers for fleet, facilities, and procurement teams.</p>
+          <a href="#contact"
+            class="mt-6 inline-flex rounded-full border border-black/10 px-6 py-3 text-sm font-semibold transition hover:border-volt-dim hover:text-volt-dim">Still
+            have questions? Contact us</a>
+        </div>
+        <div class="space-y-3">
+          <details class="group rounded-2xl bg-white open:ring-1 open:ring-volt/30" open>
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 font-semibold">
+              What types of batteries are compatible?
+              <span class="text-volt-dim transition group-open:rotate-45 text-2xl leading-none">+</span>
+            </summary>
+            <p class="px-5 pb-5 text-sm leading-relaxed text-[#4C5C54]">Our chargers support lithium, lead-acid, and AGM
+              batteries — ideal for mixed industrial fleets.</p>
+          </details>
+          <details class="group rounded-2xl bg-white">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 font-semibold">
+              How fast can a depleted battery recharge?
+              <span class="text-volt-dim transition group-open:rotate-45 text-2xl leading-none">+</span>
+            </summary>
+            <p class="px-5 pb-5 text-sm leading-relaxed text-[#4C5C54]">Typical configurations recharge a fully depleted
+              battery in about three hours, depending on battery type and configuration.</p>
+          </details>
+          <details class="group rounded-2xl bg-white">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 font-semibold">
+              Are products suitable for outdoor use?
+              <span class="text-volt-dim transition group-open:rotate-45 text-2xl leading-none">+</span>
+            </summary>
+            <p class="px-5 pb-5 text-sm leading-relaxed text-[#4C5C54]">Yes. Altus II is designed for outdoor eGSE
+              applications with weather-minded construction and dual-port performance.</p>
+          </details>
+          <details class="group rounded-2xl bg-white">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 font-semibold">
+              Can AssetPro 360 integrate with our systems?
+              <span class="text-volt-dim transition group-open:rotate-45 text-2xl leading-none">+</span>
+            </summary>
+            <p class="px-5 pb-5 text-sm leading-relaxed text-[#4C5C54]">AssetPro 360 connects with enterprise workflows
+              including ERP and CMMS paths.</p>
+          </details>
+          <details class="group rounded-2xl bg-white">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 font-semibold">
+              Is there online pricing?
+              <span class="text-volt-dim transition group-open:rotate-45 text-2xl leading-none">+</span>
+            </summary>
+            <p class="px-5 pb-5 text-sm leading-relaxed text-[#4C5C54]">No consumer self-serve pricing. We scope your
+              fleet, tailor the configuration, then provide a transparent quote and install plan.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="bg-paper-dim py-20" id="service-area" aria-labelledby="service-heading">
       <div class="mx-auto max-w-[1240px] px-6 text-center lg:px-8">
-        <h2 id="service-heading" class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Industrial charging solutions from Chandler, AZ—serving fleets nationwide.</h2>
+        <h2 id="service-heading" class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Industrial
+          charging solutions from Chandler, AZ—serving fleets nationwide.</h2>
         <p class="mx-auto mt-4 max-w-3xl text-[17px] leading-relaxed text-[#4C5C54]">
-          Minit Charger is headquartered at 7303 W Boston St, Chandler, Arizona. We support warehouses, airports, cold storage, ports, and manufacturing sites across the United States with industrial battery chargers, CellTrac BMS, and AssetPro 360 fleet intelligence.
+          Minit Charger is headquartered at 7303 W Boston St, Chandler, Arizona. We support warehouses, airports, cold
+          storage, ports, and manufacturing sites across the United States with industrial battery chargers, CellTrac
+          BMS, and AssetPro 360 fleet intelligence.
         </p>
         <p class="mt-6 font-mono text-sm text-volt-dim">(908) 789-8700 · info@minitcharger.com</p>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <section class="relative overflow-hidden bg-ink-950" id="quote">
+      <div
+        class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(92,242,160,0.15),transparent_55%)]"
+        aria-hidden="true"></div>
+      <div class="relative mx-auto grid max-w-[1240px] items-center gap-10 px-6 py-20 lg:grid-cols-2 lg:px-8">
+        <div class="text-center lg:text-left">
+          <h2 class="font-display text-3xl font-semibold text-white sm:text-4xl">Ready to reduce downtime? Get your
+            industrial charging plan.</h2>
+          <p class="mt-4 text-lg text-mist">Talk with Minit Charger about chargers, CellTrac, and AssetPro 360.</p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+            <a href="#contact"
+              class="rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt px-7 py-3.5 text-sm font-semibold text-[#04150C]">Get
+              a Quote</a>
+            <a href="#products"
+              class="rounded-full border border-white/40 px-7 py-3.5 text-sm font-semibold text-white">Explore
+              Products</a>
+          </div>
+        </div>
+        <div class="flex justify-center gap-4">
+          <img src="../product-images/Altus%20II/ALTUS%20II.14.png" alt="Altus II charger"
+            class="h-48 object-contain sm:h-56" width="280" height="280" loading="lazy" />
+          <img src="../product-images/Maximus/MAXIMUS.png" alt="Maximus charger"
+            class="hidden h-48 object-contain sm:block sm:h-56" width="280" height="280" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
     <section class="mx-auto max-w-[1240px] px-6 py-24 lg:px-8" id="contact">
       <div class="grid gap-12 lg:grid-cols-2">
         <div>
           <h2 class="font-display text-3xl font-semibold tracking-tight">Contact Minit Charger</h2>
-          <p class="mt-3 text-[#4C5C54]">Tell us about your fleet and sites. We’ll follow up with a tailored charging recommendation.</p>
+          <p class="mt-3 text-[#4C5C54]">Tell us about your fleet and sites. We’ll follow up with a tailored charging
+            recommendation.</p>
           <ul class="mt-8 space-y-4 text-sm">
             <li class="flex gap-3">
-              <svg class="mt-0.5 h-5 w-5 text-volt-dim" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-12a7 7 0 1 0-14 0c0 6.5 7 12 7 12Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+              <svg class="mt-0.5 h-5 w-5 text-volt-dim" viewBox="0 0 24 24" fill="none">
+                <path d="M12 21s7-5.5 7-12a7 7 0 1 0-14 0c0 6.5 7 12 7 12Z" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5" />
+              </svg>
               <span>7303 W Boston St, Chandler, AZ 85226</span>
             </li>
             <li class="flex gap-3">
-              <svg class="mt-0.5 h-5 w-5 text-volt-dim" viewBox="0 0 24 24" fill="none"><path d="M6.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 13.5l4 1.5v3A2 2 0 0 1 18 20 14 14 0 0 1 4 6a2 2 0 0 1 2.5-2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              <svg class="mt-0.5 h-5 w-5 text-volt-dim" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 13.5l4 1.5v3A2 2 0 0 1 18 20 14 14 0 0 1 4 6a2 2 0 0 1 2.5-2Z"
+                  stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
               <a class="font-semibold text-volt-dim hover:underline" href="tel:+19087898700">(908) 789-8700</a>
             </li>
             <li class="flex gap-3">
-              <svg class="mt-0.5 h-5 w-5 text-volt-dim" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5"/></svg>
-              <a class="font-semibold text-volt-dim hover:underline" href="mailto:info@minitcharger.com">info@minitcharger.com</a>
+              <svg class="mt-0.5 h-5 w-5 text-volt-dim" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5" />
+                <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+              <a class="font-semibold text-volt-dim hover:underline"
+                href="mailto:info@minitcharger.com">info@minitcharger.com</a>
             </li>
           </ul>
         </div>
         <form class="rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-black/5 sm:p-8" action="#" method="post">
           <div class="grid gap-4 sm:grid-cols-2">
             <label class="block text-sm font-medium">Name
-              <input type="text" name="name" required class="mt-1 w-full rounded-xl border border-black/10 px-3 py-2.5 text-sm outline-none focus:border-volt-dim" />
+              <input type="text" name="name" required
+                class="mt-1 w-full rounded-xl border border-black/10 px-3 py-2.5 text-sm outline-none focus:border-volt-dim" />
             </label>
             <label class="block text-sm font-medium">Company
-              <input type="text" name="company" class="mt-1 w-full rounded-xl border border-black/10 px-3 py-2.5 text-sm outline-none focus:border-volt-dim" />
+              <input type="text" name="company"
+                class="mt-1 w-full rounded-xl border border-black/10 px-3 py-2.5 text-sm outline-none focus:border-volt-dim" />
             </label>
             <label class="block text-sm font-medium">Email
-              <input type="email" name="email" required class="mt-1 w-full rounded-xl border border-black/10 px-3 py-2.5 text-sm outline-none focus:border-volt-dim" />
+              <input type="email" name="email" required
+                class="mt-1 w-full rounded-xl border border-black/10 px-3 py-2.5 text-sm outline-none focus:border-volt-dim" />
             </label>
             <label class="block text-sm font-medium">Phone
-              <input type="tel" name="phone" class="mt-1 w-full rounded-xl border border-black/10 px-3 py-2.5 text-sm outline-none focus:border-volt-dim" />
+              <input type="tel" name="phone"
+                class="mt-1 w-full rounded-xl border border-black/10 px-3 py-2.5 text-sm outline-none focus:border-volt-dim" />
             </label>
           </div>
           <label class="mt-4 block text-sm font-medium">How can we help?
-            <textarea name="message" rows="4" class="mt-1 w-full rounded-xl border border-black/10 px-3 py-2.5 text-sm outline-none focus:border-volt-dim"></textarea>
+            <textarea name="message" rows="4"
+              class="mt-1 w-full rounded-xl border border-black/10 px-3 py-2.5 text-sm outline-none focus:border-volt-dim"></textarea>
           </label>
-          <button type="submit" class="mt-6 w-full rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt py-3.5 text-sm font-semibold text-[#04150C] shadow-volt">Submit quote request</button>
+          <button type="submit"
+            class="mt-6 w-full rounded-full bg-gradient-to-b from-[#6BFFB1] to-volt py-3.5 text-sm font-semibold text-[#04150C] shadow-volt">Submit
+            quote request</button>
         </form>
       </div>
     </section>
@@ -1410,17 +2111,30 @@
       <div>
         <div class="flex items-center gap-2.5 font-display">
           <span class="flex h-8 w-8 items-center justify-center rounded-[9px] bg-ink-800 text-volt" aria-hidden="true">
-            <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="currentColor"/></svg>
+            <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none">
+              <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="currentColor" />
+            </svg>
           </span>
           <span>MINIT<span class="font-bold text-volt">CHARGER</span></span>
         </div>
-        <p class="mt-4 text-sm leading-relaxed text-mist">25 years of industrial fast charging — smart chargers and AssetPro 360 for equipment that has to stay online.</p>
+        <p class="mt-4 text-sm leading-relaxed text-mist">25 years of industrial fast charging — smart chargers and
+          AssetPro 360 for equipment that has to stay online.</p>
         <div class="mt-6 flex gap-3">
-          <a href="https://www.linkedin.com/" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-mist transition hover:border-volt hover:text-volt" aria-label="LinkedIn">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5H3.5V20h3V8.5ZM5 3a1.75 1.75 0 1 0 0 3.5A1.75 1.75 0 0 0 5 3Zm15.5 7.3c0-2.4-1.6-4-4.1-4-1.6 0-2.6.7-3.2 1.6h-.1V8.5h-2.9c0 .8 0 11.5 0 11.5h3v-6.4c0-.3 0-.7.1-1 .3-.7.9-1.4 2-1.4 1.4 0 2 1.1 2 2.6V20h3v-6.7Z"/></svg>
+          <a href="https://www.linkedin.com/"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-mist transition hover:border-volt hover:text-volt"
+            aria-label="LinkedIn">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M6.5 8.5H3.5V20h3V8.5ZM5 3a1.75 1.75 0 1 0 0 3.5A1.75 1.75 0 0 0 5 3Zm15.5 7.3c0-2.4-1.6-4-4.1-4-1.6 0-2.6.7-3.2 1.6h-.1V8.5h-2.9c0 .8 0 11.5 0 11.5h3v-6.4c0-.3 0-.7.1-1 .3-.7.9-1.4 2-1.4 1.4 0 2 1.1 2 2.6V20h3v-6.7Z" />
+            </svg>
           </a>
-          <a href="mailto:info@minitcharger.com" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-mist transition hover:border-volt hover:text-volt" aria-label="Email">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5"/></svg>
+          <a href="mailto:info@minitcharger.com"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-mist transition hover:border-volt hover:text-volt"
+            aria-label="Email">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5" />
+              <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5" />
+            </svg>
           </a>
         </div>
       </div>
@@ -1459,7 +2173,8 @@
       </div>
     </div>
     <div class="border-t border-white/10">
-      <div class="mx-auto flex max-w-[1240px] flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-mist/70 sm:flex-row lg:px-8">
+      <div
+        class="mx-auto flex max-w-[1240px] flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-mist/70 sm:flex-row lg:px-8">
         <p>© <span id="y"></span> Minit Charger. All rights reserved.</p>
         <p>Industrial battery chargers · Fleet charging management · Chandler, AZ</p>
       </div>
@@ -1549,7 +2264,7 @@
         });
         tab.classList.add('is-active');
         tab.setAttribute('aria-selected', 'true');
-        
+
         const sceneId = tab.getAttribute('data-scene');
         document.querySelectorAll('.scene').forEach((scene) => {
           if (scene.getAttribute('data-scene') === sceneId) {
@@ -1562,4 +2277,5 @@
     });
   </script>
 </body>
+
 </html>
